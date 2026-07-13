@@ -69,7 +69,7 @@ export default function CTASection() {
   return (
     <>
       {/* Stats Section */}
-      <section className="bg-[#F9F4EB] py-16 relative overflow-hidden">
+      <section className="bg-[#FAF7F2] py-16 border-t border-b border-[#0D2818]/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -84,12 +84,13 @@ export default function CTASection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="text-center group"
+                className="text-center"
               >
-                <p className="font-display text-4xl lg:text-5xl text-[#841B2D] mb-2 group-hover:scale-110 transition-transform duration-300">
+                <p className="font-display text-5xl lg:text-6xl text-[#B22234] mb-3">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </p>
-                <p className="font-body text-xs text-[#1A2F23]/60 uppercase tracking-wider">
+                <div className="mx-auto w-8 h-px bg-[#C9A96E] mb-3" />
+                <p className="font-body text-xs text-[#0D2818]/60 uppercase tracking-wider">
                   {stat.label}
                 </p>
               </motion.div>
@@ -99,31 +100,10 @@ export default function CTASection() {
       </section>
 
       {/* CTA Section */}
-      <section id="regalos" className="relative bg-[#841B2D] py-20 lg:py-28 overflow-hidden">
-        {/* Festive pattern overlay */}
-        <div className="absolute inset-0 opacity-10">
-          {[...Array(12)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute"
-              animate={{
-                y: [0, -10, 0],
-                rotate: [0, 5, -5, 0],
-              }}
-              transition={{
-                duration: 4 + i * 0.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              style={{
-                left: `${(i * 8.5) % 100}%`,
-                top: `${(i * 17) % 100}%`,
-              }}
-            >
-              <Gift size={24 + (i % 3) * 12} className="text-[#F9F4EB]" />
-            </motion.div>
-          ))}
-        </div>
+      <section id="regalos" className="relative bg-[#B22234] py-20 lg:py-28 overflow-hidden">
+        {/* Subtle decorative elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#8B1A28] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 opacity-30" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#C9A96E] rounded-full blur-3xl translate-x-1/2 translate-y-1/2 opacity-10" />
 
         <div className="relative max-w-4xl mx-auto px-6 lg:px-16 text-center">
           <motion.div
@@ -137,13 +117,13 @@ export default function CTASection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#F9F4EB]/10 border border-[#F9F4EB]/20 text-[#F9F4EB] text-xs tracking-widest uppercase font-body mb-6"
+              className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#FAF7F2]/10 border border-[#FAF7F2]/20 text-[#FAF7F2] text-xs tracking-widest uppercase font-body mb-6"
             >
-              <Truck size={14} className="text-[#B39359]" />
+              <Truck size={14} className="text-[#C9A96E]" />
               Envío express disponible
             </motion.div>
 
-            <h2 className="font-display text-4xl lg:text-6xl text-[#F9F4EB] leading-tight">
+            <h2 className="font-display text-4xl lg:text-6xl text-[#FAF7F2] leading-tight">
               Haz tu pedido
               <br />
               <motion.span
@@ -151,13 +131,13 @@ export default function CTASection() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="italic text-[#B39359]"
+                className="italic text-[#C9A96E]"
               >
                 a tiempo para Navidad
               </motion.span>
             </h2>
 
-            <p className="mt-5 font-body text-sm lg:text-base text-[#F9F4EB]/70 max-w-xl mx-auto">
+            <p className="mt-5 font-body text-sm lg:text-base text-[#FAF7F2]/70 max-w-xl mx-auto">
               Asegura que tus canastas lleguen a tiempo. Realiza tu pedido antes del
               20 de diciembre y garantiza la entrega para Nochebuena.
             </p>
@@ -175,12 +155,12 @@ export default function CTASection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.5 + i * 0.1 }}
-                  className="bg-[#1A2F23]/40 border border-[#F9F4EB]/15 w-20 lg:w-28 py-4 hover:bg-[#1A2F23]/60 transition-colors duration-300"
+                  className="bg-[#0D2818]/40 border border-[#FAF7F2]/15 w-20 lg:w-28 py-4 hover:bg-[#0D2818]/60 transition-colors duration-300"
                 >
-                  <p className="font-display text-3xl lg:text-5xl text-[#F9F4EB]">
+                  <p className="font-display text-3xl lg:text-5xl text-[#FAF7F2]">
                     {String(unit.val).padStart(2, "0")}
                   </p>
-                  <p className="mt-1 font-body text-xs tracking-widest uppercase text-[#B39359]">
+                  <p className="mt-1 font-body text-xs tracking-widest uppercase text-[#C9A96E]">
                     {unit.label}
                   </p>
                 </motion.div>
@@ -192,7 +172,7 @@ export default function CTASection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleCotizar}
-                className="group px-10 py-4 bg-[#F9F4EB] text-[#841B2D] font-body text-sm tracking-widest uppercase hover:bg-[#B39359] hover:text-[#F9F4EB] transition-all duration-300 flex items-center justify-center gap-2"
+                className="group px-10 py-4 bg-[#FAF7F2] text-[#B22234] font-body text-sm tracking-widest uppercase hover:bg-[#C9A96E] hover:text-[#FAF7F2] transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <MessageCircle size={16} />
                 Cotizar ahora
@@ -201,7 +181,7 @@ export default function CTASection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollTo("#contacto")}
-                className="px-10 py-4 border border-[#F9F4EB]/30 text-[#F9F4EB] font-body text-sm tracking-widest uppercase hover:bg-[#F9F4EB]/10 transition-all duration-300 flex items-center justify-center gap-2"
+                className="px-10 py-4 border border-[#FAF7F2]/30 text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#FAF7F2]/10 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Clock size={16} />
                 Pedido corporativo

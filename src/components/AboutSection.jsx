@@ -5,7 +5,7 @@ const RIBBON_IMG = "https://publiventa.pe/wp-content/uploads/2025/09/Mesa-de-tra
 
 export default function AboutSection() {
   return (
-    <section id="nosotros" className="bg-[#1A2F23] py-24 lg:py-32 overflow-hidden">
+    <section id="nosotros" className="bg-[#0D2818] py-24 lg:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div
@@ -14,21 +14,21 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <p className="font-body text-xs tracking-[0.4em] uppercase text-[#B39359] mb-4">
+            <p className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-4">
               Nuestra Historia
             </p>
-            <h2 className="font-display text-4xl lg:text-5xl text-[#F9F4EB] leading-tight">
+            <h2 className="font-display text-4xl lg:text-5xl text-[#FAF7F2] leading-tight">
               El Arte de{" "}
-              <span className="italic text-[#B39359]">Regalar</span>
+              <span className="italic text-[#C9A96E]">Regalar</span>
             </h2>
-            <div className="mt-4 w-16 h-px bg-[#B39359]" />
-            <p className="mt-8 font-body text-base text-[#F9F4EB]/60 leading-relaxed">
+            <div className="mt-4 w-16 h-px bg-[#C9A96E]" />
+            <p className="mt-8 font-body text-base text-[#FAF7F2]/60 leading-relaxed">
               Desde hace más de una década, curamos cada canasta como una pieza
               única. Seleccionamos los mejores productos artesanales de
               productores locales y europeos, combinándolos en composiciones que
               cuentan una historia de sabor, tradición y elegancia.
             </p>
-            <p className="mt-5 font-body text-base text-[#F9F4EB]/60 leading-relaxed">
+            <p className="mt-5 font-body text-base text-[#FAF7F2]/60 leading-relaxed">
               Cada detalle importa: desde la calidad del mimbre hasta el lazo
               que corona cada presentación. No vendemos productos, creamos
               momentos inolvidables de gratitud y celebración.
@@ -41,10 +41,10 @@ export default function AboutSection() {
                 { num: "200+", label: "Clientes\ncorporativos" },
               ].map((stat) => (
                 <div key={stat.num}>
-                  <p className="font-display text-3xl lg:text-4xl text-[#B39359]">
+                  <p className="font-display text-3xl lg:text-4xl text-[#C9A96E]">
                     {stat.num}
                   </p>
-                  <p className="mt-1 font-body text-xs text-[#F9F4EB]/40 whitespace-pre-line leading-relaxed">
+                  <p className="mt-1 font-body text-xs text-[#FAF7F2]/40 whitespace-pre-line leading-relaxed">
                     {stat.label}
                   </p>
                 </div>
@@ -64,7 +64,7 @@ export default function AboutSection() {
               alt="Manos colocando un lazo de seda sobre una canasta navideña"
               className="w-full object-cover"
             />
-            <div className="absolute inset-0 border border-[#B39359]/20 translate-x-4 translate-y-4 pointer-events-none" />
+            <div className="absolute inset-0 border border-[#C9A96E]/20 translate-x-4 translate-y-4 pointer-events-none" />
           </motion.div>
         </div>
       </div>

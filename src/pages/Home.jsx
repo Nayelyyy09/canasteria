@@ -48,7 +48,7 @@ export default function Home() {
   }, [location.state]);
 
   return (
-    <div className="bg-[#F9F4EB]">
+    <div className="bg-[#FAF7F2]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }}

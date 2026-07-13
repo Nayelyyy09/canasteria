@@ -14,28 +14,28 @@ const ACTIVACIONES = [
     title: "Canastas Corporativas",
     description: "Sorprende a tu equipo y clientes con canastas navideñas personalizadas con la identidad de tu marca.",
     icon: Building2,
-    gradient: "from-[#841B2D] to-[#6d1625]",
+    gradient: "from-[#B22234] to-[#8B1A28]",
   },
   {
     id: 2,
     title: "Eventos de Navidad",
     description: "Organizamos la activación perfecta para tus fiestas corporativas con ambientación y experiencias únicas.",
     icon: PartyPopper,
-    gradient: "from-[#B39359] to-[#8a7345]",
+    gradient: "from-[#C9A96E] to-[#A08050]",
   },
   {
     id: 3,
     title: "Regalos Personalizados",
     description: "Diseñamos packs de regalo exclusivos con productos gourmet y tarjetas de saludo personalizadas.",
     icon: Gift,
-    gradient: "from-[#1A2F23] to-[#0d1a12]",
+    gradient: "from-[#0D2818] to-[#071A0E]",
   },
   {
     id: 4,
     title: "Logística y Envíos",
     description: "Nos encargamos de la entrega en todo Lima Metropolitana con seguimiento en tiempo real.",
     icon: Truck,
-    gradient: "from-[#841B2D] to-[#B39359]",
+    gradient: "from-[#B22234] to-[#C9A96E]",
   },
 ];
 
@@ -91,17 +91,17 @@ export default function Blog() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#F9F4EB]">
+    <div className="min-h-screen bg-[#FAF7F2]">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative bg-[#1A2F23] overflow-hidden">
+      <section className="relative bg-[#0D2818] overflow-hidden">
         {/* Animated snowflakes */}
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(30)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-[#F9F4EB] rounded-full opacity-20"
+              className="absolute w-1 h-1 bg-[#FAF7F2] rounded-full opacity-20"
               initial={{
                 x: Math.random() * 1200,
                 y: -10,
@@ -126,7 +126,7 @@ export default function Blog() {
 
         {/* Decorative garland */}
         <div className="absolute top-0 left-0 right-0 h-32 overflow-hidden opacity-30">
-          <svg viewBox="0 0 1200 120" className="w-full h-full text-[#B39359]">
+          <svg viewBox="0 0 1200 120" className="w-full h-full text-[#C9A96E]">
             <path
               d="M0,60 Q150,120 300,60 Q450,0 600,60 Q750,120 900,60 Q1050,0 1200,60"
               fill="none"
@@ -134,7 +134,7 @@ export default function Blog() {
               strokeWidth="2"
             />
             {[0, 150, 300, 450, 600, 750, 900, 1050].map((x, i) => (
-              <circle key={i} cx={x} cy={60} r="6" className="fill-[#841B2D]" />
+              <circle key={i} cx={x} cy={60} r="6" className="fill-[#B22234]" />
             ))}
           </svg>
         </div>
@@ -146,20 +146,20 @@ export default function Blog() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="inline-flex items-center gap-2 bg-[#841B2D]/20 px-4 py-2 mb-6">
-                <Sparkles size={14} className="text-[#B39359]" />
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#B39359]">
+              <span className="inline-flex items-center gap-2 bg-[#B22234]/20 px-4 py-2 mb-6">
+                <Sparkles size={14} className="text-[#C9A96E]" />
+                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#C9A96E]">
                   Temporada Navideña 2024
                 </span>
               </span>
 
-              <h1 className="font-display text-4xl lg:text-6xl xl:text-7xl text-[#F9F4EB] leading-[1.1] mb-6">
+              <h1 className="font-display text-4xl lg:text-6xl xl:text-7xl text-[#FAF7F2] leading-[1.1] mb-6">
                 Activaciones{" "}
-                <span className="italic text-[#B39359]">Navideñas</span>{" "}
+                <span className="italic text-[#C9A96E]">Navideñas</span>{" "}
                 que Conectan
               </h1>
 
-              <p className="font-body text-base lg:text-lg text-[#F9F4EB]/60 max-w-lg mb-8 leading-relaxed">
+              <p className="font-body text-base lg:text-lg text-[#FAF7F2]/60 max-w-lg mb-8 leading-relaxed">
                 Creamos experiencias navideñas inolvidables para empresas que buscan
                 sorprender a sus equipos y clientes con canastas premium y eventos únicos.
               </p>
@@ -167,7 +167,7 @@ export default function Blog() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="/contacto"
-                  className="inline-flex items-center justify-center gap-2 bg-[#841B2D] text-[#F9F4EB] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#6d1625] transition-all duration-300 group"
+                  className="inline-flex items-center justify-center gap-2 bg-[#B22234] text-[#FAF7F2] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#8B1A28] transition-all duration-300 group"
                 >
                   Cotizar Ahora
                   <ChevronRight
@@ -177,7 +177,7 @@ export default function Blog() {
                 </a>
                 <a
                   href="#servicios"
-                  className="inline-flex items-center justify-center gap-2 border border-[#B39359]/40 text-[#F9F4EB] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#B39359]/10 transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 border border-[#C9A96E]/40 text-[#FAF7F2] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#C9A96E]/10 transition-all duration-300"
                 >
                   Ver Servicios
                 </a>
@@ -191,16 +191,16 @@ export default function Blog() {
               className="relative hidden lg:block"
             >
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-[#841B2D]/20 to-[#B39359]/20 blur-2xl" />
+                <div className="absolute -inset-4 bg-gradient-to-br from-[#B22234]/20 to-[#C9A96E]/20 blur-2xl" />
                 <img
                   src="https://publiventa.pe/wp-content/uploads/2023/12/canasta-navideña-corporativa.jpg"
                   alt="Canasta Navideña Corporativa"
                   className="relative w-full h-auto object-cover shadow-2xl"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-[#841B2D] p-6 shadow-xl">
-                <p className="font-display text-3xl text-[#F9F4EB]">15%</p>
-                <p className="font-body text-xs text-[#F9F4EB]/80 uppercase tracking-wider">
+              <div className="absolute -bottom-6 -left-6 bg-[#B22234] p-6 shadow-xl">
+                <p className="font-display text-3xl text-[#FAF7F2]">15%</p>
+                <p className="font-body text-xs text-[#FAF7F2]/80 uppercase tracking-wider">
                   Descuento Early Bird
                 </p>
               </div>
@@ -210,7 +210,7 @@ export default function Blog() {
 
         {/* Wave separator */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 60" className="w-full h-auto text-[#F9F4EB]">
+          <svg viewBox="0 0 1440 60" className="w-full h-auto text-[#FAF7F2]">
             <path
               fill="currentColor"
               d="M0,60 L0,30 Q360,0 720,30 Q1080,60 1440,30 L1440,60 Z"
@@ -220,7 +220,7 @@ export default function Blog() {
       </section>
 
       {/* Stats */}
-      <section className="py-12 bg-[#F9F4EB]">
+      <section className="py-12 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {STATS.map((stat, i) => (
@@ -232,10 +232,10 @@ export default function Blog() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <p className="font-display text-3xl lg:text-4xl text-[#841B2D] mb-1">
+                <p className="font-display text-3xl lg:text-4xl text-[#B22234] mb-1">
                   {stat.value}
                 </p>
-                <p className="font-body text-xs text-[#1A2F23]/60 uppercase tracking-wider">
+                <p className="font-body text-xs text-[#0D2818]/60 uppercase tracking-wider">
                   {stat.label}
                 </p>
               </motion.div>
@@ -253,14 +253,14 @@ export default function Blog() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#B39359] mb-4 block">
+            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-4 block">
               Nuestros Servicios
             </span>
-            <h2 className="font-display text-3xl lg:text-5xl text-[#1A2F23] mb-4">
+            <h2 className="font-display text-3xl lg:text-5xl text-[#0D2818] mb-4">
               Activaciones{" "}
-              <span className="italic text-[#841B2D]">Completas</span>
+              <span className="italic text-[#B22234]">Completas</span>
             </h2>
-            <p className="font-body text-sm text-[#1A2F23]/60 max-w-2xl mx-auto">
+            <p className="font-body text-sm text-[#0D2818]/60 max-w-2xl mx-auto">
               Ofrecemos soluciones integrales para que tu empresa viva la magia de la Navidad
               sin preocupaciones.
             </p>
@@ -274,17 +274,17 @@ export default function Blog() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group relative bg-[#F9F4EB] p-8 hover:shadow-xl transition-all duration-300"
+                className="group relative bg-[#FAF7F2] p-8 hover:shadow-xl transition-all duration-300"
               >
                 <div
                   className={`w-14 h-14 bg-gradient-to-br ${activacion.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
-                  <activacion.icon size={24} className="text-[#F9F4EB]" />
+                  <activacion.icon size={24} className="text-[#FAF7F2]" />
                 </div>
-                <h3 className="font-display text-xl text-[#1A2F23] mb-3">
+                <h3 className="font-display text-xl text-[#0D2818] mb-3">
                   {activacion.title}
                 </h3>
-                <p className="font-body text-sm text-[#1A2F23]/60 leading-relaxed">
+                <p className="font-body text-sm text-[#0D2818]/60 leading-relaxed">
                   {activacion.description}
                 </p>
               </motion.div>
@@ -294,13 +294,13 @@ export default function Blog() {
       </section>
 
       {/* How it works */}
-      <section className="py-20 bg-[#1A2F23] relative overflow-hidden">
+      <section className="py-20 bg-[#0D2818] relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           {[...Array(15)].map((_, i) => (
             <Star
               key={i}
               size={20}
-              className="absolute text-[#B39359]"
+              className="absolute text-[#C9A96E]"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -316,12 +316,12 @@ export default function Blog() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#B39359] mb-4 block">
+            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-4 block">
               Cómo Funciona
             </span>
-            <h2 className="font-display text-3xl lg:text-5xl text-[#F9F4EB] mb-4">
+            <h2 className="font-display text-3xl lg:text-5xl text-[#FAF7F2] mb-4">
               Proceso{" "}
-              <span className="italic text-[#B39359]">Simple</span>
+              <span className="italic text-[#C9A96E]">Simple</span>
             </h2>
           </motion.div>
 
@@ -335,23 +335,23 @@ export default function Blog() {
                 transition={{ delay: i * 0.15 }}
                 className={`relative p-6 border transition-all duration-500 ${
                   activeStep === i
-                    ? "bg-[#841B2D]/20 border-[#841B2D]"
-                    : "bg-transparent border-[#F9F4EB]/10"
+                    ? "bg-[#B22234]/20 border-[#B22234]"
+                    : "bg-transparent border-[#FAF7F2]/10"
                 }`}
               >
-                <span className="font-display text-5xl text-[#B39359]/20 absolute top-4 right-4">
+                <span className="font-display text-5xl text-[#C9A96E]/20 absolute top-4 right-4">
                   {paso.step}
                 </span>
                 <div className="relative">
-                  <h3 className="font-display text-xl text-[#F9F4EB] mb-3">
+                  <h3 className="font-display text-xl text-[#FAF7F2] mb-3">
                     {paso.title}
                   </h3>
-                  <p className="font-body text-sm text-[#F9F4EB]/50 leading-relaxed">
+                  <p className="font-body text-sm text-[#FAF7F2]/50 leading-relaxed">
                     {paso.description}
                   </p>
                 </div>
                 {i < PASOS.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-8 text-[#B39359]/40">
+                  <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-8 text-[#C9A96E]/40">
                     <ChevronRight size={24} />
                   </div>
                 )}
@@ -362,30 +362,30 @@ export default function Blog() {
       </section>
 
       {/* Testimonial / CTA */}
-      <section className="py-20 bg-[#F9F4EB]">
+      <section className="py-20 bg-[#FAF7F2]">
         <div className="max-w-5xl mx-auto px-6 lg:px-16">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-[#841B2D] p-12 lg:p-16 text-center relative overflow-hidden"
+            className="bg-[#B22234] p-12 lg:p-16 text-center relative overflow-hidden"
           >
             <div className="absolute inset-0 opacity-10">
-              <Award size={200} className="absolute -bottom-10 -right-10 text-[#F9F4EB]" />
+              <Award size={200} className="absolute -bottom-10 -right-10 text-[#FAF7F2]" />
             </div>
             <div className="relative">
-              <Heart size={32} className="mx-auto text-[#B39359] mb-6" />
-              <blockquote className="font-display text-2xl lg:text-3xl text-[#F9F4EB] mb-6 leading-relaxed italic">
+              <Heart size={32} className="mx-auto text-[#C9A96E] mb-6" />
+              <blockquote className="font-display text-2xl lg:text-3xl text-[#FAF7F2] mb-6 leading-relaxed italic">
                 "La Navidad es el momento perfecto para demostrar el valor que
                 le das a tu equipo y clientes."
               </blockquote>
-              <p className="font-body text-sm text-[#F9F4EB]/60 mb-8">
+              <p className="font-body text-sm text-[#FAF7F2]/60 mb-8">
                 En PubliVenta transformamos cada canasta en una experiencia memorable
                 que fortalece relaciones y crea vínculos duraderos.
               </p>
               <a
                 href="/contacto"
-                className="inline-flex items-center gap-2 bg-[#F9F4EB] text-[#841B2D] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#B39359] hover:text-[#1A2F23] transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-[#FAF7F2] text-[#B22234] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#C9A96E] hover:text-[#0D2818] transition-all duration-300"
               >
                 <Phone size={16} />
                 Contáctanos Hoy
@@ -396,7 +396,7 @@ export default function Blog() {
       </section>
 
       {/* Contact Info */}
-      <section className="py-16 bg-[#1A2F23]">
+      <section className="py-16 bg-[#0D2818]">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <motion.div
@@ -405,11 +405,11 @@ export default function Blog() {
               viewport={{ once: true }}
               className="flex flex-col items-center"
             >
-              <div className="w-12 h-12 bg-[#841B2D]/20 flex items-center justify-center mb-4">
-                <Phone size={20} className="text-[#B39359]" />
+              <div className="w-12 h-12 bg-[#B22234]/20 flex items-center justify-center mb-4">
+                <Phone size={20} className="text-[#C9A96E]" />
               </div>
-              <h4 className="font-display text-lg text-[#F9F4EB] mb-2">Llámanos</h4>
-              <p className="font-body text-sm text-[#F9F4EB]/50">+51 999 888 777</p>
+              <h4 className="font-display text-lg text-[#FAF7F2] mb-2">Llámanos</h4>
+              <p className="font-body text-sm text-[#FAF7F2]/50">+51 999 888 777</p>
             </motion.div>
 
             <motion.div
@@ -419,11 +419,11 @@ export default function Blog() {
               transition={{ delay: 0.1 }}
               className="flex flex-col items-center"
             >
-              <div className="w-12 h-12 bg-[#841B2D]/20 flex items-center justify-center mb-4">
-                <Mail size={20} className="text-[#B39359]" />
+              <div className="w-12 h-12 bg-[#B22234]/20 flex items-center justify-center mb-4">
+                <Mail size={20} className="text-[#C9A96E]" />
               </div>
-              <h4 className="font-display text-lg text-[#F9F4EB] mb-2">Email</h4>
-              <p className="font-body text-sm text-[#F9F4EB]/50">ventas@canastanavidena.pe</p>
+              <h4 className="font-display text-lg text-[#FAF7F2] mb-2">Email</h4>
+              <p className="font-body text-sm text-[#FAF7F2]/50">ventas@canastanavidena.pe</p>
             </motion.div>
 
             <motion.div
@@ -433,11 +433,11 @@ export default function Blog() {
               transition={{ delay: 0.2 }}
               className="flex flex-col items-center"
             >
-              <div className="w-12 h-12 bg-[#841B2D]/20 flex items-center justify-center mb-4">
-                <MapPin size={20} className="text-[#B39359]" />
+              <div className="w-12 h-12 bg-[#B22234]/20 flex items-center justify-center mb-4">
+                <MapPin size={20} className="text-[#C9A96E]" />
               </div>
-              <h4 className="font-display text-lg text-[#F9F4EB] mb-2">Ubicación</h4>
-              <p className="font-body text-sm text-[#F9F4EB]/50">Lima, Perú</p>
+              <h4 className="font-display text-lg text-[#FAF7F2] mb-2">Ubicación</h4>
+              <p className="font-body text-sm text-[#FAF7F2]/50">Lima, Perú</p>
             </motion.div>
           </div>
         </div>

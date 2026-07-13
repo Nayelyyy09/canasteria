@@ -9,34 +9,34 @@ export default function TermsConditions() {
   const fadeIn = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
   return (
-    <div className="bg-[#F9F4EB] min-h-screen">
+    <div className="bg-[#FAF7F2] min-h-screen">
       <Navbar />
 
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-6 lg:px-16 py-4">
-        <nav className="flex items-center gap-2 font-body text-xs text-[#1A2F23]/50">
-          <Link to="/" className="hover:text-[#841B2D] transition-colors">Inicio</Link>
+        <nav className="flex items-center gap-2 font-body text-xs text-[#0D2818]/50">
+          <Link to="/" className="hover:text-[#B22234] transition-colors">Inicio</Link>
           <ChevronRight size={12} />
-          <span className="text-[#1A2F23]">Términos y Condiciones</span>
+          <span className="text-[#0D2818]">Términos y Condiciones</span>
         </nav>
       </div>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#1A2F23] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#0D2818] py-20 lg:py-28">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-[#841B2D] rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#B39359] rounded-full blur-3xl" />
+          <div className="absolute top-10 left-10 w-72 h-72 bg-[#B22234] rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#C9A96E] rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-16 text-center">
           <div className="inline-flex items-center gap-2 mb-6">
-            <TreePine size={18} className="text-[#B39359]" />
-            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#B39359]">Legal</span>
-            <TreePine size={18} className="text-[#B39359]" />
+            <TreePine size={18} className="text-[#C9A96E]" />
+            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E]">Legal</span>
+            <TreePine size={18} className="text-[#C9A96E]" />
           </div>
-          <h1 className="font-display text-5xl lg:text-7xl text-[#F9F4EB] leading-tight">
-            Términos y <span className="italic text-[#841B2D]">Condiciones</span>
+          <h1 className="font-display text-5xl lg:text-7xl text-[#FAF7F2] leading-tight">
+            Términos y <span className="italic text-[#B22234]">Condiciones</span>
           </h1>
-          <p className="mt-6 font-body text-[#F9F4EB]/60 max-w-2xl mx-auto text-lg">
+          <p className="mt-6 font-body text-[#FAF7F2]/60 max-w-2xl mx-auto text-lg">
             Términos de uso y condiciones generales de contratación.
           </p>
         </div>
@@ -49,15 +49,15 @@ export default function TermsConditions() {
           variants={fadeIn} transition={{ duration: 0.6 }}
         >
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 flex items-center justify-center bg-[#841B2D]/10 border border-[#841B2D]/20">
-              <FileText size={18} className="text-[#841B2D]" />
+            <div className="w-10 h-10 flex items-center justify-center bg-[#B22234]/10 border border-[#B22234]/20">
+              <FileText size={18} className="text-[#B22234]" />
             </div>
-            <p className="font-body text-xs text-[#1A2F23]/40">Última actualización: Junio 2026</p>
+            <p className="font-body text-xs text-[#0D2818]/40">Última actualización: Junio 2026</p>
           </div>
 
-          <div className="prose prose-lg max-w-none font-body text-[#1A2F23]/70 leading-relaxed space-y-8">
+          <div className="prose prose-lg max-w-none font-body text-[#0D2818]/70 leading-relaxed space-y-8">
             <div>
-              <h2 className="font-display text-2xl text-[#1A2F23] mb-3">1. Identificación del Prestador</h2>
+              <h2 className="font-display text-2xl text-[#0D2818] mb-3">1. Identificación del Prestador</h2>
               <p>Los presentes Términos y Condiciones regulan el uso del sitio web canastanavidena.pe y la prestación de servicios de:</p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
                 <li><strong>Razón social:</strong> Canastas Navideñas E.I.R.L.</li>
@@ -69,14 +69,14 @@ export default function TermsConditions() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#1A2F23] mb-3">2. Aceptación de los Términos</h2>
+              <h2 className="font-display text-2xl text-[#0D2818] mb-3">2. Aceptación de los Términos</h2>
               <p>
                 Al acceder y utilizar este sitio web, usted acepta plenamente los presentes Términos y Condiciones. Si no está de acuerdo con alguno de estos términos, le recomendamos no utilizar el sitio. El uso del sitio implica la aceptación de estos términos y de nuestra Política de Privacidad.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#1A2F23] mb-3">3. Productos y Servicios</h2>
+              <h2 className="font-display text-2xl text-[#0D2818] mb-3">3. Productos y Servicios</h2>
               <p>
                 Ofrecemos canastas navideñas, arcones gourmet y regalos corporativos. Los productos mostrados en el sitio web son representativos y pueden variar en diseño, contenido y presentación según la disponibilidad de ingredientes y la temporada.
               </p>
@@ -89,7 +89,7 @@ export default function TermsConditions() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#1A2F23] mb-3">4. Proceso de Compra</h2>
+              <h2 className="font-display text-2xl text-[#0D2818] mb-3">4. Proceso de Compra</h2>
               <p>Para realizar una compra en nuestro sitio:</p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
                 <li>Seleccione los productos deseados y agrégalos al carrito de compras.</li>
@@ -101,7 +101,7 @@ export default function TermsConditions() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#1A2F23] mb-3">5. Precios y Pagos</h2>
+              <h2 className="font-display text-2xl text-[#0D2818] mb-3">5. Precios y Pagos</h2>
               <ul className="list-disc pl-6 space-y-1">
                 <li>Los precios están sujetos a cambio sin previo aviso.</li>
                 <li>Aceptamos tarjetas de crédito y débito (Visa, Mastercard, American Express), transferencia bancaria y PayPal.</li>
@@ -112,7 +112,7 @@ export default function TermsConditions() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#1A2F23] mb-3">6. Envíos y Entregas</h2>
+              <h2 className="font-display text-2xl text-[#0D2818] mb-3">6. Envíos y Entregas</h2>
               <ul className="list-disc pl-6 space-y-1">
                 <li>Realizamos envíos a todo el territorio peruano.</li>
                 <li>En Lima y zona metropolitana: entrega en 24 a 48 horas hábiles.</li>
@@ -124,7 +124,7 @@ export default function TermsConditions() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#1A2F23] mb-3">7. Devoluciones y Reembolsos</h2>
+              <h2 className="font-display text-2xl text-[#0D2818] mb-3">7. Devoluciones y Reembolsos</h2>
               <p>
                 Conforme al Código de Protección y Defensa del Consumidor (TUO del D.S. N° 006-2014-JUS), usted puede solicitar la devolución dentro de los primeros 7 días naturales posteriores a la recepción del producto, siempre que:
               </p>
@@ -139,21 +139,21 @@ export default function TermsConditions() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#1A2F23] mb-3">8. Facturación</h2>
+              <h2 className="font-display text-2xl text-[#0D2818] mb-3">8. Facturación</h2>
               <p>
                 Emitimos factura electrónica conforme a las normas de la SUNAT. Para ello, deberá proporcionar sus datos fiscales (RUC, razón social, régimen tributario) al momento de la compra o dentro de los 5 días posteriores. La factura se enviará por correo electrónico.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#1A2F23] mb-3">9. Propiedad Intelectual</h2>
+              <h2 className="font-display text-2xl text-[#0D2818] mb-3">9. Propiedad Intelectual</h2>
               <p>
                 Todo el contenido del sitio web, incluyendo textos, imágenes, logos, diseños, código fuente y marcas registradas, es propiedad de Canastas Navideñas E.I.R.L. o de terceros y está protegido por las leyes de propiedad intelectual del Perú e internacionales. Queda prohibida su reproducción, distribución o uso sin autorización expresa.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#1A2F23] mb-3">10. Limitación de Responsabilidad</h2>
+              <h2 className="font-display text-2xl text-[#0D2818] mb-3">10. Limitación de Responsabilidad</h2>
               <ul className="list-disc pl-6 space-y-1">
                 <li>No nos hacemos responsables por retrasos causados por fuerza mayor o casos fortuitos.</li>
                 <li>El uso del sitio web es bajo su propio riesgo.</li>
@@ -163,28 +163,28 @@ export default function TermsConditions() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#1A2F23] mb-3">11. Protección de Datos Personales</h2>
+              <h2 className="font-display text-2xl text-[#0D2818] mb-3">11. Protección de Datos Personales</h2>
               <p>
                 El tratamiento de sus datos personales se rige por nuestra Política de Privacidad, conforme a la Ley N° 29733, Ley de Protección de Datos Personales del Perú. Al utilizar nuestros servicios, usted consiente el tratamiento de sus datos según lo establecido en dicha política.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#1A2F23] mb-3">12. Ley Aplicable y Jurisdicción</h2>
+              <h2 className="font-display text-2xl text-[#0D2818] mb-3">12. Ley Aplicable y Jurisdicción</h2>
               <p>
                 Los presentes Términos y Condiciones se rigen por las leyes de la República del Perú. Para la resolución de cualquier controversia derivada del uso del sitio o de la compra de productos, las partes se someten a la jurisdicción de los tribunales competentes de la ciudad de Lima, Perú, renunciando expresamente a cualquier otro fuero que pudiera corresponderles.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#1A2F23] mb-3">13. Modificaciones</h2>
+              <h2 className="font-display text-2xl text-[#0D2818] mb-3">13. Modificaciones</h2>
               <p>
                 Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Las modificaciones serán publicadas en esta página y entrarán en vigor desde su publicación. Le recomendamos revisar periódicamente esta página.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#1A2F23] mb-3">14. Contacto</h2>
+              <h2 className="font-display text-2xl text-[#0D2818] mb-3">14. Contacto</h2>
               <p>Para consultas sobre estos Términos y Condiciones:</p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
                 <li><strong>Correo:</strong> ventas@canastanavidena.pe</li>

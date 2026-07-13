@@ -12,7 +12,7 @@ export default function ProductGrid({ onAddToCart }) {
       : PRODUCTS.filter((p) => p.category === active);
 
   return (
-    <section id="coleccion" className="bg-[#F9F4EB] py-24 lg:py-32">
+    <section id="coleccion" className="bg-[#FAF7F2] py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -20,13 +20,13 @@ export default function ProductGrid({ onAddToCart }) {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="font-body text-xs tracking-[0.4em] uppercase text-[#B39359] mb-4">
+          <p className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-4">
             Nuestra Selección
           </p>
-          <h2 className="font-display text-4xl lg:text-6xl text-[#1A2F23]">
+          <h2 className="font-display text-4xl lg:text-6xl text-[#0D2818]">
             Colección Navideña
           </h2>
-          <div className="mt-4 mx-auto w-16 h-px bg-[#B39359]" />
+          <div className="mt-4 mx-auto w-16 h-px bg-[#C9A96E]" />
         </motion.div>
 
         <div className="flex justify-center gap-2 lg:gap-6 mb-14 flex-wrap">
@@ -36,8 +36,8 @@ export default function ProductGrid({ onAddToCart }) {
               onClick={() => setActive(cat.id)}
               className={`font-body text-xs tracking-widest uppercase px-4 py-2 transition-all duration-300 ${
                 active === cat.id
-                  ? "text-[#841B2D] border-b-2 border-[#841B2D]"
-                  : "text-[#1A2F23]/50 hover:text-[#1A2F23]"
+                  ? "text-[#B22234] border-b-2 border-[#B22234]"
+                  : "text-[#0D2818]/50 hover:text-[#0D2818]"
               }`}
             >
               {cat.label}

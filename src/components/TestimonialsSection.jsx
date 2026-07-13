@@ -25,7 +25,7 @@ const VIDEOS = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-[#1A2F23] py-24 lg:py-32">
+    <section className="bg-[#FAF7F2] py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,13 +33,13 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="font-body text-xs tracking-[0.4em] uppercase text-[#B39359] mb-4">
+          <p className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-4">
             Nuestro Proceso
           </p>
-          <h2 className="font-display text-4xl lg:text-5xl text-[#F9F4EB]">
+          <h2 className="font-display text-4xl lg:text-5xl text-[#0D2818]">
             Conoce Cómo Hacemos Nuestras Canastas
           </h2>
-          <div className="mt-4 mx-auto w-16 h-px bg-[#B39359]" />
+          <div className="mt-4 mx-auto w-16 h-px bg-[#C9A96E]" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
@@ -62,18 +62,18 @@ export default function TestimonialsSection() {
                   alt={video.title}
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A2F23] via-[#1A2F23]/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D2818] via-[#0D2818]/30 to-transparent" />
                 
                 {/* Play button */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-[#841B2D]/90 group-hover:bg-[#841B2D] rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                    <Play size={28} className="text-[#F9F4EB] ml-1" fill="currentColor" />
+                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-[#B22234]/90 group-hover:bg-[#B22234] rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                    <Play size={28} className="text-[#FAF7F2] ml-1" fill="currentColor" />
                   </div>
                 </div>
 
                 {/* Title */}
                 <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <p className="font-display text-lg text-[#F9F4EB]">
+                  <p className="font-display text-lg text-[#FAF7F2]">
                     {video.title}
                   </p>
                 </div>

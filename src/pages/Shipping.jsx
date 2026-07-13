@@ -32,20 +32,20 @@ const faqItems = [
 
 function FAQItem({ item, isOpen, onToggle }) {
   return (
-    <div className="border border-[#B39359]/20 bg-white">
+    <div className="border border-[#C9A96E]/20 bg-white">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between p-5 text-left hover:bg-[#F9F4EB] transition-colors"
+        className="w-full flex items-center justify-between p-5 text-left hover:bg-[#FAF7F2] transition-colors"
       >
-        <span className="font-display text-lg text-[#1A2F23] pr-4">{item.q}</span>
+        <span className="font-display text-lg text-[#0D2818] pr-4">{item.q}</span>
         <ChevronDown
           size={18}
-          className={`text-[#841B2D] flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+          className={`text-[#B22234] flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
       {isOpen && (
         <div className="px-5 pb-5">
-          <p className="font-body text-sm text-[#1A2F23]/60 leading-relaxed">{item.a}</p>
+          <p className="font-body text-sm text-[#0D2818]/60 leading-relaxed">{item.a}</p>
         </div>
       )}
     </div>
@@ -57,34 +57,34 @@ export default function Shipping() {
   const fadeIn = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
   return (
-    <div className="bg-[#F9F4EB] min-h-screen">
+    <div className="bg-[#FAF7F2] min-h-screen">
       <Navbar />
 
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-6 lg:px-16 py-4">
-        <nav className="flex items-center gap-2 font-body text-xs text-[#1A2F23]/50">
-          <Link to="/" className="hover:text-[#841B2D] transition-colors">Inicio</Link>
+        <nav className="flex items-center gap-2 font-body text-xs text-[#0D2818]/50">
+          <Link to="/" className="hover:text-[#B22234] transition-colors">Inicio</Link>
           <ChevronRight size={12} />
-          <span className="text-[#1A2F23]">Envíos y Devoluciones</span>
+          <span className="text-[#0D2818]">Envíos y Devoluciones</span>
         </nav>
       </div>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#1A2F23] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#0D2818] py-20 lg:py-28">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-[#841B2D] rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#B39359] rounded-full blur-3xl" />
+          <div className="absolute top-10 left-10 w-72 h-72 bg-[#B22234] rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#C9A96E] rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-16 text-center">
           <div className="inline-flex items-center gap-2 mb-6">
-            <TreePine size={18} className="text-[#B39359]" />
-            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#B39359]">Información de Envíos</span>
-            <TreePine size={18} className="text-[#B39359]" />
+            <TreePine size={18} className="text-[#C9A96E]" />
+            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E]">Información de Envíos</span>
+            <TreePine size={18} className="text-[#C9A96E]" />
           </div>
-          <h1 className="font-display text-5xl lg:text-7xl text-[#F9F4EB] leading-tight">
-            Envíos y <span className="italic text-[#841B2D]">Devoluciones</span>
+          <h1 className="font-display text-5xl lg:text-7xl text-[#FAF7F2] leading-tight">
+            Envíos y <span className="italic text-[#B22234]">Devoluciones</span>
           </h1>
-          <p className="mt-6 font-body text-[#F9F4EB]/60 max-w-2xl mx-auto text-lg">
+          <p className="mt-6 font-body text-[#FAF7F2]/60 max-w-2xl mx-auto text-lg">
             Todo lo que necesitas saber sobre nuestras políticas de envío, entrega y cambios.
           </p>
         </div>
@@ -132,17 +132,17 @@ export default function Shipping() {
               key={i}
               initial="hidden" whileInView="visible" viewport={{ once: true }}
               variants={fadeIn} transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-white border border-[#B39359]/20 p-8"
+              className="bg-white border border-[#C9A96E]/20 p-8"
             >
-              <div className="w-12 h-12 flex items-center justify-center bg-[#841B2D]/10 border border-[#841B2D]/20 mb-5">
-                <card.icon size={22} className="text-[#841B2D]" />
+              <div className="w-12 h-12 flex items-center justify-center bg-[#B22234]/10 border border-[#B22234]/20 mb-5">
+                <card.icon size={22} className="text-[#B22234]" />
               </div>
-              <h3 className="font-display text-2xl text-[#1A2F23] mb-4">{card.title}</h3>
+              <h3 className="font-display text-2xl text-[#0D2818] mb-4">{card.title}</h3>
               <ul className="space-y-3">
                 {card.items.map((item, j) => (
                   <li key={j} className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#B39359] mt-1.5 flex-shrink-0" />
-                    <span className="font-body text-sm text-[#1A2F23]/60">{item}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C9A96E] mt-1.5 flex-shrink-0" />
+                    <span className="font-body text-sm text-[#0D2818]/60">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -152,12 +152,12 @@ export default function Shipping() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-[#1A2F23] py-20 lg:py-28">
+      <section className="bg-[#0D2818] py-20 lg:py-28">
         <div className="max-w-3xl mx-auto px-6 lg:px-16">
           <div className="text-center mb-12">
-            <HelpCircle size={32} className="text-[#B39359] mx-auto mb-4" />
-            <h2 className="font-display text-4xl lg:text-5xl text-[#F9F4EB]">
-              Preguntas <span className="italic text-[#841B2D]">Frecuentes</span>
+            <HelpCircle size={32} className="text-[#C9A96E] mx-auto mb-4" />
+            <h2 className="font-display text-4xl lg:text-5xl text-[#FAF7F2]">
+              Preguntas <span className="italic text-[#B22234]">Frecuentes</span>
             </h2>
           </div>
           <div className="space-y-3">
@@ -175,7 +175,7 @@ export default function Shipping() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#1A6B3E] text-[#F9F4EB] font-body text-sm tracking-widest uppercase hover:bg-[#145a32] transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#1B5E3B] text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#154A30] transition-colors"
             >
               <Phone size={16} />
               ¿Otra pregunta? Escríbenos

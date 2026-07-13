@@ -136,7 +136,7 @@ export default function CategoryPage() {
     : null;
 
   return (
-    <div className="bg-[#F9F4EB] min-h-screen">
+    <div className="bg-[#FAF7F2] min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -151,23 +151,23 @@ export default function CategoryPage() {
       <Navbar />
 
       {/* Hero Banner */}
-      <section className="relative bg-[#1A2F23] overflow-hidden">
+      <section className="relative bg-[#0D2818] overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={category.image}
             alt={category.label}
             className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1A2F23]/80 to-[#1A2F23]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0D2818]/80 to-[#0D2818]" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-16 py-16 lg:py-24">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 mb-8" aria-label="Breadcrumb">
-            <Link to="/" className="font-body text-xs tracking-widest uppercase text-[#F9F4EB]/50 hover:text-[#B39359] transition-colors">
+            <Link to="/" className="font-body text-xs tracking-widest uppercase text-[#FAF7F2]/50 hover:text-[#C9A96E] transition-colors">
               Inicio
             </Link>
-            <ChevronRight size={12} className="text-[#F9F4EB]/30" />
-            <span className="font-body text-xs tracking-widest uppercase text-[#B39359]">
+            <ChevronRight size={12} className="text-[#FAF7F2]/30" />
+            <span className="font-body text-xs tracking-widest uppercase text-[#C9A96E]">
               {category.label}
             </span>
           </nav>
@@ -175,7 +175,7 @@ export default function CategoryPage() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-display text-4xl lg:text-6xl text-[#F9F4EB] leading-tight max-w-3xl"
+            className="font-display text-4xl lg:text-6xl text-[#FAF7F2] leading-tight max-w-3xl"
           >
             {seoContent.heading}
           </motion.h1>
@@ -184,7 +184,7 @@ export default function CategoryPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-4 font-body text-sm text-[#F9F4EB]/60 max-w-2xl leading-relaxed"
+            className="mt-4 font-body text-sm text-[#FAF7F2]/60 max-w-2xl leading-relaxed"
           >
             {category.description}
           </motion.p>
@@ -195,16 +195,16 @@ export default function CategoryPage() {
             transition={{ delay: 0.2 }}
             className="mt-6 flex items-center gap-4"
           >
-            <span className="font-body text-xs tracking-widest uppercase text-[#B39359]">
+            <span className="font-body text-xs tracking-widest uppercase text-[#C9A96E]">
               {products.length} {products.length === 1 ? "producto" : "productos"} disponibles
             </span>
-            <div className="h-px flex-1 max-w-[100px] bg-[#B39359]/30" />
+            <div className="h-px flex-1 max-w-[100px] bg-[#C9A96E]/30" />
           </motion.div>
         </div>
       </section>
 
       {/* Products Grid */}
-      <section className="bg-[#1A2F23] py-16 lg:py-20">
+      <section className="bg-[#0D2818] py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {products.map((product, i) => (
@@ -219,13 +219,13 @@ export default function CategoryPage() {
 
           {products.length === 0 && (
             <div className="text-center py-20">
-              <TreePine size={48} className="mx-auto text-[#B39359]/30 mb-4" />
-              <p className="font-display text-2xl text-[#F9F4EB]/60">
+              <TreePine size={48} className="mx-auto text-[#C9A96E]/30 mb-4" />
+              <p className="font-display text-2xl text-[#FAF7F2]/60">
                 Próximamente tendremos productos en esta categoría
               </p>
               <Link
                 to="/"
-                className="mt-4 inline-block font-body text-xs tracking-widest uppercase text-[#B39359] hover:text-[#F9F4EB] transition-colors"
+                className="mt-4 inline-block font-body text-xs tracking-widest uppercase text-[#C9A96E] hover:text-[#FAF7F2] transition-colors"
               >
                 Volver al inicio
               </Link>
@@ -235,24 +235,24 @@ export default function CategoryPage() {
       </section>
 
       {/* SEO Content */}
-      <section className="bg-[#F9F4EB] py-16 lg:py-24">
+      <section className="bg-[#FAF7F2] py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <p className="font-body text-sm text-[#1A2F23]/70 leading-relaxed mb-8">
+            <p className="font-body text-sm text-[#0D2818]/70 leading-relaxed mb-8">
               {seoContent.intro}
             </p>
 
             {seoContent.sections.map((section, i) => (
               <div key={i} className="mb-8">
-                <h2 className="font-display text-2xl lg:text-3xl text-[#1A2F23] mb-3">
+                <h2 className="font-display text-2xl lg:text-3xl text-[#0D2818] mb-3">
                   {section.title}
                 </h2>
-                <div className="w-12 h-px bg-[#B39359] mb-4" />
-                <p className="font-body text-sm text-[#1A2F23]/60 leading-relaxed">
+                <div className="w-12 h-px bg-[#C9A96E] mb-4" />
+                <p className="font-body text-sm text-[#0D2818]/60 leading-relaxed">
                   {section.text}
                 </p>
               </div>
@@ -262,16 +262,16 @@ export default function CategoryPage() {
       </section>
 
       {/* Other Categories */}
-      <section className="bg-[#1A2F23] py-16 lg:py-20">
+      <section className="bg-[#0D2818] py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="text-center mb-12">
-            <p className="font-body text-xs tracking-[0.4em] uppercase text-[#B39359] mb-3">
+            <p className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-3">
               Explora más
             </p>
-            <h2 className="font-display text-3xl lg:text-4xl text-[#F9F4EB]">
+            <h2 className="font-display text-3xl lg:text-4xl text-[#FAF7F2]">
               Otras Categorías
             </h2>
-            <div className="mt-4 mx-auto w-16 h-px bg-[#B39359]" />
+            <div className="mt-4 mx-auto w-16 h-px bg-[#C9A96E]" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {CATEGORIES_FULL.filter((c) => c.slug !== slug).map((cat, i) => (
@@ -291,12 +291,12 @@ export default function CategoryPage() {
                     alt={cat.label}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A2F23] via-[#1A2F23]/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D2818] via-[#0D2818]/40 to-transparent" />
                   <div className="absolute inset-0 p-4 flex flex-col justify-end">
-                    <h3 className="font-display text-lg text-[#F9F4EB] group-hover:text-[#B39359] transition-colors">
+                    <h3 className="font-display text-lg text-[#FAF7F2] group-hover:text-[#C9A96E] transition-colors">
                       {cat.label}
                     </h3>
-                    <p className="mt-1 font-body text-xs text-[#F9F4EB]/50 line-clamp-2">
+                    <p className="mt-1 font-body text-xs text-[#FAF7F2]/50 line-clamp-2">
                       {cat.description}
                     </p>
                   </div>

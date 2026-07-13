@@ -112,11 +112,11 @@ export default function RegalosNavidenos() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#F9F4EB]">
+    <div className="min-h-screen bg-[#FAF7F2]">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative bg-[#1A2F23] overflow-hidden">
+      <section className="relative bg-[#0D2818] overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(20)].map((_, i) => (
@@ -131,7 +131,7 @@ export default function RegalosNavidenos() {
                 top: `${Math.random() * 100}%`,
               }}
             >
-              <Star size={16} className="text-[#B39359]" />
+              <Star size={16} className="text-[#C9A96E]" />
             </motion.div>
           ))}
         </div>
@@ -143,20 +143,20 @@ export default function RegalosNavidenos() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="inline-flex items-center gap-2 bg-[#841B2D]/20 px-4 py-2 mb-6">
-                <Sparkles size={14} className="text-[#B39359]" />
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#B39359]">
+              <span className="inline-flex items-center gap-2 bg-[#B22234]/20 px-4 py-2 mb-6">
+                <Sparkles size={14} className="text-[#C9A96E]" />
+                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#C9A96E]">
                   Temporada Navideña 2024
                 </span>
               </span>
 
-              <h1 className="font-display text-4xl lg:text-6xl xl:text-7xl text-[#F9F4EB] leading-[1.1] mb-6">
+              <h1 className="font-display text-4xl lg:text-6xl xl:text-7xl text-[#FAF7F2] leading-[1.1] mb-6">
                 Regalos{" "}
-                <span className="italic text-[#B39359]">Navideños</span>{" "}
+                <span className="italic text-[#C9A96E]">Navideños</span>{" "}
                 que Enamoran
               </h1>
 
-              <p className="font-body text-base lg:text-lg text-[#F9F4EB]/60 max-w-lg mb-8 leading-relaxed">
+              <p className="font-body text-base lg:text-lg text-[#FAF7F2]/60 max-w-lg mb-8 leading-relaxed">
                 Encuentra el regalo perfecto para cada persona especial. Desde canastas
                 gourmet hasta gift boxes exclusivos, creamos momentos inolvidables.
               </p>
@@ -164,7 +164,7 @@ export default function RegalosNavidenos() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="#categorias"
-                  className="inline-flex items-center justify-center gap-2 bg-[#841B2D] text-[#F9F4EB] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#6d1625] transition-all duration-300 group"
+                  className="inline-flex items-center justify-center gap-2 bg-[#B22234] text-[#FAF7F2] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#8B1A28] transition-all duration-300 group"
                 >
                   Ver Regalos
                   <ChevronRight
@@ -174,7 +174,7 @@ export default function RegalosNavidenos() {
                 </a>
                 <a
                   href="/contacto"
-                  className="inline-flex items-center justify-center gap-2 border border-[#B39359]/40 text-[#F9F4EB] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#B39359]/10 transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 border border-[#C9A96E]/40 text-[#FAF7F2] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#C9A96E]/10 transition-all duration-300"
                 >
                   Cotizar Ahora
                 </a>
@@ -188,7 +188,7 @@ export default function RegalosNavidenos() {
               className="relative hidden lg:block"
             >
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-[#841B2D]/20 to-[#B39359]/20 blur-2xl" />
+                <div className="absolute -inset-4 bg-gradient-to-br from-[#B22234]/20 to-[#C9A96E]/20 blur-2xl" />
                 <img
                   src="https://publiventa.pe/wp-content/uploads/2023/12/canasta-navideña-corporativa.jpg"
                   alt="Regalo Navideño Premium"
@@ -201,7 +201,7 @@ export default function RegalosNavidenos() {
 
         {/* Wave separator */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 60" className="w-full h-auto text-[#F9F4EB]">
+          <svg viewBox="0 0 1440 60" className="w-full h-auto text-[#FAF7F2]">
             <path
               fill="currentColor"
               d="M0,60 L0,30 Q360,0 720,30 Q1080,60 1440,30 L1440,60 Z"
@@ -211,7 +211,7 @@ export default function RegalosNavidenos() {
       </section>
 
       {/* Ideas de Regalos */}
-      <section className="py-12 bg-[#F9F4EB]">
+      <section className="py-12 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="flex flex-wrap justify-center gap-4">
             {IDEAS_REGALOS.map((idea, i) => (
@@ -223,8 +223,8 @@ export default function RegalosNavidenos() {
                 transition={{ delay: i * 0.1 }}
                 className="flex items-center gap-2 bg-white px-5 py-3 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
               >
-                <idea.icon size={18} className="text-[#841B2D]" />
-                <span className="font-body text-sm text-[#1A2F23]">{idea.label}</span>
+                <idea.icon size={18} className="text-[#B22234]" />
+                <span className="font-body text-sm text-[#0D2818]">{idea.label}</span>
               </motion.div>
             ))}
           </div>
@@ -240,14 +240,14 @@ export default function RegalosNavidenos() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#B39359] mb-4 block">
+            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-4 block">
               Regalos por Categoría
             </span>
-            <h2 className="font-display text-3xl lg:text-5xl text-[#1A2F23] mb-4">
+            <h2 className="font-display text-3xl lg:text-5xl text-[#0D2818] mb-4">
               Encuentra el{" "}
-              <span className="italic text-[#841B2D]">Regalo Perfecto</span>
+              <span className="italic text-[#B22234]">Regalo Perfecto</span>
             </h2>
-            <p className="font-body text-sm text-[#1A2F23]/60 max-w-2xl mx-auto">
+            <p className="font-body text-sm text-[#0D2818]/60 max-w-2xl mx-auto">
               Tenemos opciones para cada ocasión y cada persona especial en tu vida.
             </p>
           </motion.div>
@@ -260,7 +260,7 @@ export default function RegalosNavidenos() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
-                className="group relative overflow-hidden bg-[#1A2F23]"
+                className="group relative overflow-hidden bg-[#0D2818]"
               >
                 <div className="relative h-64 overflow-hidden">
                   <img
@@ -268,22 +268,22 @@ export default function RegalosNavidenos() {
                     alt={cat.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A2F23] via-[#1A2F23]/50 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D2818] via-[#0D2818]/50 to-transparent" />
                 </div>
 
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="w-12 h-12 bg-[#841B2D] flex items-center justify-center mb-4">
-                    <cat.icon size={24} className="text-[#F9F4EB]" />
+                  <div className="w-12 h-12 bg-[#B22234] flex items-center justify-center mb-4">
+                    <cat.icon size={24} className="text-[#FAF7F2]" />
                   </div>
-                  <h3 className="font-display text-2xl text-[#F9F4EB] mb-2">
+                  <h3 className="font-display text-2xl text-[#FAF7F2] mb-2">
                     {cat.title}
                   </h3>
-                  <p className="font-body text-sm text-[#F9F4EB]/60 mb-4">
+                  <p className="font-body text-sm text-[#FAF7F2]/60 mb-4">
                     {cat.description}
                   </p>
                   <ul className="space-y-1">
                     {cat.items.map((item, j) => (
-                      <li key={j} className="flex items-center gap-2 text-[#B39359]">
+                      <li key={j} className="flex items-center gap-2 text-[#C9A96E]">
                         <ChevronRight size={12} />
                         <span className="font-body text-xs">{item}</span>
                       </li>
@@ -297,7 +297,7 @@ export default function RegalosNavidenos() {
       </section>
 
       {/* Productos Destacados */}
-      <section className="py-20 bg-[#1A2F23]">
+      <section className="py-20 bg-[#0D2818]">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -305,12 +305,12 @@ export default function RegalosNavidenos() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#B39359] mb-4 block">
+            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-4 block">
               Los Más Buscados
             </span>
-            <h2 className="font-display text-3xl lg:text-5xl text-[#F9F4EB] mb-4">
+            <h2 className="font-display text-3xl lg:text-5xl text-[#FAF7F2] mb-4">
               Regalos{" "}
-              <span className="italic text-[#B39359]">Destacados</span>
+              <span className="italic text-[#C9A96E]">Destacados</span>
             </h2>
           </motion.div>
 
@@ -322,28 +322,28 @@ export default function RegalosNavidenos() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group bg-[#F9F4EB] overflow-hidden hover:shadow-xl transition-all duration-300"
+                className="group bg-[#FAF7F2] overflow-hidden hover:shadow-xl transition-all duration-300"
               >
-                <div className="relative h-48 bg-gradient-to-br from-[#841B2D]/10 to-[#B39359]/10 flex items-center justify-center">
-                  <Gift size={64} className="text-[#841B2D]/20" />
-                  <span className="absolute top-4 left-4 bg-[#841B2D] text-[#F9F4EB] px-3 py-1 font-body text-[10px] tracking-wider uppercase">
+                <div className="relative h-48 bg-gradient-to-br from-[#B22234]/10 to-[#C9A96E]/10 flex items-center justify-center">
+                  <Gift size={64} className="text-[#B22234]/20" />
+                  <span className="absolute top-4 left-4 bg-[#B22234] text-[#FAF7F2] px-3 py-1 font-body text-[10px] tracking-wider uppercase">
                     {producto.badge}
                   </span>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-display text-lg text-[#1A2F23] mb-2">
+                  <h3 className="font-display text-lg text-[#0D2818] mb-2">
                     {producto.name}
                   </h3>
-                  <p className="font-body text-sm text-[#1A2F23]/60 mb-4">
+                  <p className="font-body text-sm text-[#0D2818]/60 mb-4">
                     {producto.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="font-display text-2xl text-[#841B2D]">
+                    <span className="font-display text-2xl text-[#B22234]">
                       {producto.price}
                     </span>
                     <Link
                       to="/contacto"
-                      className="font-body text-xs tracking-wider uppercase text-[#841B2D] hover:text-[#6d1625] transition-colors"
+                      className="font-body text-xs tracking-wider uppercase text-[#B22234] hover:text-[#8B1A28] transition-colors"
                     >
                       Cotizar →
                     </Link>
@@ -356,7 +356,7 @@ export default function RegalosNavidenos() {
       </section>
 
       {/* Ventajas */}
-      <section className="py-20 bg-[#F9F4EB]">
+      <section className="py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -364,12 +364,12 @@ export default function RegalosNavidenos() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#B39359] mb-4 block">
+            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-4 block">
               ¿Por Qué Elegirnos?
             </span>
-            <h2 className="font-display text-3xl lg:text-5xl text-[#1A2F23]">
+            <h2 className="font-display text-3xl lg:text-5xl text-[#0D2818]">
               Nuestras{" "}
-              <span className="italic text-[#841B2D]">Ventajas</span>
+              <span className="italic text-[#B22234]">Ventajas</span>
             </h2>
           </motion.div>
 
@@ -383,13 +383,13 @@ export default function RegalosNavidenos() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-[#841B2D]/10 flex items-center justify-center mx-auto mb-4">
-                  <ventaja.icon size={28} className="text-[#841B2D]" />
+                <div className="w-16 h-16 bg-[#B22234]/10 flex items-center justify-center mx-auto mb-4">
+                  <ventaja.icon size={28} className="text-[#B22234]" />
                 </div>
-                <h3 className="font-display text-lg text-[#1A2F23] mb-2">
+                <h3 className="font-display text-lg text-[#0D2818] mb-2">
                   {ventaja.title}
                 </h3>
-                <p className="font-body text-sm text-[#1A2F23]/60">
+                <p className="font-body text-sm text-[#0D2818]/60">
                   {ventaja.description}
                 </p>
               </motion.div>
@@ -399,13 +399,13 @@ export default function RegalosNavidenos() {
       </section>
 
       {/* CTA Personalización */}
-      <section className="py-20 bg-[#841B2D] relative overflow-hidden">
+      <section className="py-20 bg-[#B22234] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           {[...Array(8)].map((_, i) => (
             <Gift
               key={i}
               size={100}
-              className="absolute text-[#F9F4EB]"
+              className="absolute text-[#FAF7F2]"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -421,19 +421,19 @@ export default function RegalosNavidenos() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Award size={40} className="mx-auto text-[#B39359] mb-6" />
-            <h2 className="font-display text-3xl lg:text-5xl text-[#F9F4EB] mb-6">
+            <Award size={40} className="mx-auto text-[#C9A96E] mb-6" />
+            <h2 className="font-display text-3xl lg:text-5xl text-[#FAF7F2] mb-6">
               ¿Quieres algo{" "}
-              <span className="italic text-[#B39359]">Totalmente Personalizado</span>?
+              <span className="italic text-[#C9A96E]">Totalmente Personalizado</span>?
             </h2>
-            <p className="font-body text-base text-[#F9F4EB]/70 max-w-2xl mx-auto mb-8">
+            <p className="font-body text-base text-[#FAF7F2]/70 max-w-2xl mx-auto mb-8">
               Creamos regalos a medida con productos seleccionados especialmente para ti.
               Incluye packaging personalizado, tarjetas con tu mensaje y entrega programada.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contacto"
-                className="inline-flex items-center justify-center gap-2 bg-[#F9F4EB] text-[#841B2D] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#B39359] transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 bg-[#FAF7F2] text-[#B22234] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#C9A96E] transition-all duration-300"
               >
                 Solicitar Personalización
               </a>
@@ -441,7 +441,7 @@ export default function RegalosNavidenos() {
                 href="https://wa.me/51997486009?text=Hola,%20me%20interesa%20un%20regalo%20personalizado"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 border border-[#F9F4EB]/40 text-[#F9F4EB] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#F9F4EB]/10 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 border border-[#FAF7F2]/40 text-[#FAF7F2] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#FAF7F2]/10 transition-all duration-300"
               >
                 Hablar por WhatsApp
               </a>
@@ -459,12 +459,12 @@ export default function RegalosNavidenos() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#B39359] mb-4 block">
+            <span className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-4 block">
               Testimonios
             </span>
-            <h2 className="font-display text-3xl lg:text-5xl text-[#1A2F23]">
+            <h2 className="font-display text-3xl lg:text-5xl text-[#0D2818]">
               Lo Que Dicen Nuestros{" "}
-              <span className="italic text-[#841B2D]">Clientes</span>
+              <span className="italic text-[#B22234]">Clientes</span>
             </h2>
           </motion.div>
 
@@ -492,21 +492,21 @@ export default function RegalosNavidenos() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-[#F9F4EB] p-8"
+                className="bg-[#FAF7F2] p-8"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} size={16} className="fill-[#B39359] text-[#B39359]" />
+                    <Star key={j} size={16} className="fill-[#C9A96E] text-[#C9A96E]" />
                   ))}
                 </div>
-                <p className="font-body text-sm text-[#1A2F23]/70 mb-6 italic">
+                <p className="font-body text-sm text-[#0D2818]/70 mb-6 italic">
                   "{testimonio.text}"
                 </p>
                 <div>
-                  <p className="font-display text-sm text-[#1A2F23]">
+                  <p className="font-display text-sm text-[#0D2818]">
                     {testimonio.name}
                   </p>
-                  <p className="font-body text-xs text-[#1A2F23]/50">
+                  <p className="font-body text-xs text-[#0D2818]/50">
                     {testimonio.company}
                   </p>
                 </div>

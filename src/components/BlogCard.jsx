@@ -9,7 +9,7 @@ export default function BlogCard({ post }) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="group bg-[#F9F4EB] border border-[#B39359]/20 overflow-hidden hover:shadow-xl transition-all duration-300"
+      className="group bg-[#FAF7F2] border border-[#C9A96E]/20 overflow-hidden hover:shadow-xl transition-all duration-300"
     >
       <Link to={`/blog/${post.slug}`} className="block">
         <div className="relative overflow-hidden aspect-[16/10]">
@@ -21,14 +21,14 @@ export default function BlogCard({ post }) {
               e.target.src = "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=600&h=400&fit=crop";
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1A2F23]/60 via-transparent to-transparent" />
-          <span className="absolute top-4 left-4 px-3 py-1 bg-[#841B2D] text-[#F9F4EB] text-xs font-body tracking-widest uppercase">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0D2818]/60 via-transparent to-transparent" />
+          <span className="absolute top-4 left-4 px-3 py-1 bg-[#B22234] text-[#FAF7F2] text-xs font-body tracking-widest uppercase">
             {post.category}
           </span>
         </div>
 
         <div className="p-6">
-          <div className="flex items-center gap-4 mb-3 text-[#1A2F23]/50">
+          <div className="flex items-center gap-4 mb-3 text-[#0D2818]/50">
             <time className="font-body text-xs">
               {new Date(post.date).toLocaleDateString("es-MX", {
                 day: "numeric",
@@ -42,15 +42,15 @@ export default function BlogCard({ post }) {
             </span>
           </div>
 
-          <h3 className="font-display text-xl text-[#1A2F23] group-hover:text-[#841B2D] transition-colors line-clamp-2 mb-3">
+          <h3 className="font-display text-xl text-[#0D2818] group-hover:text-[#B22234] transition-colors line-clamp-2 mb-3">
             {post.title}
           </h3>
 
-          <p className="font-body text-sm text-[#1A2F23]/60 line-clamp-3 mb-4">
+          <p className="font-body text-sm text-[#0D2818]/60 line-clamp-3 mb-4">
             {post.excerpt}
           </p>
 
-          <span className="inline-flex items-center gap-2 font-body text-xs tracking-widest uppercase text-[#841B2D] group-hover:text-[#6d1625] transition-colors">
+          <span className="inline-flex items-center gap-2 font-body text-xs tracking-widest uppercase text-[#B22234] group-hover:text-[#8B1A28] transition-colors">
             Leer más
             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
           </span>

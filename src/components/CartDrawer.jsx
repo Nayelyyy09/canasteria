@@ -23,18 +23,18 @@ export default function CartDrawer({ open, onClose, items, onUpdateQty, onRemove
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={onClose}
-              className="fixed inset-0 z-[70] bg-[#1A2F23]/60 backdrop-blur-sm"
+              className="fixed inset-0 z-[70] bg-[#0D2818]/60 backdrop-blur-sm"
             />
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.4 }}
-              className="fixed top-0 right-0 bottom-0 z-[80] w-full max-w-md bg-[#F9F4EB] flex flex-col shadow-2xl"
+              className="fixed top-0 right-0 bottom-0 z-[80] w-full max-w-md bg-[#FAF7F2] flex flex-col shadow-2xl"
             >
-              <div className="flex items-center justify-between px-8 py-6 border-b border-[#B39359]/20">
-                <h3 className="font-display text-2xl text-[#1A2F23]">Tu Cotización</h3>
-                <button onClick={onClose} className="text-[#1A2F23]/40 hover:text-[#1A2F23] transition-colors">
+              <div className="flex items-center justify-between px-8 py-6 border-b border-[#C9A96E]/20">
+                <h3 className="font-display text-2xl text-[#0D2818]">Tu Cotización</h3>
+                <button onClick={onClose} className="text-[#0D2818]/40 hover:text-[#0D2818] transition-colors">
                   <X size={22} strokeWidth={1.5} />
                 </button>
               </div>
@@ -42,10 +42,10 @@ export default function CartDrawer({ open, onClose, items, onUpdateQty, onRemove
               <div className="flex-1 overflow-y-auto px-8 py-6">
                 {items.length === 0 ? (
                   <div className="h-full flex flex-col items-center justify-center text-center">
-                    <p className="font-display text-xl text-[#1A2F23]/40 italic">
+                    <p className="font-display text-xl text-[#0D2818]/40 italic">
                       Tu carrito está vacío
                     </p>
-                    <p className="mt-2 font-body text-sm text-[#1A2F23]/30">
+                    <p className="mt-2 font-body text-sm text-[#0D2818]/30">
                       Explora nuestros productos y solicita tu cotización
                     </p>
                   </div>
@@ -59,40 +59,40 @@ export default function CartDrawer({ open, onClose, items, onUpdateQty, onRemove
                           className="w-20 h-20 object-cover flex-shrink-0"
                         />
                         <div className="flex-1 min-w-0">
-                          <h4 className="font-display text-lg text-[#1A2F23] truncate">
+                          <h4 className="font-display text-lg text-[#0D2818] truncate">
                             {item.name}
                           </h4>
                           {item.note && (
-                            <p className="font-body text-xs text-[#B39359] italic truncate mt-0.5">
+                            <p className="font-body text-xs text-[#C9A96E] italic truncate mt-0.5">
                               "{item.note}"
                             </p>
                           )}
                           <div className="mt-2 flex items-center">
-                            <div className="flex items-center border border-[#B39359]/20">
+                            <div className="flex items-center border border-[#C9A96E]/20">
                               <button
                                 onClick={() => onUpdateQty(item.cartId, item.qty - 1)}
-                                className="w-7 h-7 flex items-center justify-center text-[#1A2F23]/50"
+                                className="w-7 h-7 flex items-center justify-center text-[#0D2818]/50"
                               >
                                 <Minus size={12} />
                               </button>
-                              <span className="w-8 text-center font-body text-sm font-medium text-[#1A2F23]">
+                              <span className="w-8 text-center font-body text-sm font-medium text-[#0D2818]">
                                 {item.qty}
                               </span>
                               <button
                                 onClick={() => onUpdateQty(item.cartId, item.qty + 1)}
-                                className="w-7 h-7 flex items-center justify-center text-[#1A2F23]/50"
+                                className="w-7 h-7 flex items-center justify-center text-[#0D2818]/50"
                               >
                                 <Plus size={12} />
                               </button>
                             </div>
-                            <span className="ml-2 font-body text-xs text-[#1A2F23]/40">
+                            <span className="ml-2 font-body text-xs text-[#0D2818]/40">
                               {item.qty === 1 ? "unidad" : "unidades"}
                             </span>
                           </div>
                         </div>
                         <button
                           onClick={() => onRemove(item.cartId)}
-                          className="self-start text-[#1A2F23]/20 hover:text-[#841B2D] transition-colors mt-1"
+                          className="self-start text-[#0D2818]/20 hover:text-[#B22234] transition-colors mt-1"
                         >
                           <Trash2 size={16} strokeWidth={1.5} />
                         </button>
@@ -103,24 +103,24 @@ export default function CartDrawer({ open, onClose, items, onUpdateQty, onRemove
               </div>
 
               {items.length > 0 && (
-                <div className="px-8 py-6 border-t border-[#B39359]/20">
+                <div className="px-8 py-6 border-t border-[#C9A96E]/20">
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-body text-sm tracking-widest uppercase text-[#1A2F23]/60">
+                    <span className="font-body text-sm tracking-widest uppercase text-[#0D2818]/60">
                       Productos
                     </span>
-                    <span className="font-display text-2xl text-[#1A2F23]">
+                    <span className="font-display text-2xl text-[#0D2818]">
                       {totalItems} {totalItems === 1 ? "artículo" : "artículos"}
                     </span>
                   </div>
                   <button
                     onClick={() => openQuote("personal")}
-                    className="w-full py-4 bg-[#841B2D] text-[#F9F4EB] font-body text-sm tracking-widest uppercase hover:bg-[#6d1625] transition-colors"
+                    className="w-full py-4 bg-[#B22234] text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#8B1A28] transition-colors"
                   >
                     Solicitar Cotización
                   </button>
                   <button
                     onClick={() => openQuote("corporativo")}
-                    className="w-full mt-3 py-3 border border-[#1A2F23]/20 text-[#1A2F23] font-body text-xs tracking-widest uppercase hover:bg-[#1A2F23]/5 transition-colors"
+                    className="w-full mt-3 py-3 border border-[#0D2818]/20 text-[#0D2818] font-body text-xs tracking-widest uppercase hover:bg-[#0D2818]/5 transition-colors"
                   >
                     Cotización Corporativa
                   </button>

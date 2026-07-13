@@ -55,12 +55,12 @@ export default function Navbar() {
   return (
     <>
       {/* Top utility bar */}
-      <div className="bg-[#841B2D] text-[#F9F4EB] text-xs hidden md:block">
+      <div className="bg-[#B22234] text-[#FAF7F2] text-xs hidden md:block">
         <div className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between h-9">
           <div className="flex items-center gap-6">
             <button
               onClick={() => setAddressOpen(!addressOpen)}
-              className="flex items-center gap-1.5 hover:text-[#B39359] transition-colors"
+              className="flex items-center gap-1.5 hover:text-[#C9A96E] transition-colors"
             >
               <MapPin size={13} />
               <span>Enviar a: {address}</span>
@@ -68,7 +68,7 @@ export default function Navbar() {
             </button>
             <button
               onClick={() => navigate("/regalos-navidenos")}
-              className="flex items-center gap-1.5 hover:text-[#B39359] transition-colors"
+              className="flex items-center gap-1.5 hover:text-[#C9A96E] transition-colors"
             >
               <Tag size={13} />
               <span>Regalos Navideños</span>
@@ -77,7 +77,7 @@ export default function Navbar() {
           <div className="flex items-center gap-6">
             <button
               onClick={() => scrollTo("#contacto")}
-              className="flex items-center gap-1.5 hover:text-[#B39359] transition-colors"
+              className="flex items-center gap-1.5 hover:text-[#C9A96E] transition-colors"
             >
               <Phone size={13} />
               <span>Contáctanos</span>
@@ -93,20 +93,20 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="bg-[#841B2D] border-t border-[#F9F4EB]/10 overflow-hidden hidden md:block"
+            className="bg-[#B22234] border-t border-[#FAF7F2]/10 overflow-hidden hidden md:block"
           >
             <div className="max-w-7xl mx-auto px-6 lg:px-16 py-3 flex items-center gap-3">
-              <MapPin size={14} className="text-[#B39359]" />
+              <MapPin size={14} className="text-[#C9A96E]" />
               <input
                 type="text"
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
                 placeholder="Ingresa tu dirección de envío"
-                className="bg-[#F9F4EB]/10 border border-[#F9F4EB]/20 px-3 py-1.5 text-[#F9F4EB] text-xs placeholder:text-[#F9F4EB]/40 focus:outline-none focus:border-[#B39359] flex-1 max-w-xs"
+                className="bg-[#FAF7F2]/10 border border-[#FAF7F2]/20 px-3 py-1.5 text-[#FAF7F2] text-xs placeholder:text-[#FAF7F2]/40 focus:outline-none focus:border-[#C9A96E] flex-1 max-w-xs"
               />
               <button
                 onClick={() => setAddressOpen(false)}
-                className="text-[#B39359] hover:text-[#F9F4EB] text-xs font-body transition-colors"
+                className="text-[#C9A96E] hover:text-[#FAF7F2] text-xs font-body transition-colors"
               >
                 Confirmar
               </button>
@@ -118,8 +118,8 @@ export default function Navbar() {
       {/* Main nav */}
       <nav
         className={`sticky top-0 z-50 transition-all duration-500 ${scrolled
-          ? "bg-[#1A2F23]/95 backdrop-blur-md shadow-xl"
-          : "bg-[#1A2F23]"
+          ? "bg-[#0D2818]/95 backdrop-blur-md shadow-xl"
+          : "bg-[#0D2818]/90 backdrop-blur-sm"
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between h-16 lg:h-20">
@@ -136,7 +136,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-8">
             <Link
               to="/"
-              className="font-body text-sm tracking-widest uppercase text-[#F9F4EB]/80 hover:text-[#B39359] transition-colors"
+              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2]/80 hover:text-[#C9A96E] transition-colors"
             >
               Inicio
             </Link>
@@ -147,7 +147,7 @@ export default function Navbar() {
               onMouseEnter={() => setMegaOpen(true)}
               onMouseLeave={() => setMegaOpen(false)}
             >
-              <button className="flex items-center gap-1 font-body text-sm tracking-widest uppercase text-[#F9F4EB]/80 hover:text-[#B39359] transition-colors">
+              <button className="flex items-center gap-1 font-body text-sm tracking-widest uppercase text-[#FAF7F2]/80 hover:text-[#C9A96E] transition-colors">
                 Canastas Navideñas
                 <ChevronDown
                   size={14}
@@ -163,12 +163,12 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[580px] bg-[#F9F4EB] shadow-2xl border border-[#B39359]/20 p-6"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[580px] bg-[#FAF7F2] shadow-2xl border border-[#C9A96E]/20 p-6"
                   >
                     <div className="grid grid-cols-2 gap-6">
                       {MEGA_MENU_ITEMS.map((group) => (
                         <div key={group.group}>
-                          <p className="font-body text-xs tracking-widest uppercase text-[#841B2D] mb-3">
+                          <p className="font-body text-xs tracking-widest uppercase text-[#B22234] mb-3">
                             {group.group}
                           </p>
                           <ul className="space-y-2">
@@ -188,11 +188,11 @@ export default function Navbar() {
                                       />
                                     )}
                                     <div>
-                                      <p className="font-display text-sm text-[#1A2F23] group-hover:text-[#841B2D] transition-colors">
+                                      <p className="font-display text-sm text-[#0D2818] group-hover:text-[#B22234] transition-colors">
                                         {item.label}
                                       </p>
                                       {cat && (
-                                        <p className="font-body text-xs text-[#1A2F23]/40 line-clamp-1 mt-0.5">
+                                        <p className="font-body text-xs text-[#0D2818]/40 line-clamp-1 mt-0.5">
                                           {cat.description}
                                         </p>
                                       )}
@@ -207,7 +207,7 @@ export default function Navbar() {
                     </div>
                     <button
                       onClick={() => handleCategoryClick("ejecutivas")}
-                      className="mt-4 w-full text-center font-body text-xs tracking-widest uppercase text-[#841B2D] hover:text-[#6d1625] border-t border-[#B39359]/20 pt-4 transition-colors"
+                      className="mt-4 w-full text-center font-body text-xs tracking-widest uppercase text-[#B22234] hover:text-[#8B1A28] border-t border-[#C9A96E]/20 pt-4 transition-colors"
                     >
                       Ver toda la colección
                     </button>
@@ -218,25 +218,25 @@ export default function Navbar() {
 
             <Link
               to="/activaciones"
-              className="font-body text-sm tracking-widest uppercase text-[#F9F4EB]/80 hover:text-[#B39359] transition-colors"
+              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2]/80 hover:text-[#C9A96E] transition-colors"
             >
               Activaciones
             </Link>
             <Link
               to="/regalos-navidenos"
-              className="font-body text-sm tracking-widest uppercase text-[#F9F4EB]/80 hover:text-[#B39359] transition-colors"
+              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2]/80 hover:text-[#C9A96E] transition-colors"
             >
               Regalos Navideños
             </Link>
             <Link
               to="/nosotros"
-              className="font-body text-sm tracking-widest uppercase text-[#F9F4EB]/80 hover:text-[#B39359] transition-colors"
+              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2]/80 hover:text-[#C9A96E] transition-colors"
             >
               Nosotros
             </Link>
             <Link
               to="/contacto"
-              className="font-body text-sm tracking-widest uppercase text-[#F9F4EB]/80 hover:text-[#B39359] transition-colors"
+              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2]/80 hover:text-[#C9A96E] transition-colors"
             >
               Contacto
             </Link>
@@ -244,12 +244,12 @@ export default function Navbar() {
 
           {/* Right icons */}
           <div className="flex items-center gap-3 lg:gap-5">
-            <button className="hidden lg:flex text-[#F9F4EB]/70 hover:text-[#B39359] transition-colors">
+            <button className="hidden lg:flex text-[#FAF7F2]/70 hover:text-[#C9A96E] transition-colors">
               <Search size={20} strokeWidth={1.5} />
             </button>
             <button
               onClick={() => setMenuOpen(true)}
-              className="lg:hidden text-[#F9F4EB]"
+              className="lg:hidden text-[#FAF7F2]"
             >
               <Menu size={24} strokeWidth={1.5} />
             </button>
@@ -259,7 +259,7 @@ export default function Navbar() {
         {/* Divisor festivo inferior en el navbar */}
         <div className="absolute bottom-0 left-0 w-full h-1 overflow-hidden pointer-events-none">
           <svg
-            className="w-full h-full text-[#B39359]/40"
+            className="w-full h-full text-[#C9A96E]/40"
             viewBox="0 0 100 2"
             preserveAspectRatio="none"
           >
@@ -275,7 +275,7 @@ export default function Navbar() {
                 cx={5 + i * 10}
                 cy={1}
                 r="0.25"
-                className="fill-current text-[#841B2D]"
+                className="fill-current text-[#B22234]"
               />
             ))}
           </svg>
@@ -289,11 +289,11 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-[#1A2F23] flex flex-col overflow-y-auto"
+            className="fixed inset-0 z-[60] bg-[#0D2818] flex flex-col overflow-y-auto"
           >
-            <div className="flex items-center justify-between px-6 h-16 border-b border-[#B39359]/20">
-              <span className="font-display text-xl text-[#F9F4EB]">Menú</span>
-              <button onClick={() => setMenuOpen(false)} className="text-[#F9F4EB]">
+            <div className="flex items-center justify-between px-6 h-16 border-b border-[#C9A96E]/20">
+              <span className="font-display text-xl text-[#FAF7F2]">Menú</span>
+              <button onClick={() => setMenuOpen(false)} className="text-[#FAF7F2]">
                 <X size={24} strokeWidth={1.5} />
               </button>
             </div>
@@ -301,12 +301,12 @@ export default function Navbar() {
               <Link
                 to="/"
                 onClick={() => setMenuOpen(false)}
-                className="py-3 font-display text-xl text-[#F9F4EB] border-b border-[#B39359]/10 text-left"
+                className="py-3 font-display text-xl text-[#FAF7F2] border-b border-[#C9A96E]/10 text-left"
               >
                 Inicio
               </Link>
 
-              <p className="py-3 font-display text-xl text-[#F9F4EB] border-b border-[#B39359]/10">
+              <p className="py-3 font-display text-xl text-[#FAF7F2] border-b border-[#C9A96E]/10">
                 Canastas Navideñas
               </p>
               <div className="grid grid-cols-2 gap-3 py-3">
@@ -320,7 +320,7 @@ export default function Navbar() {
                         className="flex items-center gap-2 text-left"
                       >
                         {cat && <img src={cat.image} alt="" className="w-12 h-12 object-cover" />}
-                        <span className="font-body text-sm text-[#F9F4EB]/70">{item.label}</span>
+                        <span className="font-body text-sm text-[#FAF7F2]/70">{item.label}</span>
                       </button>
                     );
                   })
@@ -330,28 +330,28 @@ export default function Navbar() {
               <Link
                 to="/activaciones"
                 onClick={() => setMenuOpen(false)}
-                className="py-3 font-display text-xl text-[#F9F4EB] border-b border-[#B39359]/10 text-left"
+                className="py-3 font-display text-xl text-[#FAF7F2] border-b border-[#C9A96E]/10 text-left"
               >
                 Activaciones
               </Link>
               <Link
                 to="/regalos-navidenos"
                 onClick={() => setMenuOpen(false)}
-                className="py-3 font-display text-xl text-[#F9F4EB] border-b border-[#B39359]/10 text-left"
+                className="py-3 font-display text-xl text-[#FAF7F2] border-b border-[#C9A96E]/10 text-left"
               >
                 Regalos Navideños
               </Link>
               <Link
                 to="/nosotros"
                 onClick={() => setMenuOpen(false)}
-                className="py-3 font-display text-xl text-[#F9F4EB] border-b border-[#B39359]/10 text-left"
+                className="py-3 font-display text-xl text-[#FAF7F2] border-b border-[#C9A96E]/10 text-left"
               >
                 Nosotros
               </Link>
               <Link
                 to="/contacto"
                 onClick={() => setMenuOpen(false)}
-                className="py-3 font-display text-xl text-[#F9F4EB] border-b border-[#B39359]/10 text-left"
+                className="py-3 font-display text-xl text-[#FAF7F2] border-b border-[#C9A96E]/10 text-left"
               >
                 Contacto
               </Link>

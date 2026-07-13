@@ -173,35 +173,35 @@ export default function FAQ() {
         />
       </head>
 
-      <div className="min-h-screen bg-[#F9F4EB]">
+      <div className="min-h-screen bg-[#FAF7F2]">
         <Navbar />
 
         {/* Hero */}
-        <section className="bg-[#1A2F23] pt-32 pb-16 px-6">
+        <section className="bg-[#0D2818] pt-32 pb-16 px-6">
           <div className="max-w-4xl mx-auto text-center">
             {/* Breadcrumb */}
             <nav className="flex items-center justify-center gap-2 mb-6 text-xs font-body">
-              <Link to="/" className="text-[#F9F4EB]/50 hover:text-[#B39359] transition-colors">
+              <Link to="/" className="text-[#FAF7F2]/50 hover:text-[#C9A96E] transition-colors">
                 Inicio
               </Link>
-              <ChevronRight size={12} className="text-[#F9F4EB]/30" />
-              <span className="text-[#B39359]">Preguntas Frecuentes</span>
+              <ChevronRight size={12} className="text-[#FAF7F2]/30" />
+              <span className="text-[#C9A96E]">Preguntas Frecuentes</span>
             </nav>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="font-display text-4xl md:text-5xl lg:text-6xl text-[#F9F4EB] leading-tight"
+              className="font-display text-4xl md:text-5xl lg:text-6xl text-[#FAF7F2] leading-tight"
             >
               Preguntas{" "}
-              <span className="italic text-[#841B2D]">Frecuentes</span>
+              <span className="italic text-[#B22234]">Frecuentes</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="mt-4 font-body text-sm text-[#F9F4EB]/50 max-w-lg mx-auto"
+              className="mt-4 font-body text-sm text-[#FAF7F2]/50 max-w-lg mx-auto"
             >
               Encuentra respuestas a todo lo que necesitas saber sobre nuestras
               canastas navideñas.
@@ -220,20 +220,20 @@ export default function FAQ() {
               transition={{ duration: 0.5, delay: catIdx * 0.1 }}
               className="mb-12"
             >
-              <h2 className="font-display text-2xl md:text-3xl text-[#1A2F23] mb-6">
+              <h2 className="font-display text-2xl md:text-3xl text-[#0D2818] mb-6">
                 {cat.category}
               </h2>
-              <Accordion type="single" collapsible className="border-t border-[#1A2F23]/10">
+              <Accordion type="single" collapsible className="border-t border-[#0D2818]/10">
                 {cat.questions.map((item, idx) => (
                   <AccordionItem
                     key={idx}
                     value={`${catIdx}-${idx}`}
-                    className="border-b border-[#1A2F23]/10"
+                    className="border-b border-[#0D2818]/10"
                   >
-                    <AccordionTrigger className="font-body text-base text-[#1A2F23] hover:text-[#841B2D] hover:no-underline py-5">
+                    <AccordionTrigger className="font-body text-base text-[#0D2818] hover:text-[#B22234] hover:no-underline py-5">
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="font-body text-sm text-[#1A2F23]/70 leading-relaxed pb-5">
+                    <AccordionContent className="font-body text-sm text-[#0D2818]/70 leading-relaxed pb-5">
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -247,17 +247,17 @@ export default function FAQ() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-8 text-center bg-[#1A2F23] rounded-sm p-10"
+            className="mt-8 text-center bg-[#0D2818] rounded-sm p-10"
           >
-            <h3 className="font-display text-2xl text-[#F9F4EB] mb-3">
+            <h3 className="font-display text-2xl text-[#FAF7F2] mb-3">
               ¿No encontraste lo que buscabas?
             </h3>
-            <p className="font-body text-sm text-[#F9F4EB]/50 mb-6">
+            <p className="font-body text-sm text-[#FAF7F2]/50 mb-6">
               Nuestro equipo está listo para ayudarte con cualquier duda adicional.
             </p>
             <a
               href="mailto:ventas@canastanavidena.pe"
-              className="inline-block px-8 py-3 bg-[#841B2D] text-[#F9F4EB] font-body text-sm hover:bg-[#6d1625] transition-colors"
+              className="inline-block px-8 py-3 bg-[#B22234] text-[#FAF7F2] font-body text-sm hover:bg-[#8B1A28] transition-colors"
             >
               Contáctanos
             </a>

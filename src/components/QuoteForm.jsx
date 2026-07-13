@@ -72,7 +72,7 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
   };
 
   const typeLabel = type === "corporativo" ? "Cotización Corporativa" : "Cotización Personal";
-  const typeColor = type === "corporativo" ? "#841B2D" : "#1A6B3E";
+  const typeColor = type === "corporativo" ? "#B22234" : "#1B5E3B";
 
   return (
     <AnimatePresence>
@@ -83,7 +83,7 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleClose}
-            className="fixed inset-0 z-[90] bg-[#1A2F23]/70 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-[90] bg-[#0D2818]/70 backdrop-blur-sm flex items-center justify-center p-4"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -94,7 +94,7 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
               className="bg-white w-full max-w-lg max-h-[85vh] overflow-y-auto shadow-2xl flex flex-col"
             >
             {/* Header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-[#B39359]/20">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[#C9A96E]/20">
               <div>
                 <span
                   className="inline-block px-3 py-1 text-[10px] font-body font-bold tracking-wider uppercase text-white mb-2"
@@ -102,11 +102,11 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                 >
                   {typeLabel}
                 </span>
-                <h3 className="font-display text-2xl text-[#1A2F23]">Solicitar Cotización</h3>
+                <h3 className="font-display text-2xl text-[#0D2818]">Solicitar Cotización</h3>
               </div>
               <button
                 onClick={handleClose}
-                className="text-[#1A2F23]/40 hover:text-[#1A2F23] transition-colors"
+                className="text-[#0D2818]/40 hover:text-[#0D2818] transition-colors"
               >
                 <X size={22} strokeWidth={1.5} />
               </button>
@@ -114,19 +114,19 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
 
             {status === "success" ? (
               <div className="flex-1 flex flex-col items-center justify-center p-10 text-center">
-                <div className="w-16 h-16 rounded-full bg-[#1A6B3E]/10 flex items-center justify-center mb-5">
-                  <CheckCircle size={32} className="text-[#1A6B3E]" />
+                <div className="w-16 h-16 rounded-full bg-[#1B5E3B]/10 flex items-center justify-center mb-5">
+                  <CheckCircle size={32} className="text-[#1B5E3B]" />
                 </div>
-                <h4 className="font-display text-2xl text-[#1A2F23] mb-3">
+                <h4 className="font-display text-2xl text-[#0D2818] mb-3">
                   ¡Cotización Enviada!
                 </h4>
-                <p className="font-body text-sm text-[#1A2F23]/50 max-w-sm">
+                <p className="font-body text-sm text-[#0D2818]/50 max-w-sm">
                   Hemos recibido tu solicitud. Nuestro equipo te contactará pronto
                   con una propuesta personalizada.
                 </p>
                 <button
                   onClick={handleClose}
-                  className="mt-8 px-8 py-3 bg-[#841B2D] text-[#F9F4EB] font-body text-sm tracking-widest uppercase hover:bg-[#6d1625] transition-colors"
+                  className="mt-8 px-8 py-3 bg-[#B22234] text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#8B1A28] transition-colors"
                 >
                   Cerrar
                 </button>
@@ -135,27 +135,27 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
               <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
                 <div className="flex-1 overflow-y-auto px-6 py-5 space-y-4">
                   {/* Resumen del pedido */}
-                  <div className="bg-[#F9F4EB] p-4 border border-[#B39359]/10">
-                    <p className="font-body text-[10px] tracking-wider uppercase text-[#B39359] mb-3">
+                  <div className="bg-[#FAF7F2] p-4 border border-[#C9A96E]/10">
+                    <p className="font-body text-[10px] tracking-wider uppercase text-[#C9A96E] mb-3">
                       Resumen ({items.length} productos)
                     </p>
                     <div className="space-y-2">
                       {items.map((item) => (
                         <div key={item.cartId} className="flex justify-between items-center">
-                          <span className="font-body text-xs text-[#1A2F23]/70 truncate mr-2">
+                          <span className="font-body text-xs text-[#0D2818]/70 truncate mr-2">
                             {item.name}
                           </span>
-                          <span className="font-body text-xs text-[#841B2D] font-medium whitespace-nowrap">
+                          <span className="font-body text-xs text-[#B22234] font-medium whitespace-nowrap">
                             x{item.qty}
                           </span>
                         </div>
                       ))}
                     </div>
-                    <div className="mt-3 pt-3 border-t border-[#B39359]/20 flex justify-between items-center">
-                      <span className="font-body text-xs font-bold text-[#1A2F23] uppercase tracking-wider">
+                    <div className="mt-3 pt-3 border-t border-[#C9A96E]/20 flex justify-between items-center">
+                      <span className="font-body text-xs font-bold text-[#0D2818] uppercase tracking-wider">
                         Total
                       </span>
-                      <span className="font-body text-sm text-[#1A2F23]">
+                      <span className="font-body text-sm text-[#0D2818]">
                         {items.reduce((sum, item) => sum + item.qty, 0)} unidades
                       </span>
                     </div>
@@ -163,7 +163,7 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
 
                   {/* Formulario */}
                   <div>
-                    <label className="block font-body text-[10px] tracking-wider uppercase text-[#1A2F23]/50 mb-1.5">
+                    <label className="block font-body text-[10px] tracking-wider uppercase text-[#0D2818]/50 mb-1.5">
                       Nombre completo *
                     </label>
                     <input
@@ -173,12 +173,12 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                       onChange={handleChange}
                       required
                       placeholder="Tu nombre"
-                      className="w-full bg-white border border-[#B39359]/20 px-4 py-2.5 font-body text-sm text-[#1A2F23] placeholder:text-[#1A2F23]/30 focus:outline-none focus:border-[#841B2D] transition-colors"
+                      className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#B22234] transition-colors"
                     />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block font-body text-[10px] tracking-wider uppercase text-[#1A2F23]/50 mb-1.5">
+                      <label className="block font-body text-[10px] tracking-wider uppercase text-[#0D2818]/50 mb-1.5">
                         Email *
                       </label>
                       <input
@@ -188,11 +188,11 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                         onChange={handleChange}
                         required
                         placeholder="correo@ejemplo.com"
-                        className="w-full bg-white border border-[#B39359]/20 px-4 py-2.5 font-body text-sm text-[#1A2F23] placeholder:text-[#1A2F23]/30 focus:outline-none focus:border-[#841B2D] transition-colors"
+                        className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#B22234] transition-colors"
                       />
                     </div>
                     <div>
-                      <label className="block font-body text-[10px] tracking-wider uppercase text-[#1A2F23]/50 mb-1.5">
+                      <label className="block font-body text-[10px] tracking-wider uppercase text-[#0D2818]/50 mb-1.5">
                         Teléfono
                       </label>
                       <input
@@ -201,13 +201,13 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                         value={form.phone}
                         onChange={handleChange}
                         placeholder="997 486 009"
-                        className="w-full bg-white border border-[#B39359]/20 px-4 py-2.5 font-body text-sm text-[#1A2F23] placeholder:text-[#1A2F23]/30 focus:outline-none focus:border-[#841B2D] transition-colors"
+                        className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#B22234] transition-colors"
                       />
                     </div>
                   </div>
                   {type === "corporativo" && (
                     <div>
-                      <label className="block font-body text-[10px] tracking-wider uppercase text-[#1A2F23]/50 mb-1.5">
+                      <label className="block font-body text-[10px] tracking-wider uppercase text-[#0D2818]/50 mb-1.5">
                         Empresa
                       </label>
                       <input
@@ -216,12 +216,12 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                         value={form.company}
                         onChange={handleChange}
                         placeholder="Nombre de tu empresa"
-                        className="w-full bg-white border border-[#B39359]/20 px-4 py-2.5 font-body text-sm text-[#1A2F23] placeholder:text-[#1A2F23]/30 focus:outline-none focus:border-[#841B2D] transition-colors"
+                        className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#B22234] transition-colors"
                       />
                     </div>
                   )}
                   <div>
-                    <label className="block font-body text-[10px] tracking-wider uppercase text-[#1A2F23]/50 mb-1.5">
+                    <label className="block font-body text-[10px] tracking-wider uppercase text-[#0D2818]/50 mb-1.5">
                       Notas adicionales
                     </label>
                     <textarea
@@ -230,7 +230,7 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                       onChange={handleChange}
                       rows={3}
                       placeholder="Dirección de entrega, fecha específica, personalización..."
-                      className="w-full bg-white border border-[#B39359]/20 px-4 py-2.5 font-body text-sm text-[#1A2F23] placeholder:text-[#1A2F23]/30 focus:outline-none focus:border-[#841B2D] transition-colors resize-none"
+                      className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#B22234] transition-colors resize-none"
                     />
                   </div>
 
@@ -241,11 +241,11 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                   )}
                 </div>
 
-                <div className="px-6 py-4 border-t border-[#B39359]/20 bg-[#F9F4EB]/50">
+                <div className="px-6 py-4 border-t border-[#C9A96E]/20 bg-[#FAF7F2]/50">
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#841B2D] text-[#F9F4EB] font-body text-sm tracking-widest uppercase hover:bg-[#6d1625] transition-colors disabled:opacity-50"
+                    className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#B22234] text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#8B1A28] transition-colors disabled:opacity-50"
                   >
                     {status === "sending" ? (
                       <>

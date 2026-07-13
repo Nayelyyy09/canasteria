@@ -11,10 +11,13 @@ export default function FeaturedProducts({ activeCategory, setActiveCategory }) 
   const filtered =
     active === "todos"
       ? PRODUCTS
-      : PRODUCTS.filter((p) => p.category === active);
+      : PRODUCTS.filter((p) => p.category === active).slice(0, 6);
+
+  const [showAll, setShowAll] = useState(false);
+  const displayed = showAll ? filtered : filtered.slice(0, 6);
 
   return (
-    <section id="productos" className="bg-[#1A2F23] py-20 lg:py-28">
+    <section id="productos" className="bg-[#FAF7F2] py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,13 +25,13 @@ export default function FeaturedProducts({ activeCategory, setActiveCategory }) 
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="font-body text-xs tracking-[0.4em] uppercase text-[#B39359] mb-3">
+          <p className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-3">
             Selección especial
           </p>
-          <h2 className="font-display text-4xl lg:text-5xl text-[#F9F4EB]">
+          <h2 className="font-display text-4xl lg:text-5xl text-[#0D2818]">
             Productos Destacados
           </h2>
-          <div className="mt-4 mx-auto w-16 h-px bg-[#B39359]" />
+          <div className="mt-4 mx-auto w-16 h-px bg-[#C9A96E]" />
         </motion.div>
 
         {/* Filter tabs */}
@@ -36,11 +39,11 @@ export default function FeaturedProducts({ activeCategory, setActiveCategory }) 
           {CATEGORIES.map((cat) => (
             <button
               key={cat.id}
-              onClick={() => setActive(cat.id)}
+              onClick={() => { setActive(cat.id); setShowAll(false); }}
               className={`font-body text-xs tracking-widest uppercase px-4 py-2 transition-all duration-300 ${
                 active === cat.id
-                  ? "bg-[#841B2D] text-[#F9F4EB]"
-                  : "text-[#F9F4EB]/50 hover:text-[#F9F4EB] border border-[#F9F4EB]/15"
+                  ? "bg-[#B22234] text-[#FAF7F2]"
+                  : "text-[#0D2818]/50 hover:text-[#0D2818] border border-[#0D2818]/15"
               }`}
             >
               {cat.label}
@@ -49,15 +52,30 @@ export default function FeaturedProducts({ activeCategory, setActiveCategory }) 
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-          {filtered.map((product, i) => (
+          {displayed.map((product, i) => (
             <ProductCard
               key={product.id}
               product={product}
               index={i}
-              dark
             />
           ))}
         </div>
+
+        {!showAll && filtered.length > 6 && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mt-14"
+          >
+            <button
+              onClick={() => setShowAll(true)}
+              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#0D2818] text-[#0D2818] font-body text-sm tracking-widest uppercase hover:bg-[#0D2818] hover:text-[#FAF7F2] transition-all duration-300"
+            >
+              Ver todos los productos
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
