@@ -8,9 +8,6 @@ import CTASection from "@/components/CTASection";
 import ClientsSlider from "@/components/ClientsSlider";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FooterSection from "@/components/FooterSection";
-import CartDrawer from "@/components/CartDrawer";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import { useCart } from "@/components/CartContext";
 
 const WEBPAGE_SCHEMA = {
   "@context": "https://schema.org",
@@ -33,9 +30,7 @@ const WEBPAGE_SCHEMA = {
 };
 
 export default function Home() {
-  const [cartOpen, setCartOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("todos");
-  const { cart, addItem, updateQty, removeItem, cartCount } = useCart();
   const location = useLocation();
 
   useEffect(() => {
@@ -59,14 +54,10 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }}
       />
 
-      <Navbar
-        cartCount={cartCount}
-        onCartClick={() => setCartOpen(true)}
-      />
-      <HeroSection onAddToCart={addItem} />
+      <Navbar />
+      <HeroSection />
       <CategoriesSection />
       <FeaturedProducts
-        onAddToCart={addItem}
         activeCategory={activeCategory}
         setActiveCategory={setActiveCategory}
       />
@@ -74,16 +65,6 @@ export default function Home() {
       <ClientsSlider />
       <TestimonialsSection />
       <FooterSection />
-
-      <CartDrawer
-        open={cartOpen}
-        onClose={() => setCartOpen(false)}
-        items={cart}
-        onUpdateQty={updateQty}
-        onRemove={removeItem}
-      />
-
-      <WhatsAppButton />
     </div>
   );
 }

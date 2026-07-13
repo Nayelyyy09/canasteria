@@ -1,8 +1,55 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { CATEGORIES_FULL } from "@/lib/products";
 import { Link } from "react-router-dom";
+
+function CategoryCard({ cat, index }) {
+  const cardRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["start end", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
+
+  return (
+    <motion.div
+      ref={cardRef}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ delay: index * 0.1, duration: 0.6 }}
+    >
+      <Link
+        to={`/canastas-navidenas/${cat.slug}`}
+        className="group relative block aspect-[4/5] overflow-hidden text-left"
+      >
+        <motion.img
+          style={{ y }}
+          src={cat.image}
+          alt={`Categoría: ${cat.label} — ${cat.description}`}
+          className="absolute inset-0 w-full h-[120%] object-cover group-hover:scale-110 transition-transform duration-700"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1A2F23] via-[#1A2F23]/40 to-transparent" />
+        <div className="absolute inset-0 p-5 lg:p-6 flex flex-col justify-end">
+          <h3 className="font-display text-xl lg:text-2xl text-[#F9F4EB] group-hover:text-[#B39359] transition-colors duration-300">
+            {cat.label}
+          </h3>
+          <p className="mt-1 font-body text-xs text-[#F9F4EB]/60 line-clamp-2">
+            {cat.description}
+          </p>
+          <div className="mt-3 flex items-center gap-2 text-[#B39359] opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+            <span className="font-body text-xs tracking-widest uppercase">Ver productos</span>
+            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
+          </div>
+        </div>
+        {/* Festive corner accent */}
+        <div className="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-l-[40px] border-t-[#841B2D] border-l-transparent group-hover:border-t-[#B39359] transition-colors duration-300" />
+      </Link>
+    </motion.div>
+  );
+}
 
 export default function CategoriesSection() {
   return (
@@ -14,50 +61,30 @@ export default function CategoriesSection() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="font-body text-xs tracking-[0.4em] uppercase text-[#841B2D] mb-3">
+          <motion.p
+            initial={{ opacity: 0, letterSpacing: "0.1em" }}
+            whileInView={{ opacity: 1, letterSpacing: "0.4em" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="font-body text-xs uppercase text-[#841B2D] mb-3"
+          >
             Explora por
-          </p>
+          </motion.p>
           <h2 className="font-display text-4xl lg:text-5xl text-[#1A2F23]">
             Nuestras Categorías
           </h2>
-          <div className="mt-4 mx-auto w-16 h-px bg-[#B39359]" />
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: 64 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-4 mx-auto h-px bg-[#B39359]"
+          />
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
           {CATEGORIES_FULL.map((cat, i) => (
-            <motion.div
-              key={cat.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.5 }}
-            >
-              <Link
-                to={`/canastas-navidenas/${cat.slug}`}
-                className="group relative block aspect-[4/5] overflow-hidden text-left"
-              >
-                <img
-                  src={cat.image}
-                  alt={`Categoría: ${cat.label} — ${cat.description}`}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A2F23] via-[#1A2F23]/40 to-transparent" />
-                <div className="absolute inset-0 p-5 lg:p-6 flex flex-col justify-end">
-                  <h3 className="font-display text-xl lg:text-2xl text-[#F9F4EB]">
-                    {cat.label}
-                  </h3>
-                  <p className="mt-1 font-body text-xs text-[#F9F4EB]/60 line-clamp-2">
-                    {cat.description}
-                  </p>
-                  <div className="mt-3 flex items-center gap-2 text-[#B39359] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="font-body text-xs tracking-widest uppercase">Ver productos</span>
-                    <ArrowRight size={14} />
-                  </div>
-                </div>
-                {/* Festive corner accent */}
-                <div className="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-l-[40px] border-t-[#841B2D] border-l-transparent" />
-              </Link>
-            </motion.div>
+            <CategoryCard key={cat.id} cat={cat} index={i} />
           ))}
         </div>
       </div>

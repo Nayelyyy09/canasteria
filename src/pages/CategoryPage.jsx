@@ -6,9 +6,6 @@ import { CATEGORIES_FULL, PRODUCTS } from "@/lib/products";
 import ProductCard from "@/components/ProductCard";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
-import CartDrawer from "@/components/CartDrawer";
-import ProductDetail from "@/components/ProductDetail";
-import { useCart } from "@/components/CartContext";
 
 const SEO_CONTENT = {
   ejecutivas: {
@@ -27,7 +24,7 @@ const SEO_CONTENT = {
   },
   exclusivas: {
     heading: "Canastas Navideñas Exclusivas",
-    intro: "Para quienes buscan lo excepcional, nuestras canastas navideñas exclusivas representan la cúspide del lujo gourmet. Una selección magistral de los mejores productos del mundo.",
+    intro: "Para quienes buscan lo excepcional, nuestras canastas navideñas exclusivas representan la cúspide del lugo gourmet. Una selección magistral de los mejores productos del mundo.",
     sections: [
       {
         title: "Productos de Calidad Superior",
@@ -89,9 +86,6 @@ CATEGORIES_FULL.forEach((cat) => {
 export default function CategoryPage() {
   const { slug } = useParams();
   const category = CATEGORY_MAP[slug];
-  const [cartOpen, setCartOpen] = React.useState(false);
-  const [selectedProduct, setSelectedProduct] = React.useState(null);
-  const { cart, addItem, updateQty, removeItem, cartCount } = useCart();
 
   useEffect(() => {
     if (category) {
@@ -154,11 +148,7 @@ export default function CategoryPage() {
         />
       )}
 
-      <Navbar
-        cartCount={cartCount}
-        onCartClick={() => setCartOpen(true)}
-        onSelectCategory={() => {}}
-      />
+      <Navbar />
 
       {/* Hero Banner */}
       <section className="relative bg-[#1A2F23] overflow-hidden">
@@ -222,7 +212,6 @@ export default function CategoryPage() {
                 key={product.id}
                 product={product}
                 index={i}
-                onAddToCart={addItem}
                 dark
               />
             ))}
@@ -319,22 +308,6 @@ export default function CategoryPage() {
       </section>
 
       <FooterSection />
-
-      <CartDrawer
-        open={cartOpen}
-        onClose={() => setCartOpen(false)}
-        items={cart}
-        onUpdateQty={updateQty}
-        onRemove={removeItem}
-      />
-
-      {selectedProduct && (
-        <ProductDetail
-          product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-          onAddToCart={addItem}
-        />
-      )}
     </div>
   );
 }

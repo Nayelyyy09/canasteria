@@ -1,16 +1,26 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Gift } from "lucide-react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { ChevronLeft, ChevronRight, Gift, MessageCircle } from "lucide-react";
 import { PRODUCTS } from "@/lib/products";
 import CanvasSnow from "./CanvasSnow";
 
 const SLIDES = PRODUCTS.filter((p) => p.featured).slice(0, 4);
 
-export default function HeroSection({ onAddToCart }) {
+export default function HeroSection() {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const navigate = useNavigate();
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
   const go = useCallback((dir) => {
     setDirection(dir);
@@ -24,10 +34,19 @@ export default function HeroSection({ onAddToCart }) {
 
   const product = SLIDES[index];
 
+  const handleCotizar = () => {
+    const message = encodeURIComponent(
+      `Hola, me interesa cotizar la canasta "${product.name}". ¿Podrían darme más información?`
+    );
+    window.open(`https://wa.me/51958438095?text=${message}`, "_blank");
+  };
+
   return (
-    <section id="hero" className="relative bg-[#1A2F23] overflow-hidden">
-      {/* Efecto de Nieve en Canvas */}
-      <CanvasSnow />
+    <section ref={sectionRef} id="hero" className="relative bg-[#1A2F23] overflow-hidden">
+      {/* Parallax background */}
+      <motion.div style={{ y, scale }} className="absolute inset-0">
+        <CanvasSnow />
+      </motion.div>
 
       {/* Guirnalda de luces navideñas parpadeantes */}
       <svg
@@ -62,7 +81,7 @@ export default function HeroSection({ onAddToCart }) {
         })}
       </svg>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-16 py-12 lg:py-20">
+      <motion.div style={{ opacity }} className="relative max-w-7xl mx-auto px-6 lg:px-16 py-12 lg:py-20">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={index}
@@ -84,43 +103,78 @@ export default function HeroSection({ onAddToCart }) {
                 <Gift size={14} className="text-[#B39359]" />
                 Destacado de la temporada
               </motion.span>
-              <h1 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl text-[#F9F4EB] leading-tight">
+
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl text-[#F9F4EB] leading-tight"
+              >
                 {product.name}
-              </h1>
-              <div className="mt-3 w-16 h-px bg-[#B39359] mx-auto lg:mx-0" />
-              <p className="mt-5 font-body text-sm lg:text-base text-[#F9F4EB]/60 leading-relaxed max-w-lg mx-auto lg:mx-0 line-clamp-3">
+              </motion.h1>
+
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: 64 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+                className="mt-3 h-px bg-[#B39359] mx-auto lg:mx-0"
+              />
+
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                className="mt-5 font-body text-sm lg:text-base text-[#F9F4EB]/60 leading-relaxed max-w-lg mx-auto lg:mx-0 line-clamp-3"
+              >
                 {product.description}
-              </p>
-              <div className="mt-7 flex items-center justify-center lg:justify-start gap-6">
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.5 }}
+                className="mt-7 flex items-center justify-center lg:justify-start gap-6"
+              >
                 <div className="flex gap-3">
                   <button
-                    onClick={() => onAddToCart(product)}
-                    className="px-7 py-3 bg-[#841B2D] text-[#F9F4EB] font-body text-xs tracking-widest uppercase hover:bg-[#6d1625] transition-colors"
+                    onClick={handleCotizar}
+                    className="group px-7 py-3 bg-[#841B2D] text-[#F9F4EB] font-body text-xs tracking-widest uppercase hover:bg-[#6d1625] transition-all duration-300 hover:shadow-lg hover:shadow-[#841B2D]/30 hover:-translate-y-0.5 flex items-center gap-2"
                   >
+                    <MessageCircle size={14} />
                     Cotizar
                   </button>
                   <button
                     onClick={() => navigate(`/producto/${product.slug}`)}
-                    className="px-7 py-3 border border-[#B39359]/40 text-[#F9F4EB] font-body text-xs tracking-widest uppercase hover:bg-[#B39359]/10 transition-colors"
+                    className="px-7 py-3 border border-[#B39359]/40 text-[#F9F4EB] font-body text-xs tracking-widest uppercase hover:bg-[#B39359]/10 transition-all duration-300 hover:-translate-y-0.5"
                   >
                     Ver detalle
                   </button>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* Image side */}
             <div className="order-1 lg:order-2 relative">
-              <div className="relative aspect-[4/3] lg:aspect-square overflow-hidden">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3, duration: 0.7 }}
+                className="relative aspect-[4/3] lg:aspect-square overflow-hidden"
+              >
                 <img
                   src={product.image}
                   alt={`Canasta navideña artesanal: ${product.name} — regalo gourmet navideño`}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#1A2F23]/50 via-transparent to-[#841B2D]/20" />
-              </div>
+              </motion.div>
               {/* Decorative border */}
-              <div className="absolute -bottom-3 -right-3 w-full h-full border border-[#B39359]/30 pointer-events-none" />
+              <motion.div
+                initial={{ opacity: 0, x: 20, y: 20 }}
+                animate={{ opacity: 1, x: 12, y: 12 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+                className="absolute -bottom-3 -right-3 w-full h-full border border-[#B39359]/30 pointer-events-none"
+              />
             </div>
           </motion.div>
         </AnimatePresence>
@@ -129,7 +183,7 @@ export default function HeroSection({ onAddToCart }) {
         <div className="mt-10 flex items-center justify-center gap-6">
           <button
             onClick={() => go(-1)}
-            className="w-10 h-10 flex items-center justify-center border border-[#B39359]/30 text-[#F9F4EB] hover:bg-[#B39359]/10 transition-colors"
+            className="w-10 h-10 flex items-center justify-center border border-[#B39359]/30 text-[#F9F4EB] hover:bg-[#B39359]/10 transition-all duration-300 hover:scale-110"
           >
             <ChevronLeft size={18} />
           </button>
@@ -151,12 +205,12 @@ export default function HeroSection({ onAddToCart }) {
           </div>
           <button
             onClick={() => go(1)}
-            className="w-10 h-10 flex items-center justify-center border border-[#B39359]/30 text-[#F9F4EB] hover:bg-[#B39359]/10 transition-colors"
+            className="w-10 h-10 flex items-center justify-center border border-[#B39359]/30 text-[#F9F4EB] hover:bg-[#B39359]/10 transition-all duration-300 hover:scale-110"
           >
             <ChevronRight size={18} />
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

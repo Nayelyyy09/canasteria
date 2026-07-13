@@ -1,9 +1,8 @@
 import React, { useEffect, useMemo } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ShoppingCart, MessageCircle, ChevronRight, ArrowLeft, Check } from "lucide-react";
+import { MessageCircle, ChevronRight, ArrowLeft, Check } from "lucide-react";
 import { getProductBySlug, PRODUCTS, CATEGORIES_FULL } from "@/lib/products";
-import { useCart } from "@/components/CartContext";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import ProductCard from "@/components/ProductCard";
@@ -11,7 +10,6 @@ import ProductCard from "@/components/ProductCard";
 export default function ProductPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const { addItem } = useCart();
   const product = getProductBySlug(slug);
 
   const category = useMemo(() => {
@@ -92,15 +90,11 @@ export default function ProductPage() {
     );
   }
 
-  const handleAddToCart = () => {
-    addItem(product);
-  };
-
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
       `Hola, me interesa cotizar la canasta "${product.name}". ¿Podrían darme más información?`
     );
-    window.open(`https://wa.me/51997486009?text=${message}`, "_blank");
+    window.open(`https://wa.me/51958438095?text=${message}`, "_blank");
   };
 
   const jsonLd = {
@@ -228,13 +222,6 @@ export default function ProductPage() {
 
               {/* CTAs */}
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={handleAddToCart}
-                  className="flex items-center justify-center gap-2 px-8 py-4 bg-[#841B2D] text-[#F9F4EB] font-body text-xs tracking-widest uppercase hover:bg-[#6d1625] transition-colors"
-                >
-                  <ShoppingCart size={18} />
-                  Cotizar
-                </button>
                 <button
                   onClick={handleWhatsApp}
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-[#25D366] text-white font-body text-xs tracking-widest uppercase hover:bg-[#1da851] transition-colors"

@@ -1,30 +1,98 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronRight, Phone, Mail, MapPin, Clock, Send, TreePine } from "lucide-react";
+import { ChevronRight, Phone, Mail, MapPin, Clock, Send, TreePine, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import { useToast } from "@/components/ui/use-toast";
 
-const WHATSAPP = "https://wa.me/51997486009?text=Hola,%20quiero%20más%20información";
+const WHATSAPP = "https://wa.me/51958438095?text=Hola,%20quiero%20más%20información";
+const RECAPTCHA_SITE_KEY = "6LcDp1EtAAAAAOui-7Pi_IbuyJqgRI5u2-u4JnIF";
 
 export default function Contact() {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
   const [sending, setSending] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+  const recaptchaRef = useRef(null);
+  const recaptchaWidgetId = useRef(null);
+
+  useEffect(() => {
+    const checkRecaptcha = setInterval(() => {
+      if (typeof window.grecaptcha !== 'undefined') {
+        clearInterval(checkRecaptcha);
+        renderRecaptcha();
+      }
+    }, 100);
+    return () => clearInterval(checkRecaptcha);
+  }, []);
+
+  const renderRecaptcha = () => {
+    if (recaptchaRef.current && recaptchaWidgetId.current === null) {
+      try {
+        recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
+          sitekey: RECAPTCHA_SITE_KEY,
+          callback: () => {},
+          'expired-callback': () => {},
+          'error-callback': () => {}
+        });
+      } catch (error) {
+        console.error('Error rendering reCAPTCHA:', error);
+      }
+    }
+  };
+
+  const getRecaptchaToken = () => {
+    return new Promise((resolve, reject) => {
+      if (typeof window.grecaptcha === 'undefined') {
+        reject(new Error('reCAPTCHA no está disponible'));
+        return;
+      }
+      const response = window.grecaptcha.getResponse(recaptchaWidgetId.current);
+      if (response) {
+        resolve(response);
+      } else {
+        reject(new Error('Por favor completa el captcha'));
+      }
+    });
+  };
+
+  const resetRecaptcha = () => {
+    if (recaptchaWidgetId.current !== null && typeof window.grecaptcha !== 'undefined') {
+      window.grecaptcha.reset(recaptchaWidgetId.current);
+    }
+  };
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
-    setTimeout(() => {
+    setSubmitStatus(null);
+
+    try {
+      const recaptchaToken = await getRecaptchaToken();
+      console.log('Token reCAPTCHA:', recaptchaToken);
+      console.log('Form data:', form);
+
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      setSubmitStatus('success');
       toast({ title: "Mensaje enviado", description: "Nos pondremos en contacto contigo pronto." });
       setForm({ name: "", email: "", phone: "", subject: "", message: "" });
+      resetRecaptcha();
+      setTimeout(() => setSubmitStatus(null), 3000);
+    } catch (error) {
+      console.error('Error:', error);
+      setSubmitStatus('error');
+      toast({ title: "Error", description: error.message || "Por favor completa el captcha.", variant: "destructive" });
+      resetRecaptcha();
+      setTimeout(() => setSubmitStatus(null), 3000);
+    } finally {
       setSending(false);
-    }, 1500);
+    }
   };
 
   const fadeIn = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
@@ -86,7 +154,8 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="Tu nombre completo"
-                    className="w-full bg-white border border-[#B39359]/20 px-4 py-3 font-body text-sm text-[#1A2F23] placeholder:text-[#1A2F23]/30 focus:outline-none focus:border-[#841B2D] transition-colors"
+                    disabled={sending}
+                    className="w-full bg-white border border-[#B39359]/20 px-4 py-3 font-body text-sm text-[#1A2F23] placeholder:text-[#1A2F23]/30 focus:outline-none focus:border-[#841B2D] transition-colors disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -98,7 +167,8 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="correo@ejemplo.com"
-                    className="w-full bg-white border border-[#B39359]/20 px-4 py-3 font-body text-sm text-[#1A2F23] placeholder:text-[#1A2F23]/30 focus:outline-none focus:border-[#841B2D] transition-colors"
+                    disabled={sending}
+                    className="w-full bg-white border border-[#B39359]/20 px-4 py-3 font-body text-sm text-[#1A2F23] placeholder:text-[#1A2F23]/30 focus:outline-none focus:border-[#841B2D] transition-colors disabled:opacity-50"
                   />
                 </div>
               </div>
@@ -111,7 +181,8 @@ export default function Contact() {
                     value={form.phone}
                     onChange={handleChange}
                     placeholder="997 486 009"
-                    className="w-full bg-white border border-[#B39359]/20 px-4 py-3 font-body text-sm text-[#1A2F23] placeholder:text-[#1A2F23]/30 focus:outline-none focus:border-[#841B2D] transition-colors"
+                    disabled={sending}
+                    className="w-full bg-white border border-[#B39359]/20 px-4 py-3 font-body text-sm text-[#1A2F23] placeholder:text-[#1A2F23]/30 focus:outline-none focus:border-[#841B2D] transition-colors disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -121,7 +192,8 @@ export default function Contact() {
                     value={form.subject}
                     onChange={handleChange}
                     required
-                    className="w-full bg-white border border-[#B39359]/20 px-4 py-3 font-body text-sm text-[#1A2F23] focus:outline-none focus:border-[#841B2D] transition-colors"
+                    disabled={sending}
+                    className="w-full bg-white border border-[#B39359]/20 px-4 py-3 font-body text-sm text-[#1A2F23] focus:outline-none focus:border-[#841B2D] transition-colors disabled:opacity-50"
                   >
                     <option value="">Selecciona un asunto</option>
                     <option value="pedido">Realizar un pedido</option>
@@ -141,16 +213,37 @@ export default function Contact() {
                   required
                   rows={5}
                   placeholder="Cuéntanos en qué podemos ayudarte..."
-                  className="w-full bg-white border border-[#B39359]/20 px-4 py-3 font-body text-sm text-[#1A2F23] placeholder:text-[#1A2F23]/30 focus:outline-none focus:border-[#841B2D] transition-colors resize-none"
+                  disabled={sending}
+                  className="w-full bg-white border border-[#B39359]/20 px-4 py-3 font-body text-sm text-[#1A2F23] placeholder:text-[#1A2F23]/30 focus:outline-none focus:border-[#841B2D] transition-colors resize-none disabled:opacity-50"
                 />
               </div>
+
+              {/* reCAPTCHA */}
+              <div className="flex justify-start">
+                <div ref={recaptchaRef}></div>
+              </div>
+
               <button
                 type="submit"
                 disabled={sending}
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#841B2D] text-[#F9F4EB] font-body text-sm tracking-widest uppercase hover:bg-[#6d1625] transition-colors disabled:opacity-50"
+                className={`inline-flex items-center gap-2 px-8 py-4 font-body text-sm tracking-widest uppercase transition-colors disabled:opacity-50 ${
+                  submitStatus === 'success'
+                    ? 'bg-[#1A6B3E] text-[#F9F4EB]'
+                    : submitStatus === 'error'
+                    ? 'bg-[#841B2D] text-[#F9F4EB]'
+                    : 'bg-[#841B2D] text-[#F9F4EB] hover:bg-[#6d1625]'
+                }`}
               >
-                <Send size={16} />
-                {sending ? "Enviando..." : "Enviar Mensaje"}
+                {sending ? (
+                  <Loader2 size={16} className="animate-spin" />
+                ) : submitStatus === 'success' ? (
+                  <CheckCircle2 size={16} />
+                ) : submitStatus === 'error' ? (
+                  <AlertCircle size={16} />
+                ) : (
+                  <Send size={16} />
+                )}
+                {sending ? "Enviando..." : submitStatus === 'success' ? "Enviado" : "Enviar Mensaje"}
               </button>
             </form>
           </motion.div>

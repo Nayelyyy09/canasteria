@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { PRODUCTS, CATEGORIES } from "@/lib/products";
 import ProductCard from "@/components/ProductCard";
 
-export default function FeaturedProducts({ onAddToCart, activeCategory, setActiveCategory }) {
+export default function FeaturedProducts({ activeCategory, setActiveCategory }) {
   const [internalCat, setInternalCat] = useState("todos");
   const active = activeCategory ?? internalCat;
   const setActive = setActiveCategory ?? setInternalCat;
@@ -54,7 +54,6 @@ export default function FeaturedProducts({ onAddToCart, activeCategory, setActiv
               key={product.id}
               product={product}
               index={i}
-              onAddToCart={onAddToCart}
               dark
             />
           ))}

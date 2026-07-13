@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  ShoppingBag, Menu, X, ChevronDown, MapPin, User, Tag,
+  Menu, X, ChevronDown, MapPin, User, Tag,
   Phone, Search, TreePine,
 } from "lucide-react";
 import { CATEGORIES_FULL } from "@/lib/products";
@@ -26,7 +26,7 @@ const MEGA_MENU_ITEMS = [
   },
 ];
 
-export default function Navbar({ cartCount = 0, onCartClick }) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
@@ -67,11 +67,11 @@ export default function Navbar({ cartCount = 0, onCartClick }) {
               <ChevronDown size={12} />
             </button>
             <button
-              onClick={() => scrollTo("#promociones")}
+              onClick={() => navigate("/regalos-navidenos")}
               className="flex items-center gap-1.5 hover:text-[#B39359] transition-colors"
             >
               <Tag size={13} />
-              <span>Promociones</span>
+              <span>Regalos Navideños</span>
             </button>
           </div>
           <div className="flex items-center gap-6">
@@ -217,17 +217,17 @@ export default function Navbar({ cartCount = 0, onCartClick }) {
             </div>
 
             <Link
-              to="/blog"
+              to="/activaciones"
               className="font-body text-sm tracking-widest uppercase text-[#F9F4EB]/80 hover:text-[#B39359] transition-colors"
             >
-              Blog
+              Activaciones
             </Link>
-            <button
-              onClick={() => scrollTo("#promociones")}
+            <Link
+              to="/regalos-navidenos"
               className="font-body text-sm tracking-widest uppercase text-[#F9F4EB]/80 hover:text-[#B39359] transition-colors"
             >
-              Promociones
-            </button>
+              Regalos Navideños
+            </Link>
             <Link
               to="/nosotros"
               className="font-body text-sm tracking-widest uppercase text-[#F9F4EB]/80 hover:text-[#B39359] transition-colors"
@@ -246,17 +246,6 @@ export default function Navbar({ cartCount = 0, onCartClick }) {
           <div className="flex items-center gap-3 lg:gap-5">
             <button className="hidden lg:flex text-[#F9F4EB]/70 hover:text-[#B39359] transition-colors">
               <Search size={20} strokeWidth={1.5} />
-            </button>
-            <button
-              onClick={onCartClick}
-              className="relative text-[#F9F4EB] hover:text-[#B39359] transition-colors"
-            >
-              <ShoppingBag size={22} strokeWidth={1.5} />
-              {cartCount > 0 && (
-                <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#841B2D] text-[#F9F4EB] text-xs flex items-center justify-center font-body">
-                  {cartCount}
-                </span>
-              )}
             </button>
             <button
               onClick={() => setMenuOpen(true)}
@@ -339,18 +328,19 @@ export default function Navbar({ cartCount = 0, onCartClick }) {
               </div>
 
               <Link
-                to="/blog"
+                to="/activaciones"
                 onClick={() => setMenuOpen(false)}
                 className="py-3 font-display text-xl text-[#F9F4EB] border-b border-[#B39359]/10 text-left"
               >
-                Blog
+                Activaciones
               </Link>
-              <button
-                onClick={() => scrollTo("#promociones")}
+              <Link
+                to="/regalos-navidenos"
+                onClick={() => setMenuOpen(false)}
                 className="py-3 font-display text-xl text-[#F9F4EB] border-b border-[#B39359]/10 text-left"
               >
-                Promociones
-              </button>
+                Regalos Navideños
+              </Link>
               <Link
                 to="/nosotros"
                 onClick={() => setMenuOpen(false)}
