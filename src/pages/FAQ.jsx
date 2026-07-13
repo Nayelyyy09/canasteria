@@ -106,7 +106,7 @@ const FAQ_DATA = [
   },
 ];
 
-const SITE_URL = "https://canastanavidena.com";
+const SITE_URL = "https://canastanavidena.pe";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -256,7 +256,7 @@ export default function FAQ() {
               Nuestro equipo está listo para ayudarte con cualquier duda adicional.
             </p>
             <a
-              href="mailto:ventas@publiventa.com"
+              href="mailto:ventas@canastanavidena.pe"
               className="inline-block px-8 py-3 bg-[#841B2D] text-[#F9F4EB] font-body text-sm hover:bg-[#6d1625] transition-colors"
             >
               Contáctanos

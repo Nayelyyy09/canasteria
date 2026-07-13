@@ -160,7 +160,7 @@ export default function About() {
       <FooterSection />
 
       {/* Schema Organization */}
-      
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -168,8 +168,8 @@ export default function About() {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Canastas Navideñas",
-            url: "https://canastanavidena.com",
-            logo: "https://canastanavidena.com/logo.png",
+            url: "https://canastanavidena.pe",
+            logo: "https://canastanavidena.pe/favicon.png",
             description: "Canastas navideñas artesanales de lujo para empresas y familias en Lima.",
             foundingDate: "2017",
             address: {

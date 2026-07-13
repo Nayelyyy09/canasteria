@@ -65,7 +65,7 @@ export default function PrivacyPolicy() {
                 <li><strong>Razón social:</strong> Canastas Navideñas E.I.R.L.</li>
                 <li><strong>RUC:</strong> 20601234567</li>
                 <li><strong>Dirección:</strong> Jr. Santo Tomás, Mz C Lt. 16-B, Asoc. Fundo Garagay Bajo, Los Olivos - Lima - Perú</li>
-                <li><strong>Correo electrónico:</strong> ventas@publiventa.com</li>
+                <li><strong>Correo electrónico:</strong> ventas@canastanavidena.pe</li>
                 <li><strong>Teléfono:</strong> 997 486 009</li>
               </ul>
             </div>
@@ -125,7 +125,7 @@ export default function PrivacyPolicy() {
                 <li><strong>Portabilidad:</strong> Solicitar sus datos en un formato estructurado y de uso común.</li>
               </ul>
               <p className="mt-2">
-                Para ejercer estos derechos, puede contactarnos a través de ventas@publiventa.com o al 997 486 009.
+                Para ejercer estos derechos, puede contactarnos a través de ventas@canastanavidena.pe o al 997 486 009.
               </p>
             </div>
 
@@ -167,7 +167,7 @@ export default function PrivacyPolicy() {
               <h2 className="font-display text-2xl text-[#1A2F23] mb-3">11. Contacto</h2>
               <p>Si tiene dudas o wishies ejercer sus derechos sobre sus datos personales, puede contactarnos:</p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
-                <li><strong>Correo:</strong> ventas@publiventa.com</li>
+                <li><strong>Correo:</strong> ventas@canastanavidena.pe</li>
                 <li><strong>Teléfono:</strong> 997 486 009 / 976 220 440 / 958 438 095</li>
                 <li><strong>Dirección:</strong> Jr. Santo Tomás, Mz C Lt. 16-B, Asoc. Fundo Garagay Bajo, Los Olivos - Lima - Perú</li>
               </ul>

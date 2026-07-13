@@ -354,8 +354,8 @@ export default function FooterSection() {
                 >
                   <Mail size={14} className="text-[#841B2D]" />
                 </motion.div>
-                <a href="mailto:ventas@publiventa.com" className="font-body text-sm text-[#F9F4EB]/50 hover:text-[#F9F4EB] transition-colors">
-                  ventas@publiventa.com
+                <a href="mailto:ventas@canastanavidena.pe" className="font-body text-sm text-[#F9F4EB]/50 hover:text-[#F9F4EB] transition-colors">
+                  ventas@canastanavidena.pe
                 </a>
               </li>
               <li className="flex items-start gap-3">

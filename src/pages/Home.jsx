@@ -12,15 +12,15 @@ import FooterSection from "@/components/FooterSection";
 const WEBPAGE_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://publiventa.pe/#webpage",
-  "url": "https://publiventa.pe/",
+  "@id": "https://canastanavidena.pe/#webpage",
+  "url": "https://canastanavidena.pe/",
   "name": "Publiventa - Canastas Navideñas Artesanales | Regalos Gourmet",
   "description": "Canastas navideñas artesanales de lujo. Regalos gourmet curados con los mejores productos para celebrar la temporada navideña.",
   "inLanguage": "es",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Publiventa",
-    "url": "https://publiventa.pe"
+    "url": "https://canastanavidena.pe"
   },
   "about": {
     "@type": "Organization",

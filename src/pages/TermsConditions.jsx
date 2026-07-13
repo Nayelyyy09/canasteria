@@ -58,12 +58,12 @@ export default function TermsConditions() {
           <div className="prose prose-lg max-w-none font-body text-[#1A2F23]/70 leading-relaxed space-y-8">
             <div>
               <h2 className="font-display text-2xl text-[#1A2F23] mb-3">1. Identificación del Prestador</h2>
-              <p>Los presentes Términos y Condiciones regulan el uso del sitio web canastanavidena.com y la prestación de servicios de:</p>
+              <p>Los presentes Términos y Condiciones regulan el uso del sitio web canastanavidena.pe y la prestación de servicios de:</p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
                 <li><strong>Razón social:</strong> Canastas Navideñas E.I.R.L.</li>
                 <li><strong>RUC:</strong> 20601234567</li>
                 <li><strong>Domicilio fiscal:</strong> Jr. Santo Tomás, Mz C Lt. 16-B, Asoc. Fundo Garagay Bajo, Los Olivos - Lima - Perú</li>
-                <li><strong>Correo electrónico:</strong> ventas@publiventa.com</li>
+                <li><strong>Correo electrónico:</strong> ventas@canastanavidena.pe</li>
                 <li><strong>Teléfono:</strong> 997 486 009</li>
               </ul>
             </div>
@@ -187,7 +187,7 @@ export default function TermsConditions() {
               <h2 className="font-display text-2xl text-[#1A2F23] mb-3">14. Contacto</h2>
               <p>Para consultas sobre estos Términos y Condiciones:</p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
-                <li><strong>Correo:</strong> ventas@publiventa.com</li>
+                <li><strong>Correo:</strong> ventas@canastanavidena.pe</li>
                 <li><strong>Teléfono:</strong> 997 486 009 / 976 220 440 / 958 438 095</li>
                 <li><strong>Dirección:</strong> Jr. Santo Tomás, Mz C Lt. 16-B, Asoc. Fundo Garagay Bajo, Los Olivos - Lima - Perú</li>
               </ul>
