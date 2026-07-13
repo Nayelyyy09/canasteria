@@ -160,6 +160,7 @@ export default function About() {
       <FooterSection />
 
       {/* Schema Organization */}
+      
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -188,4 +189,4 @@ export default function About() {
       />
     </div>
   );
-} 
+}
