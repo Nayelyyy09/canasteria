@@ -296,12 +296,19 @@ export const CATEGORIES_FULL = [
 ];
 
 export const CLIENTS = [
-  { name: "LOGOS-CLIENTES-10", logo: "https://publiventa.pe/wp-content/uploads/2025/07/LOGOS-CLIENTES-10-e1753974079926.png" },
-  { name: "LOGOS-CLIENTES-08", logo: "https://publiventa.pe/wp-content/uploads/2025/07/LOGOS-CLIENTES-08-e1753975783493.png" },
-  { name: "LOGOS-CLIENTES-11", logo: "https://publiventa.pe/wp-content/uploads/2025/07/LOGOS-CLIENTES-11-e1753975817436.png" },
-  { name: "LOGOS-CLIENTES-15", logo: "https://publiventa.pe/wp-content/uploads/2025/07/LOGOS-CLIENTES-15-e1753975592348.png" },
-  { name: "LOGOS-CLIENTES-03", logo: "https://publiventa.pe/wp-content/uploads/2025/07/LOGOS-CLIENTES-03-e1753975698141.png" },
-  { name: "LOGOS-CLIENTES-12", logo: "https://publiventa.pe/wp-content/uploads/2025/07/LOGOS-CLIENTES-12-e1753975527689.png" },
-  { name: "LOGOS-CLIENTES-04", logo: "https://publiventa.pe/wp-content/uploads/2025/07/LOGOS-CLIENTES-04-e1753974768260.png" },
+  { name: "Stracon", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Stracon-1.png" },
+  { name: "Caja Arequipa", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Caja-Arequipa.png" },
+  { name: "Ochosur", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Ochosur.png" },
+  { name: "Kori", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Kori.png" },
+  { name: "Arcos Dorados", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Arcos-Dorados.png" },
+  { name: "Pardos Chicken", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Pardos-Chicken.png" },
   { name: "SENTAI", logo: "https://publiventa.pe/wp-content/uploads/2025/08/LOGO_SENTAI-e1755279214511.png" },
+  { name: "Refinca", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Refinca.png" },
+  { name: "CBC", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Cbc.png" },
+  { name: "Cana Brava", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Cana-Brava.png" },
+  { name: "AC Laboratorios", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Ac-Laboratorios.png" },
+  { name: "Peru", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Peru.png" },
+  { name: "Control Union", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Controlunion.png" },
+  { name: "Group 766", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Group-766.png" },
+  { name: "Etex", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Etex.png" },
 ];

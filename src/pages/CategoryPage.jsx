@@ -151,14 +151,14 @@ export default function CategoryPage() {
       <Navbar />
 
       {/* Hero Banner */}
-      <section className="relative bg-[#0D2818] overflow-hidden">
+      <section className="relative bg-[#0A461A] overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={category.image}
             alt={category.label}
             className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0D2818]/80 to-[#0D2818]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0A461A]/80 to-[#0A461A]" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-16 py-16 lg:py-24">
           {/* Breadcrumb */}
@@ -204,7 +204,7 @@ export default function CategoryPage() {
       </section>
 
       {/* Products Grid */}
-      <section className="bg-[#0D2818] py-16 lg:py-20">
+      <section className="bg-[#0A461A] py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {products.map((product, i) => (
@@ -242,17 +242,17 @@ export default function CategoryPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <p className="font-body text-sm text-[#0D2818]/70 leading-relaxed mb-8">
+            <p className="font-body text-sm text-[#0A461A]/70 leading-relaxed mb-8">
               {seoContent.intro}
             </p>
 
             {seoContent.sections.map((section, i) => (
               <div key={i} className="mb-8">
-                <h2 className="font-display text-2xl lg:text-3xl text-[#0D2818] mb-3">
+                <h2 className="font-display text-2xl lg:text-3xl text-[#0A461A] mb-3">
                   {section.title}
                 </h2>
                 <div className="w-12 h-px bg-[#C9A96E] mb-4" />
-                <p className="font-body text-sm text-[#0D2818]/60 leading-relaxed">
+                <p className="font-body text-sm text-[#0A461A]/60 leading-relaxed">
                   {section.text}
                 </p>
               </div>
@@ -262,7 +262,7 @@ export default function CategoryPage() {
       </section>
 
       {/* Other Categories */}
-      <section className="bg-[#0D2818] py-16 lg:py-20">
+      <section className="bg-[#0A461A] py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="text-center mb-12">
             <p className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-3">
@@ -291,7 +291,7 @@ export default function CategoryPage() {
                     alt={cat.label}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D2818] via-[#0D2818]/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A461A] via-[#0A461A]/40 to-transparent" />
                   <div className="absolute inset-0 p-4 flex flex-col justify-end">
                     <h3 className="font-display text-lg text-[#FAF7F2] group-hover:text-[#C9A96E] transition-colors">
                       {cat.label}

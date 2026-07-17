@@ -14,17 +14,17 @@ export default function PrivacyPolicy() {
 
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-6 lg:px-16 py-4">
-        <nav className="flex items-center gap-2 font-body text-xs text-[#0D2818]/50">
-          <Link to="/" className="hover:text-[#B22234] transition-colors">Inicio</Link>
+        <nav className="flex items-center gap-2 font-body text-xs text-[#0A461A]/50">
+          <Link to="/" className="hover:text-[#7E0E0F] transition-colors">Inicio</Link>
           <ChevronRight size={12} />
-          <span className="text-[#0D2818]">Política de Privacidad</span>
+          <span className="text-[#0A461A]">Política de Privacidad</span>
         </nav>
       </div>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0D2818] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#0A461A] py-20 lg:py-28">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-[#B22234] rounded-full blur-3xl" />
+          <div className="absolute top-10 left-10 w-72 h-72 bg-[#7E0E0F] rounded-full blur-3xl" />
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#C9A96E] rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-16 text-center">
@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
             <TreePine size={18} className="text-[#C9A96E]" />
           </div>
           <h1 className="font-display text-5xl lg:text-7xl text-[#FAF7F2] leading-tight">
-            Política de <span className="italic text-[#B22234]">Privacidad</span>
+            Política de <span className="italic text-[#7E0E0F]">Privacidad</span>
           </h1>
           <p className="mt-6 font-body text-[#FAF7F2]/60 max-w-2xl mx-auto text-lg">
             Conoce cómo protegemos y manejamos tu información personal.
@@ -49,15 +49,15 @@ export default function PrivacyPolicy() {
           variants={fadeIn} transition={{ duration: 0.6 }}
         >
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 flex items-center justify-center bg-[#1B5E3B]/10 border border-[#1B5E3B]/20">
-              <Shield size={18} className="text-[#1B5E3B]" />
+            <div className="w-10 h-10 flex items-center justify-center bg-[#0A461A]/10 border border-[#0A461A]/20">
+              <Shield size={18} className="text-[#0A461A]" />
             </div>
-            <p className="font-body text-xs text-[#0D2818]/40">Última actualización: Junio 2026</p>
+            <p className="font-body text-xs text-[#0A461A]/40">Última actualización: Junio 2026</p>
           </div>
 
-          <div className="prose prose-lg max-w-none font-body text-[#0D2818]/70 leading-relaxed space-y-8">
+          <div className="prose prose-lg max-w-none font-body text-[#0A461A]/70 leading-relaxed space-y-8">
             <div>
-              <h2 className="font-display text-2xl text-[#0D2818] mb-3">1. Información del Responsable</h2>
+              <h2 className="font-display text-2xl text-[#0A461A] mb-3">1. Información del Responsable</h2>
               <p>
                 En cumplimiento de la Ley N° 29733, Ley de Protección de Datos Personales del Perú, y su reglamento aprobado por Decreto Supremo N° 003-2013-JUS, le informamos que los datos personales que usted proporcione serán tratados por:
               </p>
@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#0D2818] mb-3">2. Datos Personales Recopilados</h2>
+              <h2 className="font-display text-2xl text-[#0A461A] mb-3">2. Datos Personales Recopilados</h2>
               <p>Podemos recopilar los siguientes datos personales cuando usted utiliza nuestros servicios:</p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
                 <li>Datos de identificación: nombre completo, número de documento de identidad (DNI o RUC).</li>
@@ -83,7 +83,7 @@ export default function PrivacyPolicy() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#0D2818] mb-3">3. Finalidad del Tratamiento</h2>
+              <h2 className="font-display text-2xl text-[#0A461A] mb-3">3. Finalidad del Tratamiento</h2>
               <p>Sus datos personales serán utilizados para las siguientes finalidades:</p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
                 <li>Gestionar y procesar sus pedidos de canastas navideñas.</li>
@@ -96,7 +96,7 @@ export default function PrivacyPolicy() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#0D2818] mb-3">4. Base Legal del Tratamiento</h2>
+              <h2 className="font-display text-2xl text-[#0A461A] mb-3">4. Base Legal del Tratamiento</h2>
               <p>El tratamiento de sus datos personales se fundamenta en:</p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
                 <li>Su consentimiento expreso e informado.</li>
@@ -107,14 +107,14 @@ export default function PrivacyPolicy() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#0D2818] mb-3">5. Conservación de Datos</h2>
+              <h2 className="font-display text-2xl text-[#0A461A] mb-3">5. Conservación de Datos</h2>
               <p>
                 Sus datos personales serán conservados mientras se mantenga la relación comercial y por un plazo máximo de 10 años após la última transacción, o el plazo que establezcan las normas tributarias y contables aplicables en Perú.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#0D2818] mb-3">6. Derechos del Titular</h2>
+              <h2 className="font-display text-2xl text-[#0A461A] mb-3">6. Derechos del Titular</h2>
               <p>De conformidad con la Ley N° 29733, usted tiene derecho a:</p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
                 <li><strong>Acceso:</strong> Solicitar información sobre los datos personales que tratamos.</li>
@@ -130,7 +130,7 @@ export default function PrivacyPolicy() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#0D2818] mb-3">7. Seguridad de los Datos</h2>
+              <h2 className="font-display text-2xl text-[#0A461A] mb-3">7. Seguridad de los Datos</h2>
               <p>
                 Implementamos medidas de seguridad técnicas, administrativas y físicas para proteger sus datos personales contra acceso no autorizado, alteración, divulgación o destrucción. Entre estas medidas se incluyen:
               </p>
@@ -143,28 +143,28 @@ export default function PrivacyPolicy() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#0D2818] mb-3">8. Transferencias Internacionales</h2>
+              <h2 className="font-display text-2xl text-[#0A461A] mb-3">8. Transferencias Internacionales</h2>
               <p>
                 Sus datos personales podrán ser transferidos a servidores ubicados fuera del territorio peruano exclusivamente para fines de almacenamiento en la nube, siempre con las garantías adecuadas de seguridad y confidencialidad conforme a la normativa vigente.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#0D2818] mb-3">9. Cookies</h2>
+              <h2 className="font-display text-2xl text-[#0A461A] mb-3">9. Cookies</h2>
               <p>
                 Utilizamos cookies y tecnologías similares para mejorar su experiencia de navegación, analizar el tráfico del sitio y personalizar el contenido. Puede configurar su navegador para rechazar cookies, aunque esto podría afectar la funcionalidad del sitio.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#0D2818] mb-3">10. Cambios en esta Política</h2>
+              <h2 className="font-display text-2xl text-[#0A461A] mb-3">10. Cambios en esta Política</h2>
               <p>
                 Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. Los cambios serán publicados en esta página con la fecha de última actualización. Le recomendamos revisar periódicamente este documento.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-2xl text-[#0D2818] mb-3">11. Contacto</h2>
+              <h2 className="font-display text-2xl text-[#0A461A] mb-3">11. Contacto</h2>
               <p>Si tiene dudas o wishies ejercer sus derechos sobre sus datos personales, puede contactarnos:</p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
                 <li><strong>Correo:</strong> ventas@canastanavidena.pe</li>

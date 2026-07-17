@@ -72,7 +72,7 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
   };
 
   const typeLabel = type === "corporativo" ? "Cotización Corporativa" : "Cotización Personal";
-  const typeColor = type === "corporativo" ? "#B22234" : "#1B5E3B";
+  const typeColor = type === "corporativo" ? "#7E0E0F" : "#0A461A";
 
   return (
     <AnimatePresence>
@@ -83,7 +83,7 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleClose}
-            className="fixed inset-0 z-[90] bg-[#0D2818]/70 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-[90] bg-[#0A461A]/70 backdrop-blur-sm flex items-center justify-center p-4"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -102,11 +102,11 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                 >
                   {typeLabel}
                 </span>
-                <h3 className="font-display text-2xl text-[#0D2818]">Solicitar Cotización</h3>
+                <h3 className="font-display text-2xl text-[#0A461A]">Solicitar Cotización</h3>
               </div>
               <button
                 onClick={handleClose}
-                className="text-[#0D2818]/40 hover:text-[#0D2818] transition-colors"
+                className="text-[#0A461A]/40 hover:text-[#0A461A] transition-colors"
               >
                 <X size={22} strokeWidth={1.5} />
               </button>
@@ -114,19 +114,19 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
 
             {status === "success" ? (
               <div className="flex-1 flex flex-col items-center justify-center p-10 text-center">
-                <div className="w-16 h-16 rounded-full bg-[#1B5E3B]/10 flex items-center justify-center mb-5">
-                  <CheckCircle size={32} className="text-[#1B5E3B]" />
+                <div className="w-16 h-16 rounded-full bg-[#0A461A]/10 flex items-center justify-center mb-5">
+                  <CheckCircle size={32} className="text-[#0A461A]" />
                 </div>
-                <h4 className="font-display text-2xl text-[#0D2818] mb-3">
+                <h4 className="font-display text-2xl text-[#0A461A] mb-3">
                   ¡Cotización Enviada!
                 </h4>
-                <p className="font-body text-sm text-[#0D2818]/50 max-w-sm">
+                <p className="font-body text-sm text-[#0A461A]/50 max-w-sm">
                   Hemos recibido tu solicitud. Nuestro equipo te contactará pronto
                   con una propuesta personalizada.
                 </p>
                 <button
                   onClick={handleClose}
-                  className="mt-8 px-8 py-3 bg-[#B22234] text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#8B1A28] transition-colors"
+                  className="mt-8 px-8 py-3 bg-[#7E0E0F] text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#7E0E0F] transition-colors"
                 >
                   Cerrar
                 </button>
@@ -142,20 +142,20 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                     <div className="space-y-2">
                       {items.map((item) => (
                         <div key={item.cartId} className="flex justify-between items-center">
-                          <span className="font-body text-xs text-[#0D2818]/70 truncate mr-2">
+                          <span className="font-body text-xs text-[#0A461A]/70 truncate mr-2">
                             {item.name}
                           </span>
-                          <span className="font-body text-xs text-[#B22234] font-medium whitespace-nowrap">
+                          <span className="font-body text-xs text-[#7E0E0F] font-medium whitespace-nowrap">
                             x{item.qty}
                           </span>
                         </div>
                       ))}
                     </div>
                     <div className="mt-3 pt-3 border-t border-[#C9A96E]/20 flex justify-between items-center">
-                      <span className="font-body text-xs font-bold text-[#0D2818] uppercase tracking-wider">
+                      <span className="font-body text-xs font-bold text-[#0A461A] uppercase tracking-wider">
                         Total
                       </span>
-                      <span className="font-body text-sm text-[#0D2818]">
+                      <span className="font-body text-sm text-[#0A461A]">
                         {items.reduce((sum, item) => sum + item.qty, 0)} unidades
                       </span>
                     </div>
@@ -163,7 +163,7 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
 
                   {/* Formulario */}
                   <div>
-                    <label className="block font-body text-[10px] tracking-wider uppercase text-[#0D2818]/50 mb-1.5">
+                    <label className="block font-body text-[10px] tracking-wider uppercase text-[#0A461A]/50 mb-1.5">
                       Nombre completo *
                     </label>
                     <input
@@ -173,12 +173,12 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                       onChange={handleChange}
                       required
                       placeholder="Tu nombre"
-                      className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#B22234] transition-colors"
+                      className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0A461A] placeholder:text-[#0A461A]/30 focus:outline-none focus:border-[#7E0E0F] transition-colors"
                     />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block font-body text-[10px] tracking-wider uppercase text-[#0D2818]/50 mb-1.5">
+                      <label className="block font-body text-[10px] tracking-wider uppercase text-[#0A461A]/50 mb-1.5">
                         Email *
                       </label>
                       <input
@@ -188,11 +188,11 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                         onChange={handleChange}
                         required
                         placeholder="correo@ejemplo.com"
-                        className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#B22234] transition-colors"
+                        className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0A461A] placeholder:text-[#0A461A]/30 focus:outline-none focus:border-[#7E0E0F] transition-colors"
                       />
                     </div>
                     <div>
-                      <label className="block font-body text-[10px] tracking-wider uppercase text-[#0D2818]/50 mb-1.5">
+                      <label className="block font-body text-[10px] tracking-wider uppercase text-[#0A461A]/50 mb-1.5">
                         Teléfono
                       </label>
                       <input
@@ -201,13 +201,13 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                         value={form.phone}
                         onChange={handleChange}
                         placeholder="997 486 009"
-                        className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#B22234] transition-colors"
+                        className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0A461A] placeholder:text-[#0A461A]/30 focus:outline-none focus:border-[#7E0E0F] transition-colors"
                       />
                     </div>
                   </div>
                   {type === "corporativo" && (
                     <div>
-                      <label className="block font-body text-[10px] tracking-wider uppercase text-[#0D2818]/50 mb-1.5">
+                      <label className="block font-body text-[10px] tracking-wider uppercase text-[#0A461A]/50 mb-1.5">
                         Empresa
                       </label>
                       <input
@@ -216,12 +216,12 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                         value={form.company}
                         onChange={handleChange}
                         placeholder="Nombre de tu empresa"
-                        className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#B22234] transition-colors"
+                        className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0A461A] placeholder:text-[#0A461A]/30 focus:outline-none focus:border-[#7E0E0F] transition-colors"
                       />
                     </div>
                   )}
                   <div>
-                    <label className="block font-body text-[10px] tracking-wider uppercase text-[#0D2818]/50 mb-1.5">
+                    <label className="block font-body text-[10px] tracking-wider uppercase text-[#0A461A]/50 mb-1.5">
                       Notas adicionales
                     </label>
                     <textarea
@@ -230,7 +230,7 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                       onChange={handleChange}
                       rows={3}
                       placeholder="Dirección de entrega, fecha específica, personalización..."
-                      className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#B22234] transition-colors resize-none"
+                      className="w-full bg-white border border-[#C9A96E]/20 px-4 py-2.5 font-body text-sm text-[#0A461A] placeholder:text-[#0A461A]/30 focus:outline-none focus:border-[#7E0E0F] transition-colors resize-none"
                     />
                   </div>
 
@@ -245,7 +245,7 @@ export default function QuoteForm({ open, onClose, items, type = "personal" }) {
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#B22234] text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#8B1A28] transition-colors disabled:opacity-50"
+                    className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#7E0E0F] text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#7E0E0F] transition-colors disabled:opacity-50"
                   >
                     {status === "sending" ? (
                       <>

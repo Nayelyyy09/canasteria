@@ -23,7 +23,7 @@ export default function CartDrawer({ open, onClose, items, onUpdateQty, onRemove
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={onClose}
-              className="fixed inset-0 z-[70] bg-[#0D2818]/60 backdrop-blur-sm"
+              className="fixed inset-0 z-[70] bg-[#0A461A]/60 backdrop-blur-sm"
             />
             <motion.div
               initial={{ x: "100%" }}
@@ -33,8 +33,8 @@ export default function CartDrawer({ open, onClose, items, onUpdateQty, onRemove
               className="fixed top-0 right-0 bottom-0 z-[80] w-full max-w-md bg-[#FAF7F2] flex flex-col shadow-2xl"
             >
               <div className="flex items-center justify-between px-8 py-6 border-b border-[#C9A96E]/20">
-                <h3 className="font-display text-2xl text-[#0D2818]">Tu Cotización</h3>
-                <button onClick={onClose} className="text-[#0D2818]/40 hover:text-[#0D2818] transition-colors">
+                <h3 className="font-display text-2xl text-[#0A461A]">Tu Cotización</h3>
+                <button onClick={onClose} className="text-[#0A461A]/40 hover:text-[#0A461A] transition-colors">
                   <X size={22} strokeWidth={1.5} />
                 </button>
               </div>
@@ -42,10 +42,10 @@ export default function CartDrawer({ open, onClose, items, onUpdateQty, onRemove
               <div className="flex-1 overflow-y-auto px-8 py-6">
                 {items.length === 0 ? (
                   <div className="h-full flex flex-col items-center justify-center text-center">
-                    <p className="font-display text-xl text-[#0D2818]/40 italic">
+                    <p className="font-display text-xl text-[#0A461A]/40 italic">
                       Tu carrito está vacío
                     </p>
-                    <p className="mt-2 font-body text-sm text-[#0D2818]/30">
+                    <p className="mt-2 font-body text-sm text-[#0A461A]/30">
                       Explora nuestros productos y solicita tu cotización
                     </p>
                   </div>
@@ -59,7 +59,7 @@ export default function CartDrawer({ open, onClose, items, onUpdateQty, onRemove
                           className="w-20 h-20 object-cover flex-shrink-0"
                         />
                         <div className="flex-1 min-w-0">
-                          <h4 className="font-display text-lg text-[#0D2818] truncate">
+                          <h4 className="font-display text-lg text-[#0A461A] truncate">
                             {item.name}
                           </h4>
                           {item.note && (
@@ -71,28 +71,28 @@ export default function CartDrawer({ open, onClose, items, onUpdateQty, onRemove
                             <div className="flex items-center border border-[#C9A96E]/20">
                               <button
                                 onClick={() => onUpdateQty(item.cartId, item.qty - 1)}
-                                className="w-7 h-7 flex items-center justify-center text-[#0D2818]/50"
+                                className="w-7 h-7 flex items-center justify-center text-[#0A461A]/50"
                               >
                                 <Minus size={12} />
                               </button>
-                              <span className="w-8 text-center font-body text-sm font-medium text-[#0D2818]">
+                              <span className="w-8 text-center font-body text-sm font-medium text-[#0A461A]">
                                 {item.qty}
                               </span>
                               <button
                                 onClick={() => onUpdateQty(item.cartId, item.qty + 1)}
-                                className="w-7 h-7 flex items-center justify-center text-[#0D2818]/50"
+                                className="w-7 h-7 flex items-center justify-center text-[#0A461A]/50"
                               >
                                 <Plus size={12} />
                               </button>
                             </div>
-                            <span className="ml-2 font-body text-xs text-[#0D2818]/40">
+                            <span className="ml-2 font-body text-xs text-[#0A461A]/40">
                               {item.qty === 1 ? "unidad" : "unidades"}
                             </span>
                           </div>
                         </div>
                         <button
                           onClick={() => onRemove(item.cartId)}
-                          className="self-start text-[#0D2818]/20 hover:text-[#B22234] transition-colors mt-1"
+                          className="self-start text-[#0A461A]/20 hover:text-[#7E0E0F] transition-colors mt-1"
                         >
                           <Trash2 size={16} strokeWidth={1.5} />
                         </button>
@@ -105,22 +105,22 @@ export default function CartDrawer({ open, onClose, items, onUpdateQty, onRemove
               {items.length > 0 && (
                 <div className="px-8 py-6 border-t border-[#C9A96E]/20">
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-body text-sm tracking-widest uppercase text-[#0D2818]/60">
+                    <span className="font-body text-sm tracking-widest uppercase text-[#0A461A]/60">
                       Productos
                     </span>
-                    <span className="font-display text-2xl text-[#0D2818]">
+                    <span className="font-display text-2xl text-[#0A461A]">
                       {totalItems} {totalItems === 1 ? "artículo" : "artículos"}
                     </span>
                   </div>
                   <button
                     onClick={() => openQuote("personal")}
-                    className="w-full py-4 bg-[#B22234] text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#8B1A28] transition-colors"
+                    className="w-full py-4 bg-[#7E0E0F] text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#7E0E0F] transition-colors"
                   >
                     Solicitar Cotización
                   </button>
                   <button
                     onClick={() => openQuote("corporativo")}
-                    className="w-full mt-3 py-3 border border-[#0D2818]/20 text-[#0D2818] font-body text-xs tracking-widest uppercase hover:bg-[#0D2818]/5 transition-colors"
+                    className="w-full mt-3 py-3 border border-[#0A461A]/20 text-[#0A461A] font-body text-xs tracking-widest uppercase hover:bg-[#0A461A]/5 transition-colors"
                   >
                     Cotización Corporativa
                   </button>

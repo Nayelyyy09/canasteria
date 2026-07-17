@@ -42,7 +42,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section ref={sectionRef} id="hero" className="relative bg-[#0D2818] overflow-hidden">
+    <section ref={sectionRef} id="hero" className="relative bg-[#0A461A] overflow-hidden">
       {/* Parallax background */}
       <motion.div style={{ y, scale }} className="absolute inset-0">
         <CanvasSnow />
@@ -132,7 +132,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.15 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#B22234]/30 border border-[#B22234]/50 text-[#FAF7F2] text-xs tracking-widest uppercase font-body"
+                className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#7E0E0F]/30 border border-[#7E0E0F]/50 text-[#FAF7F2] text-xs tracking-widest uppercase font-body"
               >
                 <Gift size={14} className="text-[#C9A96E]" />
                 Destacado de la temporada
@@ -172,7 +172,7 @@ export default function HeroSection() {
                 <div className="flex gap-3">
                   <button
                     onClick={handleCotizar}
-                    className="group px-7 py-3 bg-[#B22234] text-[#FAF7F2] font-body text-xs tracking-widest uppercase hover:bg-[#8B1A28] transition-all duration-300 hover:shadow-lg hover:shadow-[#B22234]/30 hover:-translate-y-0.5 flex items-center gap-2"
+                    className="group px-7 py-3 bg-[#7E0E0F] text-[#FAF7F2] font-body text-xs tracking-widest uppercase hover:bg-[#7E0E0F] transition-all duration-300 hover:shadow-lg hover:shadow-[#7E0E0F]/30 hover:-translate-y-0.5 flex items-center gap-2"
                   >
                     <MessageCircle size={14} />
                     Cotizar
@@ -200,7 +200,7 @@ export default function HeroSection() {
                   alt={`Canasta navideña artesanal: ${product.name} — regalo gourmet navideño`}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#0D2818]/50 via-transparent to-[#B22234]/20" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#0A461A]/50 via-transparent to-[#7E0E0F]/20" />
               </motion.div>
               {/* Decorative border */}
               <motion.div

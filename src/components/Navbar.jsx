@@ -55,7 +55,7 @@ export default function Navbar() {
   return (
     <>
       {/* Top utility bar */}
-      <div className="bg-[#B22234] text-[#FAF7F2] text-xs hidden md:block">
+      <div className="bg-[#7E0E0F] text-[#FAF7F2] text-xs hidden md:block">
         <div className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between h-9">
           <div className="flex items-center gap-6">
             <button
@@ -93,7 +93,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="bg-[#B22234] border-t border-[#FAF7F2]/10 overflow-hidden hidden md:block"
+            className="bg-[#7E0E0F] border-t border-[#FAF7F2]/10 overflow-hidden hidden md:block"
           >
             <div className="max-w-7xl mx-auto px-6 lg:px-16 py-3 flex items-center gap-3">
               <MapPin size={14} className="text-[#C9A96E]" />
@@ -118,8 +118,8 @@ export default function Navbar() {
       {/* Main nav */}
       <nav
         className={`sticky top-0 z-50 transition-all duration-500 ${scrolled
-          ? "bg-[#0D2818]/95 backdrop-blur-md shadow-xl"
-          : "bg-[#0D2818]/90 backdrop-blur-sm"
+          ? "bg-[#0A461A]/95 backdrop-blur-md shadow-xl"
+          : "bg-[#0A461A]/90 backdrop-blur-sm"
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between h-16 lg:h-20">
@@ -136,7 +136,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-8">
             <Link
               to="/"
-              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2]/80 hover:text-[#C9A96E] transition-colors"
+              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2] hover:text-[#C9A96E] transition-colors"
             >
               Inicio
             </Link>
@@ -147,7 +147,7 @@ export default function Navbar() {
               onMouseEnter={() => setMegaOpen(true)}
               onMouseLeave={() => setMegaOpen(false)}
             >
-              <button className="flex items-center gap-1 font-body text-sm tracking-widest uppercase text-[#FAF7F2]/80 hover:text-[#C9A96E] transition-colors">
+              <button className="flex items-center gap-1 font-body text-sm tracking-widest uppercase text-[#FAF7F2] hover:text-[#C9A96E] transition-colors">
                 Canastas Navideñas
                 <ChevronDown
                   size={14}
@@ -168,7 +168,7 @@ export default function Navbar() {
                     <div className="grid grid-cols-2 gap-6">
                       {MEGA_MENU_ITEMS.map((group) => (
                         <div key={group.group}>
-                          <p className="font-body text-xs tracking-widest uppercase text-[#B22234] mb-3">
+                          <p className="font-body text-xs tracking-widest uppercase text-[#7E0E0F] mb-3">
                             {group.group}
                           </p>
                           <ul className="space-y-2">
@@ -188,11 +188,11 @@ export default function Navbar() {
                                       />
                                     )}
                                     <div>
-                                      <p className="font-display text-sm text-[#0D2818] group-hover:text-[#B22234] transition-colors">
+                                      <p className="font-display text-sm text-[#0A461A] group-hover:text-[#7E0E0F] transition-colors">
                                         {item.label}
                                       </p>
                                       {cat && (
-                                        <p className="font-body text-xs text-[#0D2818]/40 line-clamp-1 mt-0.5">
+                                        <p className="font-body text-xs text-[#0A461A]/40 line-clamp-1 mt-0.5">
                                           {cat.description}
                                         </p>
                                       )}
@@ -207,7 +207,7 @@ export default function Navbar() {
                     </div>
                     <button
                       onClick={() => handleCategoryClick("ejecutivas")}
-                      className="mt-4 w-full text-center font-body text-xs tracking-widest uppercase text-[#B22234] hover:text-[#8B1A28] border-t border-[#C9A96E]/20 pt-4 transition-colors"
+                      className="mt-4 w-full text-center font-body text-xs tracking-widest uppercase text-[#7E0E0F] hover:text-[#7E0E0F] border-t border-[#C9A96E]/20 pt-4 transition-colors"
                     >
                       Ver toda la colección
                     </button>
@@ -218,25 +218,25 @@ export default function Navbar() {
 
             <Link
               to="/activaciones"
-              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2]/80 hover:text-[#C9A96E] transition-colors"
+              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2] hover:text-[#C9A96E] transition-colors"
             >
               Activaciones
             </Link>
             <Link
               to="/regalos-navidenos"
-              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2]/80 hover:text-[#C9A96E] transition-colors"
+              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2] hover:text-[#C9A96E] transition-colors"
             >
               Regalos Navideños
             </Link>
             <Link
               to="/nosotros"
-              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2]/80 hover:text-[#C9A96E] transition-colors"
+              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2] hover:text-[#C9A96E] transition-colors"
             >
               Nosotros
             </Link>
             <Link
               to="/contacto"
-              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2]/80 hover:text-[#C9A96E] transition-colors"
+              className="font-body text-sm tracking-widest uppercase text-[#FAF7F2] hover:text-[#C9A96E] transition-colors"
             >
               Contacto
             </Link>
@@ -244,7 +244,7 @@ export default function Navbar() {
 
           {/* Right icons */}
           <div className="flex items-center gap-3 lg:gap-5">
-            <button className="hidden lg:flex text-[#FAF7F2]/70 hover:text-[#C9A96E] transition-colors">
+            <button className="hidden lg:flex text-[#FAF7F2] hover:text-[#C9A96E] transition-colors">
               <Search size={20} strokeWidth={1.5} />
             </button>
             <button
@@ -275,7 +275,7 @@ export default function Navbar() {
                 cx={5 + i * 10}
                 cy={1}
                 r="0.25"
-                className="fill-current text-[#B22234]"
+                className="fill-current text-[#7E0E0F]"
               />
             ))}
           </svg>
@@ -289,7 +289,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-[#0D2818] flex flex-col overflow-y-auto"
+            className="fixed inset-0 z-[60] bg-[#0A461A] flex flex-col overflow-y-auto"
           >
             <div className="flex items-center justify-between px-6 h-16 border-b border-[#C9A96E]/20">
               <span className="font-display text-xl text-[#FAF7F2]">Menú</span>
@@ -320,7 +320,7 @@ export default function Navbar() {
                         className="flex items-center gap-2 text-left"
                       >
                         {cat && <img src={cat.image} alt="" className="w-12 h-12 object-cover" />}
-                        <span className="font-body text-sm text-[#FAF7F2]/70">{item.label}</span>
+                        <span className="font-body text-sm text-[#FAF7F2]">{item.label}</span>
                       </button>
                     );
                   })

@@ -34,7 +34,7 @@ export default function ProductCard({ product, index, dark }) {
             animate={hovered ? { scale: 1.05 } : { scale: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0D2818]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A461A]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
           {/* Hover overlay with buttons */}
           <motion.div
@@ -56,7 +56,7 @@ export default function ProductCard({ product, index, dark }) {
               initial={{ y: 20, opacity: 0 }}
               animate={hovered ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
               transition={{ delay: 0.15, duration: 0.3 }}
-              className="w-12 h-12 bg-[#B22234] text-[#FAF7F2] rounded-full flex items-center justify-center hover:bg-[#8B1A28] transition-colors shadow-lg hover:scale-110 duration-300"
+              className="w-12 h-12 bg-[#7E0E0F] text-[#FAF7F2] rounded-full flex items-center justify-center hover:bg-[#7E0E0F] transition-colors shadow-lg hover:scale-110 duration-300"
             >
               <Eye size={20} />
             </motion.button>
@@ -65,7 +65,7 @@ export default function ProductCard({ product, index, dark }) {
 
         <div className="px-1">
           <div className="flex items-start justify-between gap-4">
-            <h3 className={`font-display text-xl lg:text-2xl leading-tight group-hover:text-[#B22234] transition-colors duration-300 ${dark ? 'text-[#FAF7F2]' : 'text-[#0D2818]'}`}>
+            <h3 className={`font-display text-xl lg:text-2xl leading-tight group-hover:text-[#7E0E0F] transition-colors duration-300 ${dark ? 'text-[#FAF7F2]' : 'text-[#0A461A]'}`}>
               {product.name}
             </h3>
           </div>
@@ -75,7 +75,7 @@ export default function ProductCard({ product, index, dark }) {
             viewport={{ once: true }}
             className="mt-2 h-px bg-[#C9A96E]"
           />
-          <p className={`mt-3 font-body text-sm leading-relaxed line-clamp-2 ${dark ? 'text-[#FAF7F2]/60' : 'text-[#0D2818]/60'}`}>
+          <p className={`mt-3 font-body text-sm leading-relaxed line-clamp-2 ${dark ? 'text-[#FAF7F2]/60' : 'text-[#0A461A]/60'}`}>
             {product.description}
           </p>
         </div>

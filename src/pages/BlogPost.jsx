@@ -37,15 +37,15 @@ export default function BlogPost() {
       <div className="min-h-screen bg-[#FAF7F2] flex items-center justify-center">
         <div className="text-center">
           <TreePine size={48} className="mx-auto text-[#C9A96E]/30 mb-4" />
-          <h1 className="font-display text-3xl text-[#0D2818] mb-4">
+          <h1 className="font-display text-3xl text-[#0A461A] mb-4">
             Artículo no encontrado
           </h1>
-          <p className="font-body text-sm text-[#0D2818]/50 mb-8">
+          <p className="font-body text-sm text-[#0A461A]/50 mb-8">
             El artículo que buscas no existe o fue movido.
           </p>
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#B22234] text-[#FAF7F2] font-body text-xs tracking-widest uppercase hover:bg-[#8B1A28] transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#7E0E0F] text-[#FAF7F2] font-body text-xs tracking-widest uppercase hover:bg-[#7E0E0F] transition-colors"
           >
             <ArrowLeft size={14} />
             Volver al Blog
@@ -67,7 +67,7 @@ export default function BlogPost() {
       if (trimmed.startsWith("### ")) {
         if (inList && listItems.length > 0) {
           elements.push(
-            <ul key={`list-${index}`} className="list-disc list-inside space-y-2 mb-6 text-[#0D2818]/70 font-body text-sm">
+            <ul key={`list-${index}`} className="list-disc list-inside space-y-2 mb-6 text-[#0A461A]/70 font-body text-sm">
               {listItems.map((item, i) => (
                 <li key={i}>{item.replace(/^[-*]\s*/, "")}</li>
               ))}
@@ -77,14 +77,14 @@ export default function BlogPost() {
           inList = false;
         }
         elements.push(
-          <h3 key={index} className="font-display text-xl text-[#0D2818] mt-8 mb-4">
+          <h3 key={index} className="font-display text-xl text-[#0A461A] mt-8 mb-4">
             {trimmed.replace("### ", "")}
           </h3>
         );
       } else if (trimmed.startsWith("## ")) {
         if (inList && listItems.length > 0) {
           elements.push(
-            <ul key={`list-${index}`} className="list-disc list-inside space-y-2 mb-6 text-[#0D2818]/70 font-body text-sm">
+            <ul key={`list-${index}`} className="list-disc list-inside space-y-2 mb-6 text-[#0A461A]/70 font-body text-sm">
               {listItems.map((item, i) => (
                 <li key={i}>{item.replace(/^[-*]\s*/, "")}</li>
               ))}
@@ -94,7 +94,7 @@ export default function BlogPost() {
           inList = false;
         }
         elements.push(
-          <h2 key={index} className="font-display text-2xl text-[#0D2818] mt-12 mb-4">
+          <h2 key={index} className="font-display text-2xl text-[#0A461A] mt-12 mb-4">
             {trimmed.replace("## ", "")}
           </h2>
         );
@@ -104,7 +104,7 @@ export default function BlogPost() {
       } else if (trimmed.startsWith("**") && trimmed.includes("**:")) {
         if (inList && listItems.length > 0) {
           elements.push(
-            <ul key={`list-${index}`} className="list-disc list-inside space-y-2 mb-6 text-[#0D2818]/70 font-body text-sm">
+            <ul key={`list-${index}`} className="list-disc list-inside space-y-2 mb-6 text-[#0A461A]/70 font-body text-sm">
               {listItems.map((item, i) => (
                 <li key={i}>{item.replace(/^[-*]\s*/, "")}</li>
               ))}
@@ -115,15 +115,15 @@ export default function BlogPost() {
         }
         const parts = trimmed.split("**:");
         elements.push(
-          <p key={index} className="font-body text-sm text-[#0D2818]/70 mb-4">
-            <strong className="text-[#0D2818]">{parts[0].replace(/\*\*/g, "")}:</strong>
+          <p key={index} className="font-body text-sm text-[#0A461A]/70 mb-4">
+            <strong className="text-[#0A461A]">{parts[0].replace(/\*\*/g, "")}:</strong>
             {parts.slice(1).join(":")}
           </p>
         );
       } else if (trimmed.startsWith("**")) {
         if (inList && listItems.length > 0) {
           elements.push(
-            <ul key={`list-${index}`} className="list-disc list-inside space-y-2 mb-6 text-[#0D2818]/70 font-body text-sm">
+            <ul key={`list-${index}`} className="list-disc list-inside space-y-2 mb-6 text-[#0A461A]/70 font-body text-sm">
               {listItems.map((item, i) => (
                 <li key={i}>{item.replace(/^[-*]\s*/, "")}</li>
               ))}
@@ -133,8 +133,8 @@ export default function BlogPost() {
           inList = false;
         }
         elements.push(
-          <p key={index} className="font-body text-sm text-[#0D2818]/70 mb-4">
-            <strong className="text-[#0D2818]">
+          <p key={index} className="font-body text-sm text-[#0A461A]/70 mb-4">
+            <strong className="text-[#0A461A]">
               {trimmed.replace(/\*\*/g, "")}
             </strong>
           </p>
@@ -144,7 +144,7 @@ export default function BlogPost() {
       } else if (trimmed) {
         if (inList && listItems.length > 0) {
           elements.push(
-            <ul key={`list-${index}`} className="list-disc list-inside space-y-2 mb-6 text-[#0D2818]/70 font-body text-sm">
+            <ul key={`list-${index}`} className="list-disc list-inside space-y-2 mb-6 text-[#0A461A]/70 font-body text-sm">
               {listItems.map((item, i) => (
                 <li key={i}>{item.replace(/^[-*]\s*/, "")}</li>
               ))}
@@ -154,7 +154,7 @@ export default function BlogPost() {
           inList = false;
         }
         elements.push(
-          <p key={index} className="font-body text-sm text-[#0D2818]/70 mb-4 leading-relaxed">
+          <p key={index} className="font-body text-sm text-[#0A461A]/70 mb-4 leading-relaxed">
             {trimmed}
           </p>
         );
@@ -163,7 +163,7 @@ export default function BlogPost() {
 
     if (listItems.length > 0) {
       elements.push(
-        <ul key="final-list" className="list-disc list-inside space-y-2 mb-6 text-[#0D2818]/70 font-body text-sm">
+        <ul key="final-list" className="list-disc list-inside space-y-2 mb-6 text-[#0A461A]/70 font-body text-sm">
           {listItems.map((item, i) => (
             <li key={i}>{item.replace(/^[-*]\s*/, "")}</li>
           ))}
@@ -178,7 +178,7 @@ export default function BlogPost() {
     <div className="min-h-screen bg-[#FAF7F2]">
       <Navbar />
       {/* Hero */}
-      <section className="relative bg-[#0D2818] overflow-hidden">
+      <section className="relative bg-[#0A461A] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: `url(${post.image})` }}
@@ -187,7 +187,7 @@ export default function BlogPost() {
               "url(https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=1200&h=600&fit=crop)";
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0D2818] via-[#0D2818]/80 to-[#0D2818]/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0A461A] via-[#0A461A]/80 to-[#0A461A]/60" />
 
         <div className="max-w-4xl mx-auto px-6 lg:px-16 py-16 lg:py-24 relative">
           {/* Breadcrumb */}
@@ -220,7 +220,7 @@ export default function BlogPost() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-3 py-1 bg-[#B22234] text-[#FAF7F2] text-xs font-body tracking-widest uppercase mb-4">
+            <span className="inline-block px-3 py-1 bg-[#7E0E0F] text-[#FAF7F2] text-xs font-body tracking-widest uppercase mb-4">
               {post.category}
             </span>
 
@@ -263,7 +263,7 @@ export default function BlogPost() {
         <div className="border-t border-[#C9A96E]/20 pt-8">
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 font-body text-sm text-[#B22234] hover:text-[#8B1A28] transition-colors"
+            className="inline-flex items-center gap-2 font-body text-sm text-[#7E0E0F] hover:text-[#7E0E0F] transition-colors"
           >
             <ArrowLeft size={16} />
             Volver al Blog
@@ -273,14 +273,14 @@ export default function BlogPost() {
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="bg-[#0D2818] py-16">
+        <section className="bg-[#0A461A] py-16">
           <div className="max-w-7xl mx-auto px-6 lg:px-16">
             <div className="text-center mb-12">
               <span className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-4 block">
                 Artículos Relacionados
               </span>
               <h2 className="font-display text-3xl text-[#FAF7F2]">
-                Sigue <span className="italic text-[#B22234]">Leyendo</span>
+                Sigue <span className="italic text-[#7E0E0F]">Leyendo</span>
               </h2>
             </div>
 

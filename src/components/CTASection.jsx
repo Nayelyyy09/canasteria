@@ -69,7 +69,7 @@ export default function CTASection() {
   return (
     <>
       {/* Stats Section */}
-      <section className="bg-[#FAF7F2] py-16 border-t border-b border-[#0D2818]/10">
+      <section className="bg-[#FAF7F2] py-16 border-t border-b border-[#0A461A]/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -86,11 +86,11 @@ export default function CTASection() {
                 transition={{ delay: i * 0.1, duration: 0.5 }}
                 className="text-center"
               >
-                <p className="font-display text-5xl lg:text-6xl text-[#B22234] mb-3">
+                <p className="font-display text-5xl lg:text-6xl text-[#7E0E0F] mb-3">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </p>
                 <div className="mx-auto w-8 h-px bg-[#C9A96E] mb-3" />
-                <p className="font-body text-xs text-[#0D2818]/60 uppercase tracking-wider">
+                <p className="font-body text-xs text-[#0A461A]/60 uppercase tracking-wider">
                   {stat.label}
                 </p>
               </motion.div>
@@ -100,9 +100,9 @@ export default function CTASection() {
       </section>
 
       {/* CTA Section */}
-      <section id="regalos" className="relative bg-[#B22234] py-20 lg:py-28 overflow-hidden">
+      <section id="regalos" className="relative bg-[#7E0E0F] py-20 lg:py-28 overflow-hidden">
         {/* Subtle decorative elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#8B1A28] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 opacity-30" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#7E0E0F] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 opacity-30" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#C9A96E] rounded-full blur-3xl translate-x-1/2 translate-y-1/2 opacity-10" />
 
         <div className="relative max-w-4xl mx-auto px-6 lg:px-16 text-center">
@@ -155,7 +155,7 @@ export default function CTASection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.5 + i * 0.1 }}
-                  className="bg-[#0D2818]/40 border border-[#FAF7F2]/15 w-20 lg:w-28 py-4 hover:bg-[#0D2818]/60 transition-colors duration-300"
+                  className="bg-[#0A461A]/40 border border-[#FAF7F2]/15 w-20 lg:w-28 py-4 hover:bg-[#0A461A]/60 transition-colors duration-300"
                 >
                   <p className="font-display text-3xl lg:text-5xl text-[#FAF7F2]">
                     {String(unit.val).padStart(2, "0")}
@@ -172,7 +172,7 @@ export default function CTASection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleCotizar}
-                className="group px-10 py-4 bg-[#FAF7F2] text-[#B22234] font-body text-sm tracking-widest uppercase hover:bg-[#C9A96E] hover:text-[#FAF7F2] transition-all duration-300 flex items-center justify-center gap-2"
+                className="group px-10 py-4 bg-[#FAF7F2] text-[#7E0E0F] font-body text-sm tracking-widest uppercase hover:bg-[#C9A96E] hover:text-[#FAF7F2] transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <MessageCircle size={16} />
                 Cotizar ahora

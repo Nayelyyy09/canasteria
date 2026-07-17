@@ -15,7 +15,7 @@ export default function ProductDetail({ product, onClose, onAddToCart }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-[70] bg-[#0D2818]/80 backdrop-blur-sm flex items-center justify-center p-4"
+        className="fixed inset-0 z-[70] bg-[#0A461A]/80 backdrop-blur-sm flex items-center justify-center p-4"
         onClick={onClose}
       >
         <motion.div
@@ -35,7 +35,7 @@ export default function ProductDetail({ product, onClose, onAddToCart }) {
               />
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 lg:hidden w-10 h-10 bg-[#0D2818]/60 text-[#FAF7F2] rounded-full flex items-center justify-center"
+                className="absolute top-4 right-4 lg:hidden w-10 h-10 bg-[#0A461A]/60 text-[#FAF7F2] rounded-full flex items-center justify-center"
               >
                 <X size={18} />
               </button>
@@ -44,7 +44,7 @@ export default function ProductDetail({ product, onClose, onAddToCart }) {
             <div className="p-8 lg:p-12 flex flex-col">
               <button
                 onClick={onClose}
-                className="hidden lg:flex self-end mb-4 text-[#0D2818]/40 hover:text-[#0D2818] transition-colors"
+                className="hidden lg:flex self-end mb-4 text-[#0A461A]/40 hover:text-[#0A461A] transition-colors"
               >
                 <X size={22} strokeWidth={1.5} />
               </button>
@@ -52,24 +52,24 @@ export default function ProductDetail({ product, onClose, onAddToCart }) {
               <p className="font-body text-xs tracking-[0.3em] uppercase text-[#C9A96E]">
                 {product.category}
               </p>
-              <h2 className="mt-2 font-display text-3xl lg:text-4xl text-[#0D2818]">
+              <h2 className="mt-2 font-display text-3xl lg:text-4xl text-[#0A461A]">
                 {product.name}
               </h2>
               <div className="mt-3 w-10 h-px bg-[#C9A96E]" />
 
-              <p className="mt-5 font-body text-sm text-[#0D2818]/70 leading-relaxed">
+              <p className="mt-5 font-body text-sm text-[#0A461A]/70 leading-relaxed">
                 {product.description}
               </p>
 
               <div className="mt-6">
-                <p className="font-body text-xs tracking-widest uppercase text-[#0D2818]/50 mb-3">
+                <p className="font-body text-xs tracking-widest uppercase text-[#0A461A]/50 mb-3">
                   Contenido
                 </p>
                 <ul className="space-y-2">
                   {product.contents.map((item, i) => (
                     <li
                       key={i}
-                      className="font-body text-sm text-[#0D2818]/80 flex items-center gap-2"
+                      className="font-body text-sm text-[#0A461A]/80 flex items-center gap-2"
                     >
                       <span className="w-1 h-1 rounded-full bg-[#C9A96E]" />
                       {item}
@@ -81,7 +81,7 @@ export default function ProductDetail({ product, onClose, onAddToCart }) {
               <div className="mt-8 border-t border-[#C9A96E]/20 pt-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Gift size={16} className="text-[#C9A96E]" />
-                  <span className="font-body text-xs tracking-widest uppercase text-[#0D2818]/60">
+                  <span className="font-body text-xs tracking-widest uppercase text-[#0A461A]/60">
                     Nota de regalo
                   </span>
                 </div>
@@ -90,12 +90,12 @@ export default function ProductDetail({ product, onClose, onAddToCart }) {
                   onChange={(e) => setNote(e.target.value)}
                   placeholder="Escribe tu mensaje personalizado..."
                   rows={3}
-                  className="w-full bg-transparent border border-[#C9A96E]/30 px-4 py-3 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#C9A96E] transition-colors resize-none"
+                  className="w-full bg-transparent border border-[#C9A96E]/30 px-4 py-3 font-body text-sm text-[#0A461A] placeholder:text-[#0A461A]/30 focus:outline-none focus:border-[#C9A96E] transition-colors resize-none"
                 />
                 {note && (
                   <button
                     onClick={() => setShowNotePreview(!showNotePreview)}
-                    className="mt-2 font-body text-xs text-[#B22234] underline underline-offset-2"
+                    className="mt-2 font-body text-xs text-[#7E0E0F] underline underline-offset-2"
                   >
                     {showNotePreview ? "Ocultar" : "Vista previa de tarjeta"}
                   </button>
@@ -106,7 +106,7 @@ export default function ProductDetail({ product, onClose, onAddToCart }) {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="mt-3 bg-[#0D2818] p-6 text-center overflow-hidden"
+                      className="mt-3 bg-[#0A461A] p-6 text-center overflow-hidden"
                     >
                       <p className="font-display text-xs tracking-widest uppercase text-[#C9A96E] mb-2">
                         Con cariño
@@ -121,23 +121,23 @@ export default function ProductDetail({ product, onClose, onAddToCart }) {
               </div>
 
               <div className="mt-auto pt-6 flex items-center justify-between">
-                <span className="font-body text-xs tracking-widest uppercase text-[#0D2818]/40">
+                <span className="font-body text-xs tracking-widest uppercase text-[#0A461A]/40">
                   Solicitar cotización
                 </span>
                 <div className="flex items-center gap-3">
                   <div className="flex items-center border border-[#C9A96E]/30">
                     <button
                       onClick={() => setQty(Math.max(1, qty - 1))}
-                      className="w-10 h-10 flex items-center justify-center text-[#0D2818]/60 hover:text-[#0D2818] transition-colors"
+                      className="w-10 h-10 flex items-center justify-center text-[#0A461A]/60 hover:text-[#0A461A] transition-colors"
                     >
                       <Minus size={14} />
                     </button>
-                    <span className="w-10 text-center font-body text-sm text-[#0D2818]">
+                    <span className="w-10 text-center font-body text-sm text-[#0A461A]">
                       {qty}
                     </span>
                     <button
                       onClick={() => setQty(qty + 1)}
-                      className="w-10 h-10 flex items-center justify-center text-[#0D2818]/60 hover:text-[#0D2818] transition-colors"
+                      className="w-10 h-10 flex items-center justify-center text-[#0A461A]/60 hover:text-[#0A461A] transition-colors"
                     >
                       <Plus size={14} />
                     </button>
@@ -147,7 +147,7 @@ export default function ProductDetail({ product, onClose, onAddToCart }) {
                       onAddToCart(product, qty, note);
                       onClose();
                     }}
-                    className="px-8 py-3 bg-[#B22234] text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#8B1A28] transition-colors"
+                    className="px-8 py-3 bg-[#7E0E0F] text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#7E0E0F] transition-colors"
                   >
                     Cotizar
                   </button>

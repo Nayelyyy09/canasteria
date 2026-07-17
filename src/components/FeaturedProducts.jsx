@@ -28,7 +28,7 @@ export default function FeaturedProducts({ activeCategory, setActiveCategory }) 
           <p className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-3">
             Selección especial
           </p>
-          <h2 className="font-display text-4xl lg:text-5xl text-[#0D2818]">
+          <h2 className="font-display text-4xl lg:text-5xl text-[#0A461A]">
             Productos Destacados
           </h2>
           <div className="mt-4 mx-auto w-16 h-px bg-[#C9A96E]" />
@@ -42,8 +42,8 @@ export default function FeaturedProducts({ activeCategory, setActiveCategory }) 
               onClick={() => { setActive(cat.id); setShowAll(false); }}
               className={`font-body text-xs tracking-widest uppercase px-4 py-2 transition-all duration-300 ${
                 active === cat.id
-                  ? "bg-[#B22234] text-[#FAF7F2]"
-                  : "text-[#0D2818]/50 hover:text-[#0D2818] border border-[#0D2818]/15"
+                  ? "bg-[#7E0E0F] text-[#FAF7F2]"
+                  : "text-[#0A461A]/50 hover:text-[#0A461A] border border-[#0A461A]/15"
               }`}
             >
               {cat.label}
@@ -70,7 +70,7 @@ export default function FeaturedProducts({ activeCategory, setActiveCategory }) 
           >
             <button
               onClick={() => setShowAll(true)}
-              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#0D2818] text-[#0D2818] font-body text-sm tracking-widest uppercase hover:bg-[#0D2818] hover:text-[#FAF7F2] transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#0A461A] text-[#0A461A] font-body text-sm tracking-widest uppercase hover:bg-[#0A461A] hover:text-[#FAF7F2] transition-all duration-300"
             >
               Ver todos los productos
             </button>

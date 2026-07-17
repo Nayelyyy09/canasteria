@@ -23,7 +23,7 @@ export default function ProductGrid({ onAddToCart }) {
           <p className="font-body text-xs tracking-[0.4em] uppercase text-[#C9A96E] mb-4">
             Nuestra Selección
           </p>
-          <h2 className="font-display text-4xl lg:text-6xl text-[#0D2818]">
+          <h2 className="font-display text-4xl lg:text-6xl text-[#0A461A]">
             Colección Navideña
           </h2>
           <div className="mt-4 mx-auto w-16 h-px bg-[#C9A96E]" />
@@ -36,8 +36,8 @@ export default function ProductGrid({ onAddToCart }) {
               onClick={() => setActive(cat.id)}
               className={`font-body text-xs tracking-widest uppercase px-4 py-2 transition-all duration-300 ${
                 active === cat.id
-                  ? "text-[#B22234] border-b-2 border-[#B22234]"
-                  : "text-[#0D2818]/50 hover:text-[#0D2818]"
+                  ? "text-[#7E0E0F] border-b-2 border-[#7E0E0F]"
+                  : "text-[#0A461A]/50 hover:text-[#0A461A]"
               }`}
             >
               {cat.label}

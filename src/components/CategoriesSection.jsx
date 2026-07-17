@@ -31,7 +31,7 @@ function CategoryCard({ cat, index }) {
           alt={`Categoría: ${cat.label} — ${cat.description}`}
           className="absolute inset-0 w-full h-[120%] object-cover group-hover:scale-110 transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0D2818] via-[#0D2818]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0A461A] via-[#0A461A]/40 to-transparent" />
         <div className="absolute inset-0 p-5 lg:p-6 flex flex-col justify-end">
           <h3 className="font-display text-xl lg:text-2xl text-[#FAF7F2] group-hover:text-[#C9A96E] transition-colors duration-300">
             {cat.label}
@@ -45,7 +45,7 @@ function CategoryCard({ cat, index }) {
           </div>
         </div>
         {/* Festive corner accent */}
-        <div className="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-l-[40px] border-t-[#B22234] border-l-transparent group-hover:border-t-[#C9A96E] transition-colors duration-300" />
+        <div className="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-l-[40px] border-t-[#7E0E0F] border-l-transparent group-hover:border-t-[#C9A96E] transition-colors duration-300" />
       </Link>
     </motion.div>
   );
@@ -66,11 +66,11 @@ export default function CategoriesSection() {
             whileInView={{ opacity: 1, letterSpacing: "0.4em" }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="font-body text-xs uppercase text-[#B22234] mb-3"
+            className="font-body text-xs uppercase text-[#7E0E0F] mb-3"
           >
             Explora por
           </motion.p>
-          <h2 className="font-display text-4xl lg:text-5xl text-[#0D2818]">
+          <h2 className="font-display text-4xl lg:text-5xl text-[#0A461A]">
             Nuestras Categorías
           </h2>
           <motion.div

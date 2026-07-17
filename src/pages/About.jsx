@@ -30,17 +30,17 @@ export default function About() {
 
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-6 lg:px-16 py-4">
-        <nav className="flex items-center gap-2 font-body text-xs text-[#0D2818]/50">
-          <Link to="/" className="hover:text-[#B22234] transition-colors">Inicio</Link>
+        <nav className="flex items-center gap-2 font-body text-xs text-[#0A461A]/50">
+          <Link to="/" className="hover:text-[#7E0E0F] transition-colors">Inicio</Link>
           <ChevronRight size={12} />
-          <span className="text-[#0D2818]">Sobre Nosotros</span>
+          <span className="text-[#0A461A]">Sobre Nosotros</span>
         </nav>
       </div>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0D2818] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#0A461A] py-20 lg:py-28">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-[#B22234] rounded-full blur-3xl" />
+          <div className="absolute top-10 left-10 w-72 h-72 bg-[#7E0E0F] rounded-full blur-3xl" />
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#C9A96E] rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-16 text-center">
@@ -50,7 +50,7 @@ export default function About() {
             <TreePine size={18} className="text-[#C9A96E]" />
           </div>
           <h1 className="font-display text-5xl lg:text-7xl text-[#FAF7F2] leading-tight">
-            Sobre <span className="italic text-[#B22234]">Nosotros</span>
+            Sobre <span className="italic text-[#7E0E0F]">Nosotros</span>
           </h1>
           <p className="mt-6 font-body text-[#FAF7F2]/60 max-w-2xl mx-auto text-lg">
             Conoce la historia detrás de las canastas navideñas más exclusivas de Lima.
@@ -66,11 +66,11 @@ export default function About() {
           className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
         >
           <div>
-            <span className="font-body text-xs tracking-[0.3em] uppercase text-[#B22234]">Nuestra Historia</span>
-            <h2 className="mt-3 font-display text-4xl lg:text-5xl text-[#0D2818] leading-tight">
-              Tradición y <span className="italic text-[#B22234]">Excelencia</span>
+            <span className="font-body text-xs tracking-[0.3em] uppercase text-[#7E0E0F]">Nuestra Historia</span>
+            <h2 className="mt-3 font-display text-4xl lg:text-5xl text-[#0A461A] leading-tight">
+              Tradición y <span className="italic text-[#7E0E0F]">Excelencia</span>
             </h2>
-            <div className="mt-8 space-y-4 font-body text-sm text-[#0D2818]/60 leading-relaxed">
+            <div className="mt-8 space-y-4 font-body text-sm text-[#0A461A]/60 leading-relaxed">
               <p>
                 Canastas Navideñas nació en 2017 con una visión clara: transformar la tradición de regalar canastas durante las fiestas navideñas en una experiencia de lujo accesible. Todo comenzó cuando nuestra fundadora, apasionada por la gastronomía y el arte de obsequiar, decidió crear canastas que no solo fueran regalos, sino verdaderas experiencias sensoriales para quienes las recibían.
               </p>
@@ -86,7 +86,7 @@ export default function About() {
             </div>
           </div>
           <div className="relative">
-            <div className="bg-[#0D2818] p-8 lg:p-12">
+            <div className="bg-[#0A461A] p-8 lg:p-12">
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((s, i) => (
                   <div key={i} className="bg-[#FAF7F2]/5 border border-[#FAF7F2]/10 p-6 text-center">
@@ -101,12 +101,12 @@ export default function About() {
       </section>
 
       {/* Valores */}
-      <section className="bg-[#0D2818] py-20 lg:py-28">
+      <section className="bg-[#0A461A] py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="text-center mb-16">
             <span className="font-body text-xs tracking-[0.3em] uppercase text-[#C9A96E]">Lo Que Nos Define</span>
             <h2 className="mt-3 font-display text-4xl lg:text-5xl text-[#FAF7F2]">
-              Nuestros <span className="italic text-[#B22234]">Valores</span>
+              Nuestros <span className="italic text-[#7E0E0F]">Valores</span>
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -117,8 +117,8 @@ export default function About() {
                 variants={fadeIn} transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="bg-[#FAF7F2]/5 border border-[#FAF7F2]/10 p-8 hover:border-[#C9A96E]/30 transition-colors"
               >
-                <div className="w-12 h-12 flex items-center justify-center bg-[#B22234]/20 border border-[#B22234]/30 mb-5">
-                  <v.icon size={22} className="text-[#B22234]" />
+                <div className="w-12 h-12 flex items-center justify-center bg-[#7E0E0F]/20 border border-[#7E0E0F]/30 mb-5">
+                  <v.icon size={22} className="text-[#7E0E0F]" />
                 </div>
                 <h3 className="font-display text-xl text-[#FAF7F2]">{v.title}</h3>
                 <p className="mt-3 font-body text-sm text-[#FAF7F2]/50 leading-relaxed">{v.desc}</p>
@@ -133,13 +133,13 @@ export default function About() {
         <motion.div
           initial="hidden" whileInView="visible" viewport={{ once: true }}
           variants={fadeIn} transition={{ duration: 0.6 }}
-          className="bg-[#0D2818] p-12 lg:p-20 text-center relative overflow-hidden"
+          className="bg-[#0A461A] p-12 lg:p-20 text-center relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#B22234] rounded-full blur-3xl opacity-20" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#7E0E0F] rounded-full blur-3xl opacity-20" />
           <div className="relative">
             <Users size={40} className="text-[#C9A96E] mx-auto mb-6" />
             <h2 className="font-display text-3xl lg:text-5xl text-[#FAF7F2]">
-              ¿Listo para <span className="italic text-[#B22234]">Sorprender</span>?
+              ¿Listo para <span className="italic text-[#7E0E0F]">Sorprender</span>?
             </h2>
             <p className="mt-4 font-body text-sm text-[#FAF7F2]/50 max-w-lg mx-auto">
               Contacta a nuestro equipo y déjanos crear la canasta navideña perfecta para ti o tu empresa.
@@ -148,7 +148,7 @@ export default function About() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-8 px-8 py-4 bg-[#1B5E3B] text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#154A30] transition-colors"
+              className="inline-flex items-center gap-2 mt-8 px-8 py-4 bg-[#0A461A] text-[#FAF7F2] font-body text-sm tracking-widest uppercase hover:bg-[#154A30] transition-colors"
             >
               <Phone size={16} />
               Hablar por WhatsApp

@@ -177,7 +177,7 @@ export default function FAQ() {
         <Navbar />
 
         {/* Hero */}
-        <section className="bg-[#0D2818] pt-32 pb-16 px-6">
+        <section className="bg-[#0A461A] pt-32 pb-16 px-6">
           <div className="max-w-4xl mx-auto text-center">
             {/* Breadcrumb */}
             <nav className="flex items-center justify-center gap-2 mb-6 text-xs font-body">
@@ -195,7 +195,7 @@ export default function FAQ() {
               className="font-display text-4xl md:text-5xl lg:text-6xl text-[#FAF7F2] leading-tight"
             >
               Preguntas{" "}
-              <span className="italic text-[#B22234]">Frecuentes</span>
+              <span className="italic text-[#7E0E0F]">Frecuentes</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -220,20 +220,20 @@ export default function FAQ() {
               transition={{ duration: 0.5, delay: catIdx * 0.1 }}
               className="mb-12"
             >
-              <h2 className="font-display text-2xl md:text-3xl text-[#0D2818] mb-6">
+              <h2 className="font-display text-2xl md:text-3xl text-[#0A461A] mb-6">
                 {cat.category}
               </h2>
-              <Accordion type="single" collapsible className="border-t border-[#0D2818]/10">
+              <Accordion type="single" collapsible className="border-t border-[#0A461A]/10">
                 {cat.questions.map((item, idx) => (
                   <AccordionItem
                     key={idx}
                     value={`${catIdx}-${idx}`}
-                    className="border-b border-[#0D2818]/10"
+                    className="border-b border-[#0A461A]/10"
                   >
-                    <AccordionTrigger className="font-body text-base text-[#0D2818] hover:text-[#B22234] hover:no-underline py-5">
+                    <AccordionTrigger className="font-body text-base text-[#0A461A] hover:text-[#7E0E0F] hover:no-underline py-5">
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="font-body text-sm text-[#0D2818]/70 leading-relaxed pb-5">
+                    <AccordionContent className="font-body text-sm text-[#0A461A]/70 leading-relaxed pb-5">
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -247,7 +247,7 @@ export default function FAQ() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-8 text-center bg-[#0D2818] rounded-sm p-10"
+            className="mt-8 text-center bg-[#0A461A] rounded-sm p-10"
           >
             <h3 className="font-display text-2xl text-[#FAF7F2] mb-3">
               ¿No encontraste lo que buscabas?
@@ -257,7 +257,7 @@ export default function FAQ() {
             </p>
             <a
               href="mailto:ventas@canastanavidena.pe"
-              className="inline-block px-8 py-3 bg-[#B22234] text-[#FAF7F2] font-body text-sm hover:bg-[#8B1A28] transition-colors"
+              className="inline-block px-8 py-3 bg-[#7E0E0F] text-[#FAF7F2] font-body text-sm hover:bg-[#7E0E0F] transition-colors"
             >
               Contáctanos
             </a>

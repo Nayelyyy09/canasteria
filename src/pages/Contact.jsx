@@ -15,7 +15,8 @@ export default function Contact() {
   const [sending, setSending] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const recaptchaRef = useRef(null);
-  const recaptchaWidgetId = useRef(null);
+  const recaptchaWidgetId = useRef(
+    null);
 
   useEffect(() => {
     const checkRecaptcha = setInterval(() => {
@@ -103,17 +104,17 @@ export default function Contact() {
 
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-6 lg:px-16 py-4">
-        <nav className="flex items-center gap-2 font-body text-xs text-[#0D2818]/50">
-          <Link to="/" className="hover:text-[#B22234] transition-colors">Inicio</Link>
+        <nav className="flex items-center gap-2 font-body text-xs text-[#0A461A]/50">
+          <Link to="/" className="hover:text-[#7E0E0F] transition-colors">Inicio</Link>
           <ChevronRight size={12} />
-          <span className="text-[#0D2818]">Contacto</span>
+          <span className="text-[#0A461A]">Contacto</span>
         </nav>
       </div>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0D2818] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#0A461A] py-20 lg:py-28">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-[#B22234] rounded-full blur-3xl" />
+          <div className="absolute top-10 left-10 w-72 h-72 bg-[#7E0E0F] rounded-full blur-3xl" />
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#C9A96E] rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-16 text-center">
@@ -123,7 +124,7 @@ export default function Contact() {
             <TreePine size={18} className="text-[#C9A96E]" />
           </div>
           <h1 className="font-display text-5xl lg:text-7xl text-[#FAF7F2] leading-tight">
-            <span className="italic text-[#B22234]">Contacto</span>
+            <span className="italic text-[#7E0E0F]">Contacto</span>
           </h1>
           <p className="mt-6 font-body text-[#FAF7F2]/60 max-w-2xl mx-auto text-lg">
             Estamos aquí para ayudarte. Escríbenos o llámanos, responderemos lo antes posible.
@@ -140,13 +141,13 @@ export default function Contact() {
             variants={fadeIn} transition={{ duration: 0.6 }}
             className="lg:col-span-3"
           >
-            <h2 className="font-display text-3xl text-[#0D2818] mb-8">
-              Envíanos un <span className="italic text-[#B22234]">Mensaje</span>
+            <h2 className="font-display text-3xl text-[#0A461A] mb-8">
+              Envíanos un <span className="italic text-[#7E0E0F]">Mensaje</span>
             </h2>
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid md:grid-cols-2 gap-5">
                 <div>
-                  <label className="block font-body text-xs tracking-wider uppercase text-[#0D2818]/60 mb-2">Nombre *</label>
+                  <label className="block font-body text-xs tracking-wider uppercase text-[#0A461A]/60 mb-2">Nombre *</label>
                   <input
                     type="text"
                     name="name"
@@ -155,11 +156,11 @@ export default function Contact() {
                     required
                     placeholder="Tu nombre completo"
                     disabled={sending}
-                    className="w-full bg-white border border-[#C9A96E]/20 px-4 py-3 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#B22234] transition-colors disabled:opacity-50"
+                    className="w-full bg-white border border-[#C9A96E]/20 px-4 py-3 font-body text-sm text-[#0A461A] placeholder:text-[#0A461A]/30 focus:outline-none focus:border-[#7E0E0F] transition-colors disabled:opacity-50"
                   />
                 </div>
                 <div>
-                  <label className="block font-body text-xs tracking-wider uppercase text-[#0D2818]/60 mb-2">Email *</label>
+                  <label className="block font-body text-xs tracking-wider uppercase text-[#0A461A]/60 mb-2">Email *</label>
                   <input
                     type="email"
                     name="email"
@@ -168,13 +169,13 @@ export default function Contact() {
                     required
                     placeholder="correo@ejemplo.com"
                     disabled={sending}
-                    className="w-full bg-white border border-[#C9A96E]/20 px-4 py-3 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#B22234] transition-colors disabled:opacity-50"
+                    className="w-full bg-white border border-[#C9A96E]/20 px-4 py-3 font-body text-sm text-[#0A461A] placeholder:text-[#0A461A]/30 focus:outline-none focus:border-[#7E0E0F] transition-colors disabled:opacity-50"
                   />
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-5">
                 <div>
-                  <label className="block font-body text-xs tracking-wider uppercase text-[#0D2818]/60 mb-2">Teléfono</label>
+                  <label className="block font-body text-xs tracking-wider uppercase text-[#0A461A]/60 mb-2">Teléfono</label>
                   <input
                     type="tel"
                     name="phone"
@@ -182,18 +183,18 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="997 486 009"
                     disabled={sending}
-                    className="w-full bg-white border border-[#C9A96E]/20 px-4 py-3 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#B22234] transition-colors disabled:opacity-50"
+                    className="w-full bg-white border border-[#C9A96E]/20 px-4 py-3 font-body text-sm text-[#0A461A] placeholder:text-[#0A461A]/30 focus:outline-none focus:border-[#7E0E0F] transition-colors disabled:opacity-50"
                   />
                 </div>
                 <div>
-                  <label className="block font-body text-xs tracking-wider uppercase text-[#0D2818]/60 mb-2">Asunto *</label>
+                  <label className="block font-body text-xs tracking-wider uppercase text-[#0A461A]/60 mb-2">Asunto *</label>
                   <select
                     name="subject"
                     value={form.subject}
                     onChange={handleChange}
                     required
                     disabled={sending}
-                    className="w-full bg-white border border-[#C9A96E]/20 px-4 py-3 font-body text-sm text-[#0D2818] focus:outline-none focus:border-[#B22234] transition-colors disabled:opacity-50"
+                    className="w-full bg-white border border-[#C9A96E]/20 px-4 py-3 font-body text-sm text-[#0A461A] focus:outline-none focus:border-[#7E0E0F] transition-colors disabled:opacity-50"
                   >
                     <option value="">Selecciona un asunto</option>
                     <option value="pedido">Realizar un pedido</option>
@@ -205,7 +206,7 @@ export default function Contact() {
                 </div>
               </div>
               <div>
-                <label className="block font-body text-xs tracking-wider uppercase text-[#0D2818]/60 mb-2">Mensaje *</label>
+                <label className="block font-body text-xs tracking-wider uppercase text-[#0A461A]/60 mb-2">Mensaje *</label>
                 <textarea
                   name="message"
                   value={form.message}
@@ -214,7 +215,7 @@ export default function Contact() {
                   rows={5}
                   placeholder="Cuéntanos en qué podemos ayudarte..."
                   disabled={sending}
-                  className="w-full bg-white border border-[#C9A96E]/20 px-4 py-3 font-body text-sm text-[#0D2818] placeholder:text-[#0D2818]/30 focus:outline-none focus:border-[#B22234] transition-colors resize-none disabled:opacity-50"
+                  className="w-full bg-white border border-[#C9A96E]/20 px-4 py-3 font-body text-sm text-[#0A461A] placeholder:text-[#0A461A]/30 focus:outline-none focus:border-[#7E0E0F] transition-colors resize-none disabled:opacity-50"
                 />
               </div>
 
@@ -228,10 +229,10 @@ export default function Contact() {
                 disabled={sending}
                 className={`inline-flex items-center gap-2 px-8 py-4 font-body text-sm tracking-widest uppercase transition-colors disabled:opacity-50 ${
                   submitStatus === 'success'
-                    ? 'bg-[#1B5E3B] text-[#FAF7F2]'
+                    ? 'bg-[#0A461A] text-[#FAF7F2]'
                     : submitStatus === 'error'
-                    ? 'bg-[#B22234] text-[#FAF7F2]'
-                    : 'bg-[#B22234] text-[#FAF7F2] hover:bg-[#8B1A28]'
+                    ? 'bg-[#7E0E0F] text-[#FAF7F2]'
+                    : 'bg-[#7E0E0F] text-[#FAF7F2] hover:bg-[#7E0E0F]'
                 }`}
               >
                 {sending ? (
@@ -254,12 +255,12 @@ export default function Contact() {
             variants={fadeIn} transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2 space-y-8"
           >
-            <div className="bg-[#0D2818] p-8">
+            <div className="bg-[#0A461A] p-8">
               <h3 className="font-display text-2xl text-[#FAF7F2] mb-6">Información de Contacto</h3>
               <ul className="space-y-5">
                 <li className="flex items-start gap-4">
-                  <div className="w-10 h-10 flex items-center justify-center bg-[#B22234]/20 border border-[#B22234]/30 flex-shrink-0">
-                    <Phone size={16} className="text-[#B22234]" />
+                  <div className="w-10 h-10 flex items-center justify-center bg-[#7E0E0F]/20 border border-[#7E0E0F]/30 flex-shrink-0">
+                    <Phone size={16} className="text-[#7E0E0F]" />
                   </div>
                   <div>
                     <p className="font-body text-xs tracking-wider uppercase text-[#C9A96E] mb-1">Teléfono</p>
@@ -269,8 +270,8 @@ export default function Contact() {
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <div className="w-10 h-10 flex items-center justify-center bg-[#B22234]/20 border border-[#B22234]/30 flex-shrink-0">
-                    <Mail size={16} className="text-[#B22234]" />
+                  <div className="w-10 h-10 flex items-center justify-center bg-[#7E0E0F]/20 border border-[#7E0E0F]/30 flex-shrink-0">
+                    <Mail size={16} className="text-[#7E0E0F]" />
                   </div>
                   <div>
                     <p className="font-body text-xs tracking-wider uppercase text-[#C9A96E] mb-1">Email</p>
@@ -280,8 +281,8 @@ export default function Contact() {
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <div className="w-10 h-10 flex items-center justify-center bg-[#1B5E3B]/20 border border-[#1B5E3B]/30 flex-shrink-0">
-                    <MapPin size={16} className="text-[#1B5E3B]" />
+                  <div className="w-10 h-10 flex items-center justify-center bg-[#0A461A]/20 border border-[#0A461A]/30 flex-shrink-0">
+                    <MapPin size={16} className="text-[#0A461A]" />
                   </div>
                   <div>
                     <p className="font-body text-xs tracking-wider uppercase text-[#C9A96E] mb-1">Dirección</p>
@@ -310,7 +311,8 @@ export default function Contact() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 w-full p-6 bg-[#1B5E3B] text-[#FAF7F2] hover:bg-[#154A30] transition-colors"
+              className=
+              "flex items-center gap-3 w-full p-6 bg-[#0A461A] text-[#FAF7F2] hover:bg-[#154A30] transition-colors"
             >
               <Phone size={20} />
               <div>

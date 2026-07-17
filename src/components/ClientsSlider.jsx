@@ -6,7 +6,7 @@ export default function ClientsSlider() {
   const doubled = [...CLIENTS, ...CLIENTS];
 
   return (
-    <section id="clientes" className="bg-[#0D2818] py-20 lg:py-28 overflow-hidden">
+    <section id="clientes" className="bg-[#0A461A] py-20 lg:py-28 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -30,16 +30,15 @@ export default function ClientsSlider() {
 
       {/* Marquee slider */}
       <div className="relative">
-        {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 lg:w-24 bg-gradient-to-r from-[#0D2818] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 lg:w-24 bg-gradient-to-l from-[#0D2818] to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 lg:w-24 bg-gradient-to-r from-[#0A461A] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 lg:w-24 bg-gradient-to-l from-[#0A461A] to-transparent z-10 pointer-events-none" />
 
         <div className="overflow-hidden">
           <motion.div
             className="flex gap-6 lg:gap-10"
             animate={{ x: ["0%", "-50%"] }}
             transition={{
-              duration: 40,
+              duration: 18,
               repeat: Infinity,
               ease: "linear",
             }}

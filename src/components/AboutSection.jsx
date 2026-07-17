@@ -5,7 +5,7 @@ const RIBBON_IMG = "https://publiventa.pe/wp-content/uploads/2025/09/Mesa-de-tra
 
 export default function AboutSection() {
   return (
-    <section id="nosotros" className="bg-[#0D2818] py-24 lg:py-32 overflow-hidden">
+    <section id="nosotros" className="bg-[#0A461A] py-24 lg:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div
