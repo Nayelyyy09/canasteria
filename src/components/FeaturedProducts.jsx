@@ -11,10 +11,10 @@ export default function FeaturedProducts({ activeCategory, setActiveCategory }) 
   const filtered =
     active === "todos"
       ? PRODUCTS
-      : PRODUCTS.filter((p) => p.category === active).slice(0, 6);
+      : PRODUCTS.filter((p) => p.category === active);
 
   const [showAll, setShowAll] = useState(false);
-  const displayed = showAll ? filtered : filtered.slice(0, 6);
+  const displayed = showAll ? filtered : filtered;
 
   return (
     <section id="productos" className="bg-[#FAF7F2] py-20 lg:py-28">
