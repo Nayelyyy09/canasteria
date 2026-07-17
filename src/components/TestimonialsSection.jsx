@@ -74,11 +74,6 @@ function VideoCard({ video, isFirst }) {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A461A] via-[#0A461A]/30 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-5">
-          <p className="font-display text-lg text-[#FAF7F2]">
-            {video.title}
-          </p>
-        </div>
       </div>
     );
   }
@@ -124,12 +119,6 @@ function VideoCard({ video, isFirst }) {
           </div>
         </div>
 
-        {/* Title */}
-        <div className="absolute bottom-0 left-0 right-0 p-5">
-          <p className="font-display text-lg text-[#FAF7F2]">
-            {video.title}
-          </p>
-        </div>
       </div>
     );
   }
@@ -153,12 +142,6 @@ function VideoCard({ video, isFirst }) {
         <div className="w-16 h-16 lg:w-20 lg:h-20 bg-[#7E0E0F]/90 group-hover:bg-[#7E0E0F] rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
           <Play size={28} className="text-[#FAF7F2] ml-1" fill="currentColor" />
         </div>
-      </div>
-
-      <div className="absolute bottom-0 left-0 right-0 p-5">
-        <p className="font-display text-lg text-[#FAF7F2]">
-          {video.title}
-        </p>
       </div>
     </a>
   );
