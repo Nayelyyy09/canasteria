@@ -14,7 +14,7 @@ const VIDEOS = [
     id: 2,
     title: "Así se crean nuestras canastas navideñas",
     url: "https://www.tiktok.com/@publiventa_publicidad/video/7579779077989567800",
-    thumbnail: "https://publiventa.pe/wp-content/uploads/2025/09/Mesa-de-trabajo-2-3.jpg",
+    thumbnail: "https://canastanavidena.pe/wp-content/uploads/2026/07/Asi-se-crean-nuestras-canastas-navidenas.jpeg",
     videoSrc: "https://publiventa.pe/wp-content/uploads/2026/07/Asi-se-crean-nuestras-canastas-navidenas.mp4",
   },
   {
