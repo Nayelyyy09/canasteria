@@ -95,7 +95,7 @@ function VideoCard({ video, isFirst }) {
         <img
           src={video.thumbnail}
           alt={video.title}
-          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 ${
+          className={`absolute inset-0 w-full h-full object-contain bg-[#0A461A] transition-opacity duration-500 ${
             hovering && loaded ? "opacity-0" : "opacity-100"
           }`}
         />
