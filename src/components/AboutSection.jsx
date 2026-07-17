@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const RIBBON_IMG = "https://publiventa.pe/wp-content/uploads/2025/09/Mesa-de-trabajo-14.jpg";
+const TEAM_IMG = "https://publiventa.pe/wp-content/uploads/2026/07/Nosotros_Canastas.jpeg";
 
 export default function AboutSection() {
   return (
@@ -60,9 +61,14 @@ export default function AboutSection() {
             className="relative"
           >
             <img
+              src={TEAM_IMG}
+              alt="Equipo Publiventa preparando canastas navideñas"
+              className="w-full object-cover aspect-[4/3]"
+            />
+            <img
               src={RIBBON_IMG}
               alt="Manos colocando un lazo de seda sobre una canasta navideña"
-              className="w-full object-cover"
+              className="w-32 lg:w-40 absolute -bottom-6 -left-6 border-4 border-[#0A461A] shadow-xl"
             />
             <div className="absolute inset-0 border border-[#C9A96E]/20 translate-x-4 translate-y-4 pointer-events-none" />
           </motion.div>

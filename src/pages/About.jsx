@@ -86,6 +86,11 @@ export default function About() {
             </div>
           </div>
           <div className="relative">
+            <img
+              src="https://publiventa.pe/wp-content/uploads/2026/07/Nosotros_Canastas.jpeg"
+              alt="Equipo Publiventa preparando canastas navideñas"
+              className="w-full object-cover aspect-[4/3] mb-8"
+            />
             <div className="bg-[#0A461A] p-8 lg:p-12">
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((s, i) => (
