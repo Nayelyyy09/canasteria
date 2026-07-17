@@ -26,11 +26,11 @@ export default function ProductCard({ product, index, dark }) {
       onMouseLeave={() => setHovered(false)}
     >
       <Link to={`/producto/${product.slug}`} className="block">
-        <div className="relative aspect-[3/4] overflow-hidden mb-5">
+        <div className="relative aspect-[3/4] overflow-hidden mb-5 bg-white">
           <motion.img
             src={hovered ? product.hoverImage : product.image}
             alt={product.name}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain p-2"
             animate={hovered ? { scale: 1.05 } : { scale: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           />
