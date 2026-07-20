@@ -126,9 +126,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 flex-shrink-0 relative group">
             <img
-              src="https://canastanavidena.pe/wp-content/uploads/2026/07/Logo_nuevo.png"
+              src="https://canastanavidena.pe/wp-content/uploads/2026/07/Logo_final.png"
               alt="Publiventa"
-              className="h-10 lg:h-12 w-auto"
+              className="h-14 lg:h-16 w-auto"
             />
           </Link>
 
