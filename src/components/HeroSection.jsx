@@ -134,14 +134,24 @@ export default function HeroSection() {
           <motion.div
             key={index}
             custom={direction}
-            initial={{ opacity: 0, x: direction > 0 ? 60 : -60 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: direction > 0 ? -60 : 60 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center min-h-[500px] lg:min-h-[600px]"
+            className="relative min-h-[500px] lg:min-h-[600px] flex items-center"
           >
-            {/* Text side */}
-            <div className="order-2 lg:order-1 text-center lg:text-left max-w-7xl mx-auto px-6 lg:px-16 py-8 lg:py-14 lg:ml-0 lg:pl-16 lg:pr-8 z-10">
+            {/* Full-width background image */}
+            <div className="absolute inset-0">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0A461A]/95 via-[#0A461A]/60 to-transparent" />
+            </div>
+
+            {/* Text overlay */}
+            <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-16 lg:py-24">
               <motion.span
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -156,7 +166,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl text-[#FAF7F2] leading-tight"
+                className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl text-[#FAF7F2] leading-tight max-w-2xl"
               >
                 {product.name}
               </motion.h1>
@@ -165,14 +175,14 @@ export default function HeroSection() {
                 initial={{ width: 0 }}
                 animate={{ width: 64 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
-                className="mt-3 h-px bg-[#C9A96E] mx-auto lg:mx-0"
+                className="mt-3 h-px bg-[#C9A96E]"
               />
 
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
-                className="mt-5 font-body text-sm lg:text-base text-[#FAF7F2]/60 leading-relaxed max-w-lg mx-auto lg:mx-0 line-clamp-3"
+                className="mt-5 font-body text-sm lg:text-base text-[#FAF7F2]/80 leading-relaxed max-w-xl line-clamp-3"
               >
                 {product.description}
               </motion.p>
@@ -181,42 +191,23 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
-                className="mt-7 flex items-center justify-center lg:justify-start gap-6"
+                className="mt-7 flex items-center gap-4"
               >
-                <div className="flex gap-3">
+                <button
+                  onClick={handleCotizar}
+                  className="group px-7 py-3 bg-[#7E0E0F] text-[#FAF7F2] font-body text-xs tracking-widest uppercase hover:bg-[#7E0E0F] transition-all duration-300 hover:shadow-lg hover:shadow-[#7E0E0F]/30 hover:-translate-y-0.5 flex items-center gap-2"
+                >
+                  <MessageCircle size={14} />
+                  Cotizar
+                </button>
+                {!product.isCustom && (
                   <button
-                    onClick={handleCotizar}
-                    className="group px-7 py-3 bg-[#7E0E0F] text-[#FAF7F2] font-body text-xs tracking-widest uppercase hover:bg-[#7E0E0F] transition-all duration-300 hover:shadow-lg hover:shadow-[#7E0E0F]/30 hover:-translate-y-0.5 flex items-center gap-2"
+                    onClick={() => navigate(`/producto/${product.slug}`)}
+                    className="px-7 py-3 border border-[#C9A96E]/40 text-[#FAF7F2] font-body text-xs tracking-widest uppercase hover:bg-[#C9A96E]/10 transition-all duration-300 hover:-translate-y-0.5"
                   >
-                    <MessageCircle size={14} />
-                    Cotizar
+                    Ver detalle
                   </button>
-                  {!product.isCustom && (
-                    <button
-                      onClick={() => navigate(`/producto/${product.slug}`)}
-                      className="px-7 py-3 border border-[#C9A96E]/40 text-[#FAF7F2] font-body text-xs tracking-widest uppercase hover:bg-[#C9A96E]/10 transition-all duration-300 hover:-translate-y-0.5"
-                    >
-                      Ver detalle
-                    </button>
-                  )}
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Image side */}
-            <div className="order-1 lg:order-2 relative w-full h-full min-h-[400px] lg:min-h-[600px]">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3, duration: 0.7 }}
-                className="absolute inset-0"
-              >
-                <img
-                  src={product.image}
-                  alt={`Canasta navideña artesanal: ${product.name} — regalo gourmet navideño`}
-                  className="w-full h-full object-contain bg-[#FAF7F2]/5"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#0A461A] via-transparent to-transparent lg:block hidden" />
+                )}
               </motion.div>
             </div>
           </motion.div>
