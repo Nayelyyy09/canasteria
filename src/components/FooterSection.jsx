@@ -228,7 +228,7 @@ export default function FooterSection() {
           <div>
             <div className="mb-4">
               <img
-                src="https://publiventa.pe/wp-content/uploads/2017/07/publiventa-footer-.png"
+                src="https://canastanavidena.pe/wp-content/uploads/2026/07/Logo_nuevo.png"
                 alt="Publiventa"
                 className="h-12 w-auto"
               />

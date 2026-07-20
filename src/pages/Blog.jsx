@@ -193,7 +193,7 @@ export default function Blog() {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#7E0E0F]/20 to-[#C9A96E]/20 blur-2xl" />
                 <img
-                  src="https://publiventa.pe/wp-content/uploads/2026/07/Activaciones.png"
+                  src="https://canastanavidena.pe/wp-content/uploads/2026/07/Activaciones-Navidenas-que-Conectan.png"
                   alt="Activaciones Navideñas"
                   className="relative w-full h-auto object-cover shadow-2xl"
                 />
