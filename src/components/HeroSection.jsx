@@ -193,12 +193,12 @@ export default function HeroSection() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3, duration: 0.7 }}
-                className="relative aspect-[4/3] lg:aspect-square overflow-hidden"
+                className="relative aspect-[4/3] lg:aspect-square overflow-hidden bg-[#FAF7F2]/10"
               >
                 <img
                   src={product.image}
                   alt={`Canasta navideña artesanal: ${product.name} — regalo gourmet navideño`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain p-4"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#0A461A]/50 via-transparent to-[#7E0E0F]/20" />
               </motion.div>
