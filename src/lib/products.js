@@ -291,7 +291,7 @@ export const PRODUCTS = [
 
   // ==================== EXCLUSIVAS ====================
   {
-    id: 6,
+    id: 50,
     name: "Cooler Trolley Premium",
     slug: "cooler-trolley-premium-exclusiva",
     price: 0,
@@ -303,7 +303,7 @@ export const PRODUCTS = [
     hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/canasta-navidena-cooler-trolley-premium.png",
   },
   {
-    id: 7,
+    id: 51,
     name: "Cooler Trolley VIP",
     slug: "cooler-trolley-vip",
     price: 0,
@@ -957,7 +957,7 @@ export const PRODUCTS = [
 
   // ==================== REGALOS NAVIDENOS ====================
   {
-    id: 20,
+    id: 110,
     name: "Brindis Premium",
     slug: "brindis-premium",
     price: 0,
@@ -969,7 +969,7 @@ export const PRODUCTS = [
     hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-brindis-premium.png",
   },
   {
-    id: 21,
+    id: 111,
     name: "Brindis Premium 2",
     slug: "brindis-premium-2",
     price: 0,
@@ -981,7 +981,7 @@ export const PRODUCTS = [
     hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-brindis-premium-2.png",
   },
   {
-    id: 22,
+    id: 112,
     name: "Executive Box",
     slug: "executive-box",
     price: 0,
@@ -993,7 +993,7 @@ export const PRODUCTS = [
     hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-executive-box.png",
   },
   {
-    id: 23,
+    id: 113,
     name: "Gourmet Premium",
     slug: "gourmet-premium",
     price: 0,
@@ -1005,7 +1005,7 @@ export const PRODUCTS = [
     hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-gourmet-premium.png",
   },
   {
-    id: 24,
+    id: 114,
     name: "Taza Gourmet",
     slug: "taza-gourmet",
     price: 0,
@@ -1017,7 +1017,7 @@ export const PRODUCTS = [
     hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-taza-gourmet.png",
   },
   {
-    id: 25,
+    id: 115,
     name: "Taza Premium",
     slug: "taza-premium",
     price: 0,
@@ -1029,7 +1029,7 @@ export const PRODUCTS = [
     hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-taza-premium.png",
   },
   {
-    id: 26,
+    id: 116,
     name: "Vino Premium",
     slug: "vino-premium",
     price: 0,
@@ -1041,7 +1041,7 @@ export const PRODUCTS = [
     hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-vino-premium.png",
   },
   {
-    id: 27,
+    id: 117,
     name: "Vino Reserva",
     slug: "vino-reserva",
     price: 0,
@@ -1053,7 +1053,7 @@ export const PRODUCTS = [
     hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-vino-reserva.png",
   },
   {
-    id: 28,
+    id: 118,
     name: "Panetón Clásico",
     slug: "paneton-clasico",
     price: 0,
@@ -1065,7 +1065,7 @@ export const PRODUCTS = [
     hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-paneton-clasico.png",
   },
   {
-    id: 29,
+    id: 119,
     name: "Eco Bag",
     slug: "eco-bag",
     price: 0,
@@ -1079,7 +1079,7 @@ export const PRODUCTS = [
 
   // ==================== CESTAS GOURMET ====================
   {
-    id: 16,
+    id: 120,
     name: "BBQ Gourmet",
     slug: "bbq-gourmet",
     price: 0,

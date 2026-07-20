@@ -29,6 +29,7 @@ export default function ProductCard({ product, index, dark }) {
           <motion.img
             src={hovered ? product.hoverImage : product.image}
             alt={product.name}
+            loading="lazy"
             className="w-full h-full object-contain p-2"
             animate={hovered ? { scale: 1.05 } : { scale: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}

@@ -157,6 +157,7 @@ export default function CategoryPage() {
             src={category.image}
             alt={category.label}
             className="w-full h-full object-cover opacity-30"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0A461A]/80 to-[#0A461A]" />
         </div>
@@ -209,7 +210,7 @@ export default function CategoryPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {products.map((product, i) => (
               <ProductCard
-                key={product.id}
+                key={`${slug}-${product.slug}`}
                 product={product}
                 index={i}
                 dark
@@ -290,6 +291,7 @@ export default function CategoryPage() {
                     src={cat.image}
                     alt={cat.label}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A461A] via-[#0A461A]/40 to-transparent" />
                   <div className="absolute inset-0 p-4 flex flex-col justify-end">
