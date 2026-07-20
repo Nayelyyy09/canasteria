@@ -29,7 +29,7 @@ function CategoryCard({ cat, index }) {
           style={{ y }}
           src={cat.image}
           alt={`Categoría: ${cat.label} — ${cat.description}`}
-          className="absolute inset-0 w-full h-[120%] object-cover group-hover:scale-110 transition-transform duration-700"
+          className="absolute inset-0 w-full h-full object-contain p-6 bg-[#FAF7F2] group-hover:scale-105 transition-transform duration-700"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A461A] via-[#0A461A]/40 to-transparent" />
