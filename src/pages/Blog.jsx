@@ -201,7 +201,7 @@ export default function Blog() {
               <div className="absolute -bottom-6 -left-6 bg-[#7E0E0F] p-6 shadow-xl">
                 <p className="font-display text-3xl text-[#FAF7F2]">15%</p>
                 <p className="font-body text-xs text-[#FAF7F2]/80 uppercase tracking-wider">
-                  Descuento Early Bird
+                  por la compra de tu canasta navideña
                 </p>
               </div>
             </motion.div>
