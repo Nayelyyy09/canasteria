@@ -153,7 +153,7 @@ export default function HeroSection() {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain bg-[#0A461A]"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#0A461A]/80 via-[#0A461A]/40 to-transparent" />
             </div>
