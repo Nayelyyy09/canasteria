@@ -115,7 +115,7 @@ export default function HeroSection() {
         })}
       </svg>
 
-      <motion.div style={{ opacity }} className="relative max-w-7xl mx-auto px-6 lg:px-16 py-8 lg:py-14">
+      <motion.div style={{ opacity }} className="relative">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={index}
@@ -124,10 +124,10 @@ export default function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: direction > 0 ? -60 : 60 }}
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center min-h-[500px] lg:min-h-[600px]"
           >
             {/* Text side */}
-            <div className="order-2 lg:order-1 text-center lg:text-left">
+            <div className="order-2 lg:order-1 text-center lg:text-left max-w-7xl mx-auto px-6 lg:px-16 py-8 lg:py-14 lg:ml-0 lg:pl-16 lg:pr-8 z-10">
               <motion.span
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -188,33 +188,26 @@ export default function HeroSection() {
             </div>
 
             {/* Image side */}
-            <div className="order-1 lg:order-2 relative">
+            <div className="order-1 lg:order-2 relative w-full h-full min-h-[400px] lg:min-h-[600px]">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3, duration: 0.7 }}
-                className="relative aspect-[4/3] lg:aspect-square overflow-hidden bg-[#FAF7F2]/10"
+                className="absolute inset-0"
               >
                 <img
                   src={product.image}
                   alt={`Canasta navideña artesanal: ${product.name} — regalo gourmet navideño`}
-                  className="w-full h-full object-contain p-4"
+                  className="w-full h-full object-contain bg-[#FAF7F2]/5"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#0A461A]/50 via-transparent to-[#7E0E0F]/20" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0A461A] via-transparent to-transparent lg:block hidden" />
               </motion.div>
-              {/* Decorative border */}
-              <motion.div
-                initial={{ opacity: 0, x: 20, y: 20 }}
-                animate={{ opacity: 1, x: 12, y: 12 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
-                className="absolute -bottom-3 -right-3 w-full h-full border border-[#C9A96E]/30 pointer-events-none"
-              />
             </div>
           </motion.div>
         </AnimatePresence>
 
         {/* Controls */}
-        <div className="mt-6 flex items-center justify-center gap-6">
+        <div className="absolute bottom-4 left-0 right-0 z-10 flex items-center justify-center gap-6">
           <button
             onClick={() => go(-1)}
             className="w-10 h-10 flex items-center justify-center border border-[#C9A96E]/30 text-[#FAF7F2] hover:bg-[#C9A96E]/10 transition-all duration-300 hover:scale-110"
