@@ -15,7 +15,7 @@ const CATEGORIAS_REGALOS = [
     title: "Para Empresa",
     description: "Sorprende a tu equipo y clientes con regalos corporativos que reflejen los valores de tu marca.",
     icon: Building2,
-    image: "https://publiventa.pe/wp-content/uploads/2024/09/Canastas-Navidenas2.png",
+    image: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-brindis-premium.png",
     items: ["Canastas ejecutivas", "Packs de bienvenida", "Agradecimiento a clientes"],
   },
   {
@@ -23,7 +23,7 @@ const CATEGORIAS_REGALOS = [
     title: "Para Familia",
     description: "Regalos que unen a la familia y crean momentos inolvidables alrededor de la mesa navideña.",
     icon: Home,
-    image: "https://publiventa.pe/wp-content/uploads/2024/09/Canastas-Navidenas12.png",
+    image: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-brindis-premium-2.png",
     items: ["Canastas familiares", "Cestas gourmet", "Desayunos especiales"],
   },
   {
@@ -31,7 +31,7 @@ const CATEGORIAS_REGALOS = [
     title: "Para Amigos",
     description: "Detalles únicos y personalizados para sorprender a tus amigos en esta temporada.",
     icon: Users,
-    image: "https://publiventa.pe/wp-content/uploads/2024/09/Canastas-Navidenas9.png",
+    image: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-vino-reserva.png",
     items: ["Gift boxes", "Botellas premium", "Experiencias gourmet"],
   },
 ];
