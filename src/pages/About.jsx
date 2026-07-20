@@ -15,10 +15,10 @@ const values = [
 ];
 
 const stats = [
-  { number: "5,000+", label: "Canastas Entregadas" },
-  { number: "98%", label: "Clientes Satisfechos" },
-  { number: "8", label: "Años de Experiencia" },
-  { number: "50+", label: "Marcas Premium" },
+  { number: "+70,000", label: "Canastas integradas en los últimos 3 años" },
+  { number: "+80%", label: "En desarrollo de contenedores textiles" },
+  { number: "+100", label: "Marcas de alimentos aliados" },
+  { number: "100%", label: "Clientes satisfechos" },
 ];
 
 export default function About() {
