@@ -18,8 +18,7 @@ export default function ProductCard({ product, index, dark }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="group"
       onMouseEnter={() => setHovered(true)}
@@ -71,8 +70,7 @@ export default function ProductCard({ product, index, dark }) {
           </div>
           <motion.div
             initial={{ width: 32 }}
-            whileInView={{ width: 48 }}
-            viewport={{ once: true }}
+            animate={{ width: 48 }}
             className="mt-2 h-px bg-[#C9A96E]"
           />
           <p className={`mt-3 font-body text-sm leading-relaxed line-clamp-2 ${dark ? 'text-[#FAF7F2]/60' : 'text-[#0A461A]/60'}`}>
