@@ -5,7 +5,14 @@ import { ChevronLeft, ChevronRight, Gift, MessageCircle } from "lucide-react";
 import { PRODUCTS } from "@/lib/products";
 import CanvasSnow from "./CanvasSnow";
 
-const SLIDES = PRODUCTS.filter((p) => p.featured).slice(0, 4);
+const CUSTOM_BANNER = {
+  name: "Contenedores Textiles Personalizados",
+  description: "Personalizamos tu contenedor textil según tu presupuesto. Diseños a medida con la calidad y el precio que tu proyecto necesita.",
+  image: "https://canastanavidena.pe/wp-content/uploads/2026/07/Banner_1.png",
+  isCustom: true,
+};
+
+const SLIDES = [CUSTOM_BANNER, ...PRODUCTS.filter((p) => p.featured).slice(0, 4)];
 
 export default function HeroSection() {
   const [index, setIndex] = useState(0);
@@ -35,6 +42,13 @@ export default function HeroSection() {
   const product = SLIDES[index];
 
   const handleCotizar = () => {
+    if (product.isCustom) {
+      const message = encodeURIComponent(
+        `Hola, me interesa cotizar contenedores textiles personalizados. ¿Podrían darme más información?`
+      );
+      window.open(`https://wa.me/51958438095?text=${message}`, "_blank");
+      return;
+    }
     const message = encodeURIComponent(
       `Hola, me interesa cotizar la canasta "${product.name}". ¿Podrían darme más información?`
     );
@@ -135,7 +149,7 @@ export default function HeroSection() {
                 className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#7E0E0F]/30 border border-[#7E0E0F]/50 text-[#FAF7F2] text-xs tracking-widest uppercase font-body"
               >
                 <Gift size={14} className="text-[#C9A96E]" />
-                Destacado de la temporada
+                {product.isCustom ? "Soluciones a medida" : "Destacado de la temporada"}
               </motion.span>
 
               <motion.h1
@@ -177,12 +191,14 @@ export default function HeroSection() {
                     <MessageCircle size={14} />
                     Cotizar
                   </button>
-                  <button
-                    onClick={() => navigate(`/producto/${product.slug}`)}
-                    className="px-7 py-3 border border-[#C9A96E]/40 text-[#FAF7F2] font-body text-xs tracking-widest uppercase hover:bg-[#C9A96E]/10 transition-all duration-300 hover:-translate-y-0.5"
-                  >
-                    Ver detalle
-                  </button>
+                  {!product.isCustom && (
+                    <button
+                      onClick={() => navigate(`/producto/${product.slug}`)}
+                      className="px-7 py-3 border border-[#C9A96E]/40 text-[#FAF7F2] font-body text-xs tracking-widest uppercase hover:bg-[#C9A96E]/10 transition-all duration-300 hover:-translate-y-0.5"
+                    >
+                      Ver detalle
+                    </button>
+                  )}
                 </div>
               </motion.div>
             </div>
