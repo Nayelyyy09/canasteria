@@ -256,7 +256,7 @@ export default function FAQ() {
               Nuestro equipo está listo para ayudarte con cualquier duda adicional.
             </p>
             <a
-              href="mailto:ventas@canastanavidena.pe"
+              href="mailto:ventas@publiventa.com"
               className="inline-block px-8 py-3 bg-[#7E0E0F] text-[#FAF7F2] font-body text-sm hover:bg-[#7E0E0F] transition-colors"
             >
               Contáctanos

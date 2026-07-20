@@ -63,7 +63,7 @@ export default function TermsConditions() {
                 <li><strong>Razón social:</strong> Canastas Navideñas E.I.R.L.</li>
                 <li><strong>RUC:</strong> 20601234567</li>
                 <li><strong>Domicilio fiscal:</strong> Jr. Santo Tomás, Mz C Lt. 16-B, Asoc. Fundo Garagay Bajo, Los Olivos - Lima - Perú</li>
-                <li><strong>Correo electrónico:</strong> ventas@canastanavidena.pe</li>
+                <li><strong>Correo electrónico:</strong> ventas@publiventa.com</li>
                 <li><strong>Teléfono:</strong> 997 486 009</li>
               </ul>
             </div>
@@ -187,7 +187,7 @@ export default function TermsConditions() {
               <h2 className="font-display text-2xl text-[#0A461A] mb-3">14. Contacto</h2>
               <p>Para consultas sobre estos Términos y Condiciones:</p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
-                <li><strong>Correo:</strong> ventas@canastanavidena.pe</li>
+                <li><strong>Correo:</strong> ventas@publiventa.com</li>
                 <li><strong>Teléfono:</strong> 997 486 009 / 976 220 440 / 958 438 095</li>
                 <li><strong>Dirección:</strong> Jr. Santo Tomás, Mz C Lt. 16-B, Asoc. Fundo Garagay Bajo, Los Olivos - Lima - Perú</li>
               </ul>

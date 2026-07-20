@@ -275,8 +275,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-body text-xs tracking-wider uppercase text-[#C9A96E] mb-1">Email</p>
-                    <a href="mailto:ventas@canastanavidena.pe" className="font-body text-sm text-[#FAF7F2]/70 hover:text-[#FAF7F2] transition-colors">
-                      ventas@canastanavidena.pe
+                    <a href="mailto:ventas@publiventa.com" className="font-body text-sm text-[#FAF7F2]/70 hover:text-[#FAF7F2] transition-colors">
+                      ventas@publiventa.com
                     </a>
                   </div>
                 </li>
@@ -339,7 +339,7 @@ export default function Contact() {
               "@type": "Organization",
               name: "Canastas Navideñas",
               telephone: "+51-955-087-991",
-              email: "ventas@canastanavidena.pe",
+              email: "ventas@publiventa.com",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Jr. Santo Tomás, Mz C Lt. 16-B, Asoc. Fundo Garagay Bajo",

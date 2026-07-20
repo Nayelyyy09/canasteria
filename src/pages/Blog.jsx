@@ -423,7 +423,7 @@ export default function Blog() {
                 <Mail size={20} className="text-[#C9A96E]" />
               </div>
               <h4 className="font-display text-lg text-[#FAF7F2] mb-2">Email</h4>
-              <p className="font-body text-sm text-[#FAF7F2]/50">ventas@canastanavidena.pe</p>
+              <p className="font-body text-sm text-[#FAF7F2]/50">ventas@publiventa.com</p>
             </motion.div>
 
             <motion.div
