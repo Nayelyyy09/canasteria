@@ -160,8 +160,8 @@ export default function Blog() {
               </h1>
 
               <p className="font-body text-base lg:text-lg text-[#FAF7F2]/60 max-w-lg mb-8 leading-relaxed">
-                Creamos experiencias navideñas inolvidables para empresas que buscan
-                sorprender a sus equipos y clientes con canastas premium y eventos únicos.
+                Más que una canasta, entregamos una experiencia.
+                Creamos experiencias navideñas memorables con canastas premium y eventos corporativos diseñados para sorprender, emocionar y fortalecer los vínculos con colaboradores y clientes.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
