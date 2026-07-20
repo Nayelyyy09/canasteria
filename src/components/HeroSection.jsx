@@ -8,7 +8,7 @@ import CanvasSnow from "./CanvasSnow";
 const CUSTOM_BANNER = {
   name: "Contenedores Textiles Personalizados",
   description: "Personalizamos tu contenedor textil según tu presupuesto. Diseños a medida con la calidad y el precio que tu proyecto necesita.",
-  image: "https://canastanavidena.pe/wp-content/uploads/2026/07/Banner_1.png",
+  image: "https://canastanavidena.pe/wp-content/uploads/2026/07/Banner_11.png",
   isCustom: true,
 };
 
