@@ -147,8 +147,7 @@ export default function HeroSection() {
                 alt={product.name}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-[#0A461A]/70" />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0A461A] via-[#0A461A]/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0A461A]/80 via-[#0A461A]/40 to-transparent" />
             </div>
 
             {/* Text overlay */}
