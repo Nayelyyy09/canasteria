@@ -20,7 +20,7 @@ const PANETON_BANNER = {
 };
 
 const featuredProducts = PRODUCTS.filter((p) => p.featured);
-const SLIDES = [CUSTOM_BANNER, featuredProducts[0], PANETON_BANNER, ...featuredProducts.slice(1)];
+const SLIDES = [CUSTOM_BANNER, PANETON_BANNER];
 
 export default function HeroSection() {
   const [index, setIndex] = useState(0);
@@ -153,7 +153,7 @@ export default function HeroSection() {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-contain bg-[#0A461A]"
+                className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#0A461A]/80 via-[#0A461A]/40 to-transparent" />
             </div>
