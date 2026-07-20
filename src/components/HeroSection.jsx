@@ -12,7 +12,15 @@ const CUSTOM_BANNER = {
   isCustom: true,
 };
 
-const SLIDES = [CUSTOM_BANNER, ...PRODUCTS.filter((p) => p.featured).slice(0, 4)];
+const PANETON_BANNER = {
+  name: "Personaliza tu panetón y dale un toque diferente",
+  description: "Convierte un delicioso panetón en un detalle especial, personalizado con tu marca.",
+  image: "https://canastanavidena.pe/wp-content/uploads/2026/07/maletin-navideno-excelencia.png",
+  isCustom: true,
+};
+
+const featuredProducts = PRODUCTS.filter((p) => p.featured);
+const SLIDES = [CUSTOM_BANNER, featuredProducts[0], PANETON_BANNER, ...featuredProducts.slice(1)];
 
 export default function HeroSection() {
   const [index, setIndex] = useState(0);
