@@ -175,11 +175,12 @@ export default function ProductPage() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-[3/4] overflow-hidden bg-white">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain p-4"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A461A]/20 to-transparent" />
               </div>
