@@ -38,11 +38,11 @@ const SEO_CONTENT = {
   },
   familiares: {
     heading: "Canastas Navideñas Familiares",
-    intro: "Canastas textiles y de plástico para toda ocasión. Ideales para regalar en familia.",
+    intro: "Canastas navideñas para toda ocasión. Ideales para regalar en familia.",
     sections: [
       {
         title: "Variedad para Todos",
-        text: "Contamos con canastas textiles tejidas en fibras naturales y canastas de plástico resistentes. Ideales para regalos corporativos, promociones y eventos.",
+        text: "Contamos con bolsos, coolers, mochilas, maletas, cajas y canastas para toda ocasión. Ideales para regalos corporativos, promociones y eventos.",
       },
     ],
   },

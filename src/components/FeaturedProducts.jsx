@@ -51,10 +51,10 @@ export default function FeaturedProducts({ activeCategory, setActiveCategory }) 
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+        <div key={active} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
           {displayed.map((product, i) => (
             <ProductCard
-              key={`${active}-${product.slug}`}
+              key={product.slug}
               product={product}
               index={i}
             />
