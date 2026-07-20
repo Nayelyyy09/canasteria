@@ -15,7 +15,7 @@ const CUSTOM_BANNER = {
 const PANETON_BANNER = {
   name: "Personaliza tu panetón y dale un toque diferente",
   description: "Convierte un delicioso panetón en un detalle especial, personalizado con tu marca.",
-  image: "https://canastanavidena.pe/wp-content/uploads/2026/07/Banner_3_1.png",
+  image: "https://canastanavidena.pe/wp-content/uploads/2026/07/Banner_3.png",
   isCustom: true,
 };
 
