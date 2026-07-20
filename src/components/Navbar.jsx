@@ -122,13 +122,13 @@ export default function Navbar() {
           : "bg-[#0A461A]/90 backdrop-blur-sm"
           }`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between h-16 lg:h-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between h-24 lg:h-28">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 flex-shrink-0 relative group">
             <img
               src="https://canastanavidena.pe/wp-content/uploads/2026/07/Logo_final.png"
               alt="Publiventa"
-              className="h-14 lg:h-16 w-auto"
+              className="h-20 lg:h-24 w-auto"
             />
           </Link>
 
