@@ -147,7 +147,7 @@ export default function FooterSection() {
       {/* Festive top border */}
       <div className="h-1.5 bg-gradient-to-r from-[#7E0E0F] via-[#C9A96E] to-[#0A461A]" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-16">
+      <div className="max-w-[1800px] mx-auto px-6 lg:px-16">
         {/* Newsletter CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -228,9 +228,9 @@ export default function FooterSection() {
           <div>
             <div className="mb-4">
               <img
-                src="https://canastanavidena.pe/wp-content/uploads/2026/07/Logo_nuevo.png"
+                src="https://canastanavidena.pe/wp-content/uploads/2026/07/Logo_finales.png"
                 alt="Publiventa"
-                className="h-12 w-auto"
+                className="h-20 w-auto"
               />
             </div>
             <p className="font-body text-xs text-[#FAF7F2] leading-relaxed">

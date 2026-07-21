@@ -154,6 +154,7 @@ export default function CategoryPage() {
       <section className="relative bg-[#0A461A] overflow-hidden">
         <div className="absolute inset-0">
           <img
+          
             src={category.image}
             alt={category.label}
             className="w-full h-full object-cover opacity-30"

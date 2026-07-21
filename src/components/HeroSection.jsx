@@ -155,16 +155,20 @@ export default function HeroSection() {
                 alt={product.name}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0A461A]/80 via-[#0A461A]/40 to-transparent" />
+              {/* Multi-layer overlay for dramatic contrast */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              {/* Subtle vignette effect */}
+              <div className="absolute inset-0 shadow-[inset_0_0_150px_rgba(0,0,0,0.4)]" />
             </div>
 
             {/* Text overlay */}
-            <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-16 lg:py-24 text-left">
+            <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-20 lg:py-28 text-left">
               <motion.span
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.15 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#7E0E0F]/30 border border-[#7E0E0F]/50 text-[#FAF7F2] text-xs tracking-widest uppercase font-body"
+                className="inline-flex items-center gap-2 px-5 py-2 bg-black/40 backdrop-blur-sm border border-[#C9A96E]/60 text-[#C9A96E] text-xs tracking-[0.2em] uppercase font-body"
               >
                 <Gift size={14} className="text-[#C9A96E]" />
                 {product.isCustom ? "Soluciones a medida" : "Destacado de la temporada"}
@@ -174,23 +178,24 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl text-[#FAF7F2] leading-tight max-w-2xl"
+                className="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl text-white leading-tight max-w-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
               >
                 {product.name}
               </motion.h1>
 
+              {/* Decorative accent line */}
               <motion.div
                 initial={{ width: 0 }}
-                animate={{ width: 64 }}
+                animate={{ width: 80 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
-                className="mt-3 h-px bg-[#C9A96E]"
+                className="mt-4 h-[3px] bg-gradient-to-r from-[#C9A96E] to-[#C9A96E]/30"
               />
 
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
-                className="mt-5 font-body text-sm lg:text-base text-[#FAF7F2]/80 leading-relaxed max-w-xl line-clamp-3"
+                className="mt-6 font-body text-base lg:text-lg text-white/85 leading-relaxed max-w-xl line-clamp-3 drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]"
               >
                 {product.description}
               </motion.p>
@@ -199,37 +204,42 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
-                className="mt-7 flex items-center gap-4"
+                className="mt-8 flex items-center gap-4"
               >
                 <button
                   onClick={handleCotizar}
-                  className="group px-7 py-3 bg-[#7E0E0F] text-[#FAF7F2] font-body text-xs tracking-widest uppercase hover:bg-[#7E0E0F] transition-all duration-300 hover:shadow-lg hover:shadow-[#7E0E0F]/30 hover:-translate-y-0.5 flex items-center gap-2"
+                  className="group relative px-8 py-4 bg-[#C9A96E] text-[#1a1a1a] font-body text-sm tracking-widest uppercase font-semibold transition-all duration-300 hover:bg-[#d4b87a] hover:shadow-xl hover:shadow-[#C9A96E]/30 hover:-translate-y-1 flex items-center gap-3 overflow-hidden"
                 >
-                  <MessageCircle size={14} />
-                  Cotizar
+                  <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <MessageCircle size={18} className="relative z-10" />
+                  <span className="relative z-10">Cotizar Ahora</span>
                 </button>
                 {!product.isCustom && (
                   <button
                     onClick={() => navigate(`/producto/${product.slug}`)}
-                    className="px-7 py-3 border border-[#C9A96E]/40 text-[#FAF7F2] font-body text-xs tracking-widest uppercase hover:bg-[#C9A96E]/10 transition-all duration-300 hover:-translate-y-0.5"
+                    className="px-8 py-4 border-2 border-white/30 text-white font-body text-sm tracking-widest uppercase hover:bg-white/10 hover:border-white/50 transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm"
                   >
                     Ver detalle
                   </button>
                 )}
               </motion.div>
+
+              {/* Decorative corner accent */}
+              <div className="absolute top-0 right-0 w-24 h-24 border-t-2 border-r-2 border-[#C9A96E]/30 pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-24 h-24 border-b-2 border-l-2 border-[#C9A96E]/30 pointer-events-none" />
             </div>
           </motion.div>
         </AnimatePresence>
 
         {/* Controls */}
-        <div className="absolute bottom-4 left-0 right-0 z-10 flex items-center justify-center gap-6">
+        <div className="absolute bottom-6 left-0 right-0 z-10 flex items-center justify-center gap-6">
           <button
             onClick={() => go(-1)}
-            className="w-10 h-10 flex items-center justify-center border border-[#C9A96E]/30 text-[#FAF7F2] hover:bg-[#C9A96E]/10 transition-all duration-300 hover:scale-110"
+            className="w-12 h-12 flex items-center justify-center border-2 border-white/20 text-white/70 hover:bg-white/10 hover:border-[#C9A96E]/60 hover:text-[#C9A96E] transition-all duration-300 hover:scale-110 backdrop-blur-sm"
           >
-            <ChevronLeft size={18} />
+            <ChevronLeft size={20} />
           </button>
-          <div className="flex gap-2">
+          <div className="flex gap-3">
             {SLIDES.map((_, i) => (
               <button
                 key={i}
@@ -237,19 +247,19 @@ export default function HeroSection() {
                   setDirection(i > index ? 1 : -1);
                   setIndex(i);
                 }}
-                className={`h-2 transition-all duration-300 ${
+                className={`h-2 transition-all duration-400 ${
                   i === index
-                    ? "w-8 bg-[#C9A96E]"
-                    : "w-2 bg-[#FAF7F2]/20 hover:bg-[#FAF7F2]/40"
+                    ? "w-10 bg-[#C9A96E] shadow-lg shadow-[#C9A96E]/50"
+                    : "w-2 bg-white/25 hover:bg-white/50"
                 }`}
               />
             ))}
           </div>
           <button
             onClick={() => go(1)}
-            className="w-10 h-10 flex items-center justify-center border border-[#C9A96E]/30 text-[#FAF7F2] hover:bg-[#C9A96E]/10 transition-all duration-300 hover:scale-110"
+            className="w-12 h-12 flex items-center justify-center border-2 border-white/20 text-white/70 hover:bg-white/10 hover:border-[#C9A96E]/60 hover:text-[#C9A96E] transition-all duration-300 hover:scale-110 backdrop-blur-sm"
           >
-            <ChevronRight size={18} />
+            <ChevronRight size={20} />
           </button>
         </div>
       </motion.div>
