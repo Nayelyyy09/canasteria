@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   ArrowRight, Phone, Mail, MapPin, TreePine,
-  Instagram, CreditCard, Loader2, CheckCircle2, AlertCircle,
+  Instagram, CreditCard, Loader2, CheckCircle2, AlertCircle, BookOpen,
 } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -261,6 +261,19 @@ export default function FooterSection() {
                 </svg>
               </motion.a>
             </div>
+            <a
+              href="https://publiventa.pe/libro-de-reclamaciones/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 block hover:opacity-80 transition-opacity"
+              title="Libro de Reclamaciones"
+            >
+              <img
+                src="https://publiventa.pe/wp-content/uploads/2026/03/Libro-reclamaciones_1.png"
+                alt="Libro de Reclamaciones"
+                className="h-14 w-auto"
+              />
+            </a>
           </div>
 
           {/* Navigation */}
@@ -317,14 +330,27 @@ export default function FooterSection() {
                 { label: "Contacto", to: "/contacto" },
                 { label: "Política de Privacidad", to: "/politica-de-privacidad" },
                 { label: "Términos y Condiciones", to: "/terminos-y-condiciones" },
+                { label: "Libro de Reclamaciones", href: "https://publiventa.pe/libro-de-reclamaciones/", isExternal: true },
               ].map((link) => (
                 <li key={link.label}>
-                  <Link
-                    to={link.to}
-                    className="font-body text-sm text-[#FAF7F2] hover:text-[#7E0E0F] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.isExternal ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-body text-sm text-[#FAF7F2] hover:text-[#7E0E0F] transition-colors flex items-center gap-2"
+                    >
+                      {link.label}
+                      <BookOpen size={12} className="text-[#C9A96E]" />
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.to}
+                      className="font-body text-sm text-[#FAF7F2] hover:text-[#7E0E0F] transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
