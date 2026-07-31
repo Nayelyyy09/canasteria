@@ -700,8 +700,8 @@ export const PRODUCTS = [
       "Tarjeta navideña personalizada de cortesía",
       "Contenedor"
     ],
-    image: "https://canastanavidena.pe/wp-content/uploads/2026/07/canasta-navideno-armonia.png",
-    hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/canasta-navideno-armonia.png",
+    image: "/images/products/familiares/canasta-navideno-armonia.png",
+    hoverImage: "/images/products/familiares/canasta-navideno-armonia.png",
   },
   {
     id: 50,
@@ -811,8 +811,8 @@ export const PRODUCTS = [
       "(1) Vallealto Berry Mix 40g. Frutos Secos.",
       "(1) Luvisa - Chocolate bitter al 68.28% de cacao."
     ],
-    image: "https://canastanavidena.pe/wp-content/uploads/2026/07/carry-on-navideno-travesia.png",
-    hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/carry-on-navideno-travesia.png",
+    image: "/images/products/familiares/carry-on-navideno-travesia.png",
+    hoverImage: "/images/products/familiares/carry-on-navideno-travesia.png",
   },
 
   // ==================== CORPORATIVAS ====================
@@ -843,8 +843,8 @@ export const PRODUCTS = [
       "Tarjeta navideña personalizada de cortesía",
       "Contenedor"
     ],
-    image: "https://canastanavidena.pe/wp-content/uploads/2026/07/canasta-navideno-armonia.png",
-    hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/canasta-navideno-armonia.png",
+    image: "/images/products/familiares/canasta-navideno-armonia.png",
+    hoverImage: "/images/products/familiares/canasta-navideno-armonia.png",
   },
   {
     id: 70,
