@@ -1294,8 +1294,8 @@ export const PRODUCTS = [
       "Inkacrops",
       "Mochila viajera"
     ],
-    image: "/images/products/corporativas/mochila-navidena-viajero.png",
-    hoverImage: "/images/products/corporativas/mochila-navidena-viajero.png",
+    image: "/images/products/ejecutivas/mochila-navidena-viajero.png",
+    hoverImage: "/images/products/ejecutivas/mochila-navidena-viajero.png",
   },
   {
     id: 105,
