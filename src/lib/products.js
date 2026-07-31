@@ -1294,8 +1294,8 @@ export const PRODUCTS = [
       "Inkacrops",
       "Mochila viajera"
     ],
-    image: "https://canastanavidena.pe/wp-content/uploads/2026/07/mochila-navidena-viajero.png",
-    hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/mochila-navidena-viajero.png",
+    image: "/images/products/corporativas/mochila-navidena-viajero.png",
+    hoverImage: "/images/products/corporativas/mochila-navidena-viajero.png",
   },
   {
     id: 105,
