@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ChevronRight, Heart, Shield, Sparkles, Award, Users, Package, Phone, TreePine } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronRight, Heart, Shield, Sparkles, Award, Users, Package, Phone, TreePine, BadgeCheck } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 
@@ -21,7 +21,93 @@ const stats = [
   { number: "100%", label: "Clientes satisfechos" },
 ];
 
+const CERTS = [
+  {
+    id: "bureau",
+    label: "Bureau Veritas",
+    image: "/images/nosotros/Certificado-Homologacion_Bureau-Veritas.jpg",
+  },
+  {
+    id: "mega",
+    label: "MEGA",
+    image: "/images/nosotros/Certificado-Homologacion_Mega.jpg",
+  },
+];
+
+function HomologacionesSection() {
+  const [active, setActive] = useState("bureau");
+  const cert = CERTS.find((c) => c.id === active);
+
+  return (
+    <section className="bg-[#FAF7F2] py-20 lg:py-28">
+      <div className="max-w-5xl mx-auto px-6 lg:px-16">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <span className="font-body text-xs tracking-[0.3em] uppercase text-[#7E0E0F]">Calidad Certificada</span>
+          <h2 className="mt-3 font-display text-4xl lg:text-5xl text-[#0A461A]">
+            Nuestra <span className="italic text-[#7E0E0F]">Documentación</span> Reglamentaria
+          </h2>
+          <p className="mt-4 font-body text-sm text-[#0A461A]/50 max-w-xl mx-auto">
+            Contamos con homologaciones que avalan nuestra calidad y compromiso con las empresas más exigentes del mercado.
+          </p>
+        </div>
+
+        {/* Tab Buttons */}
+        <div className="flex justify-center gap-3 mb-10 flex-wrap">
+          {CERTS.map((c) => (
+            <button
+              key={c.id}
+              onClick={() => setActive(c.id)}
+              className={`inline-flex items-center gap-2 px-6 py-3 font-body text-sm tracking-widest uppercase border-2 transition-all duration-300 ${
+                active === c.id
+                  ? "bg-[#0A461A] border-[#0A461A] text-[#FAF7F2] shadow-lg shadow-[#0A461A]/20"
+                  : "bg-transparent border-[#0A461A]/30 text-[#0A461A] hover:border-[#0A461A] hover:bg-[#0A461A]/5"
+              }`}
+            >
+              <BadgeCheck size={16} className={active === c.id ? "text-[#C9A96E]" : "text-[#0A461A]/50"} />
+              Certificado de Homologación — {c.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Certificate Image */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.35 }}
+            className="relative border border-[#0A461A]/10 shadow-2xl bg-white overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#0A461A] via-[#C9A96E] to-[#7E0E0F]" />
+            <img
+              src={cert.image}
+              alt={`Certificado de Homologación ${cert.label}`}
+              className="w-full object-contain max-h-[700px]"
+            />
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/30 to-transparent flex items-center justify-between">
+              <span className="font-body text-xs tracking-widest uppercase text-white/80">
+                Homologación — {cert.label}
+              </span>
+              <a
+                href={cert.image}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white font-body text-xs tracking-widest uppercase hover:bg-white/30 transition-all duration-200"
+              >
+                Ver en tamaño completo
+              </a>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    </section>
+  );
+}
+
 export default function About() {
+
   const fadeIn = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
   return (
@@ -132,6 +218,9 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Homologaciones */}
+      <HomologacionesSection />
 
       {/* CTA WhatsApp */}
       <section className="max-w-7xl mx-auto px-6 lg:px-16 py-20 lg:py-28">
