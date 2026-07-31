@@ -5,7 +5,7 @@ import { ChevronRight, Truck, RotateCcw, ShieldCheck, HelpCircle, ChevronDown, P
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 
-const WHATSAPP = "https://wa.me/51997486009?text=Hola,%20tengo%20una%20duda%20sobre%20envíos";
+const WHATSAPP = "https://wa.me/51958438095?text=Hola,%20tengo%20una%20duda%20sobre%20envíos";
 
 const faqItems = [
   {

@@ -438,7 +438,7 @@ export default function RegalosNavidenos() {
                 Solicitar Personalización
               </a>
               <a
-                href="https://wa.me/51997486009?text=Hola,%20me%20interesa%20un%20regalo%20personalizado"
+                href="https://wa.me/51958438095?text=Hola,%20me%20interesa%20un%20regalo%20personalizado"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 border border-[#FAF7F2]/40 text-[#FAF7F2] px-8 py-4 font-body text-sm tracking-widest uppercase hover:bg-[#FAF7F2]/10 transition-all duration-300"

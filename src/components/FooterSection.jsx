@@ -369,8 +369,8 @@ export default function FooterSection() {
                 >
                   <Phone size={14} className="text-[#FAF7F2]" />
                 </motion.div>
-                <a href="tel:+51997486009" className="font-body text-sm text-[#FAF7F2] hover:text-[#FAF7F2] transition-colors">
-                  997 486 009 / 976 220 440 / 958 438 095
+                <a href="tel:+51958438095" className="font-body text-sm text-[#FAF7F2] hover:text-[#FAF7F2] transition-colors">
+                  958 438 095
                 </a>
               </li>
               <li className="flex items-center gap-3">

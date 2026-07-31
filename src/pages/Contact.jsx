@@ -264,8 +264,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-body text-xs tracking-wider uppercase text-[#C9A96E] mb-1">Teléfono</p>
-                    <a href="tel:+51997486009" className="font-body text-sm text-[#FAF7F2]/70 hover:text-[#FAF7F2] transition-colors">
-                      997 486 009 / 976 220 440 / 958 438 095
+                    <a href="tel:+51958438095" className="font-body text-sm text-[#FAF7F2]/70 hover:text-[#FAF7F2] transition-colors">
+                      958 438 095
                     </a>
                   </div>
                 </li>

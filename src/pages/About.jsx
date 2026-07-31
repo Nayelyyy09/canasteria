@@ -5,7 +5,7 @@ import { ChevronRight, Heart, Shield, Sparkles, Award, Users, Package, Phone, Tr
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 
-const WHATSAPP = "https://wa.me/51997486009?text=Hola,%20quiero%20más%20información%20sobre%20sus%20canastas%20navideñas";
+const WHATSAPP = "https://wa.me/51958438095?text=Hola,%20quiero%20más%20información%20sobre%20sus%20canastas%20navideñas";
 
 const values = [
   { icon: Heart, title: "Pasión Artesanal", desc: "Cada canasta es elaborada a mano con dedicación y amor por los detalles." },
