@@ -228,7 +228,7 @@ export default function FooterSection() {
           <div>
             <div className="mb-4">
               <img
-                src="https://canastanavidena.pe/wp-content/uploads/2026/07/Logo_finales.png"
+                src="/images/logo.png"
                 alt="Publiventa"
                 className="h-20 w-auto"
               />

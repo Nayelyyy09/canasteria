@@ -22,6 +22,7 @@ const MEGA_MENU_ITEMS = [
     items: [
       { label: "Cestas Gourmet", slug: "cestas-gourmet" },
       { label: "Regalos Navideños", slug: "regalos-navidenos" },
+      { label: "Arcones Navideños", slug: "arcones-navidenos" },
     ],
   },
 ];
@@ -126,7 +127,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0 relative group">
             <img
-              src="https://canastanavidena.pe/wp-content/uploads/2026/07/Logo_finales.png"
+              src="/images/logo.png"
               alt="Publiventa"
               className="h-24 lg:h-32 w-auto"
             />

@@ -76,6 +76,16 @@ const SEO_CONTENT = {
       },
     ],
   },
+  "arcones-navidenos": {
+    heading: "Arcones Navideños",
+    intro: "Nuestros arcones navideños representan la máxima expresión de elegancia y generosidad para esta temporada de fin de año. Diseñados con una selección exclusiva de productos gourmet, licores finos y presentaciones espectaculares en cajas de madera premium para causar un gran impacto.",
+    sections: [
+      {
+        title: "Regalos de Gran Impacto",
+        text: "Cada arcón navideño está pensado para impresionar desde el primer momento. Ofrecemos diseños a medida con empaques elegantes y productos importados de primera calidad.",
+      },
+    ],
+  },
 };
 
 const CATEGORY_MAP = {};

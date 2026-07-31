@@ -55,16 +55,19 @@ export default function Home() {
       />
 
       <Navbar />
-      <HeroSection />
-      <CategoriesSection />
-      <FeaturedProducts
-        activeCategory={activeCategory}
-        setActiveCategory={setActiveCategory}
-      />
-      <CTASection />
-      <ClientsSlider />
-      <TestimonialsSection />
-      <FooterSection />
+<HeroSection />
+<CategoriesSection />
+
+<TestimonialsSection />
+
+<FeaturedProducts
+  activeCategory={activeCategory}
+  setActiveCategory={setActiveCategory}
+/>
+
+<CTASection />
+<ClientsSlider />
+<FooterSection />
     </div>
   );
 }

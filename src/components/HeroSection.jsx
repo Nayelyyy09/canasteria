@@ -8,19 +8,26 @@ import CanvasSnow from "./CanvasSnow";
 const CUSTOM_BANNER = {
   name: "Contenedores Textiles Personalizados",
   description: "Personalizamos tu contenedor textil según tu presupuesto. Diseños a medida con la calidad y el precio que tu proyecto necesita.",
-  image: "https://canastanavidena.pe/wp-content/uploads/2026/07/Banner_11.png",
+  image: "/images/banners/contenedores-textiles.png",
   isCustom: true,
 };
 
 const PANETON_BANNER = {
   name: "Personaliza tu panetón y dale un toque diferente",
   description: "Convierte un delicioso panetón en un detalle especial, personalizado con tu marca.",
-  image: "https://canastanavidena.pe/wp-content/uploads/2026/07/Banner_3.png",
+  image: "/images/banners/personaliza_tu_paneton.png",
+  isCustom: true,
+};
+
+const BANNER_3 = {
+  name: "Canastas Navideñas para Empresas",
+  description: "Sorprende a tus colaboradores y clientes con canastas navideñas exclusivas, armadas con productos de calidad y presentación premium.",
+  image: "/images/banners/Banner_3.jpeg",
   isCustom: true,
 };
 
 const featuredProducts = PRODUCTS.filter((p) => p.featured);
-const SLIDES = [CUSTOM_BANNER, PANETON_BANNER];
+const SLIDES = [CUSTOM_BANNER, PANETON_BANNER, BANNER_3];
 
 export default function HeroSection() {
   const [index, setIndex] = useState(0);
