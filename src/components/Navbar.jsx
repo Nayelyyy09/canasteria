@@ -125,13 +125,31 @@ export default function Navbar() {
       >
         <div className="max-w-[1800px] mx-auto px-6 lg:px-16 flex items-center justify-between h-28 lg:h-32">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 flex-shrink-0 relative group">
-            <img
-              src="/images/logo.png"
-              alt="Publiventa"
-              className="h-24 lg:h-32 w-auto"
-            />
-          </Link>
+<Link
+  to="/"
+  className="flex items-center flex-shrink-0"
+>
+  <img
+    src="/images/logo.png"
+    alt="Publiventa"
+    className="
+      h-20
+      sm:h-24
+      md:h-24
+      lg:h-28
+      xl:h-28
+      w-auto
+      rounded-xl
+      border border-[#C9A96E]
+      bg-white
+      p-2
+      shadow-lg
+      transition-all
+      duration-300
+      hover:scale-105
+    "
+  />
+</Link>
 
           {/* Desktop nav links */}
           <div className="hidden lg:flex items-center gap-10">
