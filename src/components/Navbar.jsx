@@ -235,13 +235,21 @@ export default function Navbar() {
             >
               Nosotros
             </Link>
+                      <Link
+  to="/reserva-cita"
+  className="font-body text-sm tracking-widest uppercase text-[#FAF7F2] hover:text-[#C9A96E] transition-colors"
+>
+  Reserva una Cita
+</Link>
             <Link
+            
               to="/contacto"
               className="font-body text-sm tracking-widest uppercase text-[#FAF7F2] hover:text-[#C9A96E] transition-colors"
             >
               Contacto
             </Link>
           </div>
+
 
           {/* Right icons */}
           <div className="flex items-center gap-3 lg:gap-5">

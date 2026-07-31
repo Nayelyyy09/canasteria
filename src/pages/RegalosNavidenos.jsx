@@ -13,26 +13,44 @@ const CATEGORIAS_REGALOS = [
   {
     id: 1,
     title: "Para Empresa",
-    description: "Sorprende a tu equipo y clientes con regalos corporativos que reflejen los valores de tu marca.",
+    description:
+      "Sorprende a tu equipo y clientes con regalos corporativos que reflejen los valores de tu marca.",
     icon: Building2,
-    image: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-brindis-premium.png",
-    items: ["Canastas ejecutivas", "Packs de bienvenida", "Agradecimiento a clientes"],
+    image:
+      "https://www.canastanavidena.pe/images/products/ejecutivas/canasta-navidena-caja-festiva-clasica.png",
+    items: [
+      "Canastas ejecutivas",
+      "Packs de bienvenida",
+      "Agradecimiento a clientes",
+    ],
   },
   {
     id: 2,
     title: "Para Familia",
-    description: "Regalos que unen a la familia y crean momentos inolvidables alrededor de la mesa navideña.",
+    description:
+      "Regalos que unen a la familia y crean momentos inolvidables alrededor de la mesa navideña.",
     icon: Home,
-    image: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-brindis-premium-2.png",
-    items: ["Canastas familiares", "Cestas gourmet", "Desayunos especiales"],
+    image:
+      "https://www.canastanavidena.pe/images/products/familiares/bolso-navideno-celebration.png",
+    items: [
+      "Canastas familiares",
+      "Cestas gourmet",
+      "Desayunos especiales",
+    ],
   },
   {
     id: 3,
     title: "Para Amigos",
-    description: "Detalles únicos y personalizados para sorprender a tus amigos en esta temporada.",
+    description:
+      "Detalles únicos y personalizados para sorprender a tus amigos en esta temporada.",
     icon: Users,
-    image: "https://canastanavidena.pe/wp-content/uploads/2026/07/regalo-navideno-vino-reserva.png",
-    items: ["Gift boxes", "Botellas premium", "Experiencias gourmet"],
+    image:
+      "https://www.canastanavidena.pe/images/products/regalos-navidenos/regalo-navideno-brindis-premium-2.png",
+    items: [
+      "Gift boxes",
+      "Botellas premium",
+      "Experiencias gourmet",
+    ],
   },
 ];
 

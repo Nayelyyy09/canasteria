@@ -13,6 +13,7 @@ import BlogPost from './pages/BlogPost';
 import RegalosNavidenos from './pages/RegalosNavidenos';
 import FAQ from './pages/FAQ';
 import About from './pages/About';
+import ReservaCita from "@/pages/ReservaCita";
 import Contact from './pages/Contact';
 import Shipping from './pages/Shipping';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -35,6 +36,7 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/nosotros" element={<About />} />
           <Route path="/contacto" element={<Contact />} />
+          <Route path="/reserva-cita" element={<ReservaCita />} />
           <Route path="/envios-devoluciones" element={<Shipping />} />
           <Route path="/politica-de-privacidad" element={<PrivacyPolicy />} />
           <Route path="/terminos-y-condiciones" element={<TermsConditions />} />
