@@ -4,8 +4,6 @@ import { X } from "lucide-react";
 
 const WHATSAPP_NUMBERS = [
   { number: "51958438095", label: "Ventas 1" },
-  { number: "51997486009", label: "Ventas 2" },
-  { number: "51976220440", label: "Ventas 3" },
 ];
 const WHATSAPP_MESSAGE = encodeURIComponent("Hola, me interesa información sobre sus canastas navideñas.");
 
