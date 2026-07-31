@@ -54,11 +54,12 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }}
       />
 
-      <Navbar />
+ <Navbar />
 <HeroSection />
-<CategoriesSection />
 
 <TestimonialsSection />
+
+<CategoriesSection />
 
 <FeaturedProducts
   activeCategory={activeCategory}
