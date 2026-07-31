@@ -133,11 +133,12 @@ export default function Navbar() {
     src="/images/logo.png"
     alt="Publiventa"
     className="
-      h-20
-      sm:h-24
-      md:h-24
-      lg:h-28
-      xl:h-28
+      h-14
+      sm:h-16
+      md:h-16
+      lg:h-20
+      xl:h-20
+      2xl:h-24
       w-auto
       rounded-xl
       border border-[#C9A96E]
@@ -152,7 +153,7 @@ export default function Navbar() {
 </Link>
 
           {/* Desktop nav links */}
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-5 xl:gap-7">
             <Link
               to="/"
               className="font-body text-sm tracking-widest uppercase text-[#FAF7F2] hover:text-[#C9A96E] transition-colors"
