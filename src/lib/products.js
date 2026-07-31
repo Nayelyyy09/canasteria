@@ -1583,7 +1583,7 @@ export const CATEGORIES_FULL = [
 ];
 
 export const CLIENTS = [
-  { name: "Stracon", logo: "/images/products/ejecutivas/canasta-navidena-caja-festiva-stracon.png" },
+  { name: "Stracon", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Stracon-1.png" },
   { name: "Caja Arequipa", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Caja-Arequipa.png" },
   { name: "Ochosur", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Ochosur.png" },
   { name: "Kori", logo: "https://publiventa.pe/wp-content/uploads/2026/07/Kori.png" },
