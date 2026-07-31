@@ -764,8 +764,8 @@ export const PRODUCTS = [
       "Tarjeta de Cortesía",
       "Capacidad de 40 kg"
     ],
-    image: "https://canastanavidena.pe/wp-content/uploads/2026/07/canasta-navideno-eminencia.png",
-    hoverImage: "https://canastanavidena.pe/wp-content/uploads/2026/07/canasta-navideno-eminencia.png",
+    image: "/images/products/familiares/canasta-navideno-eminencia.png",
+    hoverImage: "/images/products/familiares/canasta-navideno-eminencia.png",
   },
   {
     id: 52,
