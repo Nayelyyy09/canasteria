@@ -259,9 +259,9 @@ export default function Contact() {
               <h3 className="font-display text-2xl text-[#FAF7F2] mb-6">Información de Contacto</h3>
               <ul className="space-y-5">
                 <li className="flex items-start gap-4">
-                  <div className="w-10 h-10 flex items-center justify-center bg-[#7E0E0F]/20 border border-[#7E0E0F]/30 flex-shrink-0">
-                    <Phone size={16} className="text-[#7E0E0F]" />
-                  </div>
+                  <div className="w-10 h-10 flex items-center justify-center bg-[#C9A96E]/20 border border-[#C9A96E]/30 flex-shrink-0">
+                  <Phone size={16} className="text-[#C9A96E]" />
+                </div>
                   <div>
                     <p className="font-body text-xs tracking-wider uppercase text-[#C9A96E] mb-1">Teléfono</p>
                     <a href="tel:+51958438095" className="font-body text-sm text-[#FAF7F2]/70 hover:text-[#FAF7F2] transition-colors">
@@ -270,8 +270,8 @@ export default function Contact() {
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <div className="w-10 h-10 flex items-center justify-center bg-[#7E0E0F]/20 border border-[#7E0E0F]/30 flex-shrink-0">
-                    <Mail size={16} className="text-[#7E0E0F]" />
+                  <div className="w-10 h-10 flex items-center justify-center bg-[#C9A96E]/20 border border-[#C9A96E]/30 flex-shrink-0">
+                    <Mail size={16} className="text-[#C9A96E]" />
                   </div>
                   <div>
                     <p className="font-body text-xs tracking-wider uppercase text-[#C9A96E] mb-1">Email</p>
@@ -281,8 +281,8 @@ export default function Contact() {
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <div className="w-10 h-10 flex items-center justify-center bg-[#0A461A]/20 border border-[#0A461A]/30 flex-shrink-0">
-                    <MapPin size={16} className="text-[#0A461A]" />
+                  <div className="w-10 h-10 flex items-center justify-center bg-[#C9A96E]/20 border border-[#C9A96E]/30 flex-shrink-0">
+                    <MapPin size={16} className="text-[#C9A96E]" />
                   </div>
                   <div>
                     <p className="font-body text-xs tracking-wider uppercase text-[#C9A96E] mb-1">Dirección</p>
