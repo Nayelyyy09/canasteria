@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
 const WHATSAPP_NUMBERS = [
-  { number: "51958438095", label: "Ventas 1" },
+  { number: "51958438095", label: "Canastas Corporativas" },
 ];
 const WHATSAPP_MESSAGE = encodeURIComponent("Hola, me interesa información sobre sus canastas navideñas.");
 
