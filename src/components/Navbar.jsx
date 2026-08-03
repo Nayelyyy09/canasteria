@@ -141,10 +141,6 @@ export default function Navbar() {
     2xl:h-24
     w-auto
     rounded-xl
-    border border-[#C9A96E]
-    bg-white
-    p-2
-    shadow-lg
   "
 />
 </Link>
