@@ -132,17 +132,8 @@ export default function Navbar() {
 <img
   src="/images/logo.png"
   alt="Publiventa"
-  className="
-    h-14
-    sm:h-16
-    md:h-16
-    lg:h-20
-    xl:h-20
-    2xl:h-24
-    w-auto
-    rounded-xl
-  "
-/>
+  className="h-36 w-auto"
+ />
 </Link>
 
           {/* Desktop nav links */}
