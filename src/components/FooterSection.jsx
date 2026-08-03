@@ -227,22 +227,11 @@ export default function FooterSection() {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <img
-              src="/images/logo.png"
-              alt="Publiventa"
-              className="
-                h-14
-                md:h-16
-                lg:h-20
-                xl:h-24
-                w-auto
-                rounded-2xl
-                border border-[#C9A96E]/30
-                bg-white
-                shadow-md
-                p-2
-              "
-            />
+             <img
+  src="/images/logo.png"
+  alt="Publiventa"
+  className="h-30 w-auto"
+ />
             </div>
             <p className="font-body text-xs text-[#FAF7F2] leading-relaxed">
               Canastas navideñas artesanales de lujo. Curamos cada regalo como
